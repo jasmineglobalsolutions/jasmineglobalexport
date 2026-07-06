@@ -20,41 +20,10 @@ export default function Home() {
       {/* Hero */}
       <section className="hero" aria-label="Hero section">
         <div className="wrap">
-          <div className="hero-top-pill office-duo">
-            <div className="office-box sg">
-              <div className="office-flag">🇸🇬</div>
-              <div>
-                <div className="office-title">
-                  Singapore Office <span className="office-role">Main HQ</span>
-                </div>
-                <div className="office-address">
-                  390 Victoria Street, Golden Landmark Shopping Complex,
-                  <br />#03-20, Singapore 188061
-                </div>
-              </div>
-            </div>
-            <div className="office-box ph">
-              <div className="office-flag">🇵🇭</div>
-              <div>
-                <div className="office-title">
-                  Philippines Office <span className="office-role">Operation HQ</span>
-                </div>
-                <div className="office-address">
-                  Regus RM 401, 4th Floor, The Aurora Suites &amp; Pavilion,
-                  <br />Canal Road cor. Labitan St., Central Business District,
-                  <br />Subic Bay 2222, Freeport Zone, Zambales, Philippines
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div className="hero-chip-stack">
-            <div className="mini-chip">Specialised in Toyota Hilux</div>
-            <div className="mini-chip">Container &amp; RoRo Export</div>
-            <div className="mini-chip">Destination Country Delivery Only</div>
-          </div>
 
-          <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
+
+          <div style={{ padding: "0 0 32px 0" }}>
             <div className="hero-text">
               <div className="kicker">Toyota Hilux Export Specialist</div>
               <h1>Specialised in Toyota Hilux Exports</h1>
@@ -123,17 +92,40 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="hero-car-img" style={{ position: "relative", borderRadius: 20, overflow: "hidden", boxShadow: "0 32px 80px rgba(7,23,47,0.22)" }}>
-              <Image
-                src="/images/extracted-2-white-philippines-spec-toyota-hilux-at-port.jpg"
-                alt="White Toyota Hilux Philippines export unit at port — Jasmine Global HI-Lux Export"
-                width={620}
-                height={440}
-                priority
-                style={{ width: "100%", height: "auto", objectFit: "cover" }}
-              />
+          <div className="hero-top-pill office-duo" style={{ marginTop: 32 }}>
+            <div className="office-box sg">
+              <div className="office-flag">🇸🇬</div>
+              <div>
+                <div className="office-title">
+                  Singapore Office <span className="office-role">Main HQ</span>
+                </div>
+                <div className="office-address">
+                  390 Victoria Street, Golden Landmark Shopping Complex,
+                  <br />#03-20, Singapore 188061
+                </div>
+              </div>
             </div>
+            <div className="office-box ph">
+              <div className="office-flag">🇵🇭</div>
+              <div>
+                <div className="office-title">
+                  Philippines Office <span className="office-role">Operation HQ</span>
+                </div>
+                <div className="office-address">
+                  Regus RM 401, 4th Floor, The Aurora Suites &amp; Pavilion,
+                  <br />Canal Road cor. Labitan St., Central Business District,
+                  <br />Subic Bay 2222, Freeport Zone, Zambales, Philippines
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-chip-stack" style={{ marginTop: 24 }}>
+            <div className="mini-chip">Specialised in Toyota Hilux</div>
+            <div className="mini-chip">Container &amp; RoRo Export</div>
+            <div className="mini-chip">Destination Country Delivery Only</div>
           </div>
         </div>
       </section>
@@ -159,7 +151,7 @@ export default function Home() {
               Position the company as a specialist in Philippines-market spec Toyota Hilux units. The showcase below displays three separate Hilux colour examples in one clean row for export buyers.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "28px" }}>
+          <div className="grid-3" style={{ gap: "28px" }}>
             {[
               {
                 src: "/images/extracted-2-white-philippines-spec-toyota-hilux-at-port.jpg",
@@ -210,7 +202,7 @@ export default function Home() {
       {/* Global Shipping Coverage Section */}
       <section aria-label="Global shipping coverage" style={{ padding: "80px 0", background: "linear-gradient(180deg,#071b35 0%,#0d2b55 100%)", color: "#dcecff" }}>
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
+          <div className="grid-2" style={{ gap: "56px", alignItems: "center" }}>
             <div>
               <h2 style={{ margin: "12px 0 18px", color: "#ffffff", fontSize: "clamp(24px, 3.5vw, 36px)", lineHeight: 1.2 }}>
                 Global shipping coverage
@@ -249,7 +241,7 @@ export default function Home() {
               Keep the customer journey simple, visual and professional. The website should communicate a clean export-only scope from sourcing to international delivery.
             </p>
           </div>
-          <div className="how-steps" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "28px" }}>
+          <div className="how-steps" style={{ display: "grid", gap: "28px" }}>
             {[
               { step: "1", title: "Source", desc: "Identify available Toyota Hilux units from the Philippines based on live market supply, spec, trim and export eligibility." },
               { step: "2", title: "Verify", desc: "Confirm basic vehicle details, condition, photos, trim, year, transmission, engine type and export paperwork before final quotation." },
@@ -269,7 +261,7 @@ export default function Home() {
       {/* Trust Strip */}
       <section aria-label="Trust signals" style={{ padding: "56px 0", background: "var(--navy)", color: "#dcecff" }}>
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px", textAlign: "center" }}>
+          <div className="trust-grid" style={{ display: "grid", gap: "32px", textAlign: "center" }}>
             {[
               { title: "Singapore-based coordination" },
               { title: "Vehicle verified" },

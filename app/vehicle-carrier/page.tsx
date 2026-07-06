@@ -110,7 +110,7 @@ export default function VehicleCarrierPage() {
         aria-label="Vehicle Carrier Transfer hero"
       >
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
+          <div className="grid-2" style={{ gap: "56px", alignItems: "center" }}>
             <div>
               <div
                 style={{
@@ -164,7 +164,7 @@ export default function VehicleCarrierPage() {
               </div>
 
               {/* Key Stats */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginTop: 36 }}>
+              <div className="grid-3" style={{ gap: "16px", marginTop: 36 }}>
                 {[
                   { value: "2", label: "Shipping Modes" },
                   { value: "🌍", label: "Worldwide Routes" },
@@ -212,7 +212,7 @@ export default function VehicleCarrierPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px" }}>
+          <div className="grid-2" style={{ gap: "36px" }}>
             {shippingModes.map((mode) => (
               <div
                 key={mode.title}
@@ -283,7 +283,7 @@ export default function VehicleCarrierPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+          <div className="grid-3" style={{ gap: "24px" }}>
             {processSteps.map((step) => (
               <div
                 key={step.step}
@@ -330,7 +330,7 @@ export default function VehicleCarrierPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "18px", marginBottom: 48 }}>
+          <div className="grid-3" style={{ gap: "18px", marginBottom: 48 }}>
             {carriers.map((carrier) => (
               <div
                 key={carrier.name}

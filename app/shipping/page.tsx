@@ -20,7 +20,7 @@ export default function ShippingPage() {
       {/* Section 1 - Vehicle carrier transfer */}
       <section style={{ padding: "80px 0" }} aria-label="Vehicle carrier transfer">
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
+          <div className="grid-2" style={{ gap: "48px", alignItems: "center" }}>
             <div>
               <div className="kicker">Pre-shipment handling</div>
               <h2 style={{ margin: "10px 0 16px", fontSize: "clamp(26px, 4vw, 44px)", color: "var(--navy)" }}>
@@ -46,7 +46,7 @@ export default function ShippingPage() {
       {/* Section 2 - Global shipping coverage */}
       <section style={{ padding: "80px 0", background: "var(--soft)" }} aria-label="Global shipping coverage">
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
+          <div className="grid-2" style={{ gap: "48px", alignItems: "center" }}>
             <div style={{ order: 2 }}>
               <h2 style={{ margin: "0 0 16px", fontSize: "clamp(26px, 4vw, 44px)", color: "var(--navy)" }}>
                 Global shipping coverage
@@ -80,7 +80,7 @@ export default function ShippingPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+          <div className="grid-2" style={{ gap: 32 }}>
             {/* Container Article */}
             <div style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 24, overflow: "hidden", boxShadow: "0 12px 32px rgba(7,23,47,0.06)" }}>
               <div style={{ position: "relative" }}>

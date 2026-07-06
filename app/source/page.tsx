@@ -77,7 +77,7 @@ export default function SourcePage() {
           </div>
 
           {/* Feature Grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24, marginTop: 64 }}>
+          <div className="grid-4" style={{ gap: 24, marginTop: 64 }}>
             {[
               { title: "Container Shipping", desc: "Controlled lashing and documentation", icon: "📦" },
               { title: "RoRo Shipping", desc: "Port-to-port export coordination", icon: "🚢" },
@@ -97,7 +97,7 @@ export default function SourcePage() {
       {/* Stats Bar */}
       <section style={{ padding: "40px 0", background: "var(--navy)", borderTop: "1px solid rgba(255,255,255,0.1)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24, textAlign: "center" }}>
+          <div className="grid-4" style={{ gap: 24, textAlign: "center" }}>
             {[
               { val: "1", label: "Core sourcing market: Philippines" },
               { val: "2", label: "Shipping modes: Container and RoRo" },
@@ -123,7 +123,7 @@ export default function SourcePage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }} className="how-steps">
+          <div className="how-steps" style={{ display: "grid", gap: 24 }}>
             {[
               { step: "1", title: "Source", desc: "Identify available Toyota Hilux units from the Philippines based on live market supply, spec, trim and export eligibility." },
               { step: "2", title: "Verify", desc: "Confirm basic vehicle details, condition, photos, trim, year, transmission, engine type and export paperwork before final quotation." },
@@ -150,7 +150,7 @@ export default function SourcePage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32 }}>
+          <div className="grid-2" style={{ gap: 32 }}>
             {[
               { icon: "🇸🇬", title: "Singapore-based coordination", desc: "Use the Singapore office as the professional contact point for buyer enquiries, quotation, documentation coordination and export communication." },
               { icon: "🔍", title: "Vehicle verification flow", desc: "Before final quotation, confirm photos, trim, year, transmission, engine, condition notes and export eligibility." },
@@ -186,7 +186,7 @@ export default function SourcePage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+          <div className="grid-2" style={{ gap: 48, alignItems: "center" }}>
             <div>
               <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                 {[

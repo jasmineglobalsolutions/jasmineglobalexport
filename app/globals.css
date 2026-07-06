@@ -27,6 +27,11 @@ body {
   transition: 0.25s;
 }
 
+/* Responsive Grids */
+.grid-2, .hero-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4, .trust-grid, .how-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
 /* Mobile-first responsive breakpoints */
 @media (max-width: 900px) {
   .nav-hamburger {
@@ -128,7 +133,7 @@ body {
     grid-template-columns: 1fr !important;
   }
 
-  .how-steps {
+  .how-steps, .grid-3, .grid-4, .trust-grid {
     grid-template-columns: 1fr 1fr !important;
   }
 }
@@ -142,7 +147,7 @@ body {
     grid-template-columns: 1fr !important;
   }
 
-  .how-steps {
+  .how-steps, .grid-3, .grid-4, .trust-grid {
     grid-template-columns: 1fr !important;
   }
 

@@ -37,18 +37,7 @@ export default function TestimonialsPage() {
                 tags: ["Name withheld", "Collection proof", "Customer privacy"],
                 photoHint: "Customer with collected Hilux / vehicle handover",
               },
-              {
-                title: "Vehicle Handover Testimonial",
-                quote: "The collection arrangement was smooth and we received the vehicle handover support as discussed.",
-                tags: ["Handover", "Collected unit", "Buyer details hidden"],
-                photoHint: "Dealer / yard / customer collection moment",
-              },
-              {
-                title: "End User / Fleet Collection",
-                quote: "The team helped us understand the collection process and what documents were required.",
-                tags: ["Fleet buyer", "End user", "Private details protected"],
-                photoHint: "End user / fleet buyer collection proof",
-              },
+              
             ].map((card, i) => (
               <div
                 key={i}

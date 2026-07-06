@@ -1,3 +1,12 @@
+@import "./new-styles.css";
+
+.floating-wa-btn {
+  transition: transform 0.2s ease;
+}
+.floating-wa-btn:hover {
+  transform: scale(1.05);
+}
+
 /* Global base — imports Inter from next/font via CSS variable */
 body {
   font-family: var(--font-inter, Inter, "Segoe UI", Roboto, Arial, sans-serif);

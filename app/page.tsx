@@ -18,114 +18,42 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <section className="hero" aria-label="Hero section">
-        <div className="wrap">
+      <section className="hero">
+        <div className="hero-visual" aria-hidden="true">
+          <Image
+            src="/images/hero.png"
+            alt="Three Toyota Hilux variants — Base, Conquest and GR-S — lined up for export"
+            width={1600}
+            height={640}
+            priority
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              objectPosition: "right center",
+              filter: "saturate(1.04) contrast(1.02) brightness(1.01)"
+            }}
+          />
+        </div>
 
+        <div className="container">
+          <div className="hero-copy">
+            <div className="eyebrow">Toyota Hilux Export Specialist</div>
 
+            <h1>Specialised in<br />Toyota Hilux<br />Variants &amp; Exports</h1>
 
-          <div style={{ padding: "0 0 32px 0" }}>
-            <div className="hero-text">
-              <div className="kicker">Toyota Hilux Export Specialist</div>
-              <h1>Specialised in Toyota Hilux Exports</h1>
-              <div className="hero-subline">
-                <span>Philippines Spec</span>
-              </div>
-              <p className="lead">
-                We source, verify, purchase, lash and ship Toyota Hilux units
-                worldwide by container or RoRo. We deliver to the destination
-                country or port only.{" "}
-                <strong>
-                  Destination customs clearance, taxes, registration and local
-                  compliance are handled by the buyer.
-                </strong>
-              </p>
-              <div className="cta-row">
-                <a className="btn dark" href="/specs">
-                  View Available Specs
-                </a>
-                <a className="btn outline" href="/quote">
-                  Request a Quote
-                </a>
-              </div>
-              <div className="hero-bottom">
-                <div className="feature">
-                  <svg fill="none" viewBox="0 0 64 64">
-                    <rect x="8" y="18" width="48" height="30" rx="4" stroke="#0f2a50" strokeWidth="3" />
-                    <path d="M16 18v-6m32 6v-6M14 26h36M22 34h20" stroke="#d7a44a" strokeLinecap="round" strokeWidth="3" />
-                  </svg>
-                  <div>
-                    <b>Container Shipping</b>
-                    <span>Controlled lashing and documentation</span>
-                  </div>
-                </div>
-                <div className="feature">
-                  <svg fill="none" viewBox="0 0 64 64">
-                    <path d="M7 39h40l6-10h4c2 0 4 2 4 4v11H7z" stroke="#0f2a50" strokeWidth="3" />
-                    <circle cx="20" cy="46" r="4" stroke="#d7a44a" strokeWidth="3" />
-                    <circle cx="47" cy="46" r="4" stroke="#d7a44a" strokeWidth="3" />
-                    <path d="M14 25h18l10 8" stroke="#0f2a50" strokeWidth="3" />
-                  </svg>
-                  <div>
-                    <b>RoRo Shipping</b>
-                    <span>Port-to-port export coordination</span>
-                  </div>
-                </div>
-                <div className="feature">
-                  <svg fill="none" viewBox="0 0 64 64">
-                    <circle cx="32" cy="32" r="22" stroke="#0f2a50" strokeWidth="3" />
-                    <path d="M10 32h44M32 10c7 7 9 15 9 22s-2 15-9 22c-7-7-9-15-9-22s2-15 9-22z" stroke="#d7a44a" strokeWidth="3" />
-                  </svg>
-                  <div>
-                    <b>Global Delivery</b>
-                    <span>Worldwide destination-country supply</span>
-                  </div>
-                </div>
-                <div className="feature">
-                  <svg fill="none" viewBox="0 0 64 64">
-                    <path d="M18 8h22l10 10v34a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" stroke="#0f2a50" strokeWidth="3" />
-                    <path d="M40 8v12h12M22 34h20M22 42h14" stroke="#d7a44a" strokeLinecap="round" strokeWidth="3" />
-                  </svg>
-                  <div>
-                    <b>Export Documentation</b>
-                    <span>Invoice, packing list and BL coordination</span>
-                  </div>
-                </div>
-              </div>
+            <div className="pill">Philippines Spec | From Base Model to GR-S</div>
+
+            <p className="hero-text">
+              We source, verify, purchase, lash and ship Toyota Hilux units worldwide by container or RoRo.
+              We deliver to the destination country or port only.{" "}
+              <strong>Destination customs clearance, taxes, registration and local compliance are handled by the buyer.</strong>
+            </p>
+
+            <div className="hero-actions">
+              <a className="btn btn-navy" href="/specs">View Available Specs <span>→</span></a>
+              <a className="btn btn-outline" href="/quote">Request a Quote <span>→</span></a>
             </div>
-          </div>
-
-          <div className="hero-top-pill office-duo" style={{ marginTop: 32 }}>
-            <div className="office-box sg">
-              <div className="office-flag">🇸🇬</div>
-              <div>
-                <div className="office-title">
-                  Singapore Office <span className="office-role">Main HQ</span>
-                </div>
-                <div className="office-address">
-                  390 Victoria Street, Golden Landmark Shopping Complex,
-                  <br />#03-20, Singapore 188061
-                </div>
-              </div>
-            </div>
-            <div className="office-box ph">
-              <div className="office-flag">🇵🇭</div>
-              <div>
-                <div className="office-title">
-                  Philippines Office <span className="office-role">Operation HQ</span>
-                </div>
-                <div className="office-address">
-                  Regus RM 401, 4th Floor, The Aurora Suites &amp; Pavilion,
-                  <br />Canal Road cor. Labitan St., Central Business District,
-                  <br />Subic Bay 2222, Freeport Zone, Zambales, Philippines
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="hero-chip-stack" style={{ marginTop: 24 }}>
-            <div className="mini-chip">Specialised in Toyota Hilux</div>
-            <div className="mini-chip">Container &amp; RoRo Export</div>
-            <div className="mini-chip">Destination Country Delivery Only</div>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SocialIconButtons, SocialPillLinks } from "./SocialIcons";
 
 export default function Footer() {
   return (
@@ -28,6 +29,15 @@ export default function Footer() {
             The Aurora Suites &amp; Pavilion, Canal Road cor. Labitan St., Central
             Business District, Subic Bay 2222, Freeport Zone, Zambales, Philippines
           </p>
+
+          {/* Social Media Icons (Client Component) */}
+          <div style={{ marginTop: "20px" }}>
+            <p style={{ fontSize: "12px", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "12px" }}>
+              Follow Us
+            </p>
+            <SocialIconButtons />
+          </div>
+
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginTop: "16px" }}>
             <a
               href="https://wa.me/6589874467"
@@ -56,6 +66,7 @@ export default function Footer() {
           <Link href="/trust">Trust &amp; Process</Link>
           <Link href="/specs">Hilux Specs</Link>
           <Link href="/shipping">Shipping</Link>
+          <Link href="/vehicle-carrier">Vehicle Carrier Transfer</Link>
           <Link href="/testimonials">Testimonials</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/faq">FAQ</Link>
@@ -63,15 +74,25 @@ export default function Footer() {
         </div>
 
         <div id="terms">
-          <h3>Export Scope</h3>
+          <h3>Export Scope &amp; Legal</h3>
           <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.6 }}>
             We supply and ship Toyota Hilux units to the destination country or port only.
           </p>
+          <Link href="/terms">Terms &amp; Conditions</Link>
           <a href="#">Export supply only</a>
           <a href="#">No destination customs clearance</a>
           <a href="#">No destination registration</a>
           <a href="#">Buyer handles local compliance</a>
           <a href="#">Quote subject to live stock &amp; verification</a>
+
+          {/* Social pill links (Client Component) */}
+          <div style={{ marginTop: "24px" }}>
+            <p style={{ fontSize: "12px", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "10px" }}>
+              Connect With Us
+            </p>
+            <SocialPillLinks />
+          </div>
+
           <p style={{ fontSize: "12px", color: "var(--muted)", marginTop: "24px" }}>
             © {new Date().getFullYear()} Jasmine Global HI-Lux Export. All rights reserved.
           </p>

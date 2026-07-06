@@ -1,99 +1,122 @@
-"use client";
+import type { Metadata } from "next";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
-import { useState } from "react";
-import PageLayout from "../components/PageLayout";
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions | Jasmine Global HI-Lux Export",
+  description:
+    "Find answers to frequently asked questions about exporting Toyota Hilux from the Philippines, shipping, documents and buyer responsibilities.",
+  alternates: {
+    canonical: "/faq",
+  },
+};
 
 const faqs = [
   {
     q: "Do you handle destination customs clearance and vehicle registration?",
-    a: "No. We supply and ship the Toyota Hilux to the destination country or port only. Destination customs clearance, import duties, taxes, registration and local compliance are handled entirely by the buyer.",
+    a: "No. We supply and ship the Toyota Hilux to the destination country or port only. Destination customs clearance, taxes, registration, homologation and local compliance are handled by the buyer or the buyer's local agent.",
+  },
+  {
+    q: "What is your main Philippines source?",
+    a: "We specialise in Philippines-spec Toyota Hilux units only.",
   },
   {
     q: "Do you offer both container shipping and RoRo shipping?",
-    a: "Yes. We can structure export supply by container shipping (typically 2 Hilux units per 40FT container) or RoRo shipping (drive-on/drive-off vessel service), depending on route availability and buyer preference.",
+    a: "Yes. We can structure export supply by container shipping or RoRo shipping depending on vehicle type, route availability, loading strategy and buyer preference.",
   },
   {
-    q: "Which Toyota Hilux variants are available for export?",
-    a: "We specialise in Philippines-spec Hilux variants including the 2.8 GR-S 4x4 A/T, 2.8 Conquest 4x4 A/T, 2.4 G 4x4 MT, 2.4 J 4x2 MT and 2.4 E 4x2 MT. Availability depends on live stock at the time of enquiry.",
+    q: "Can I request a specific trim, year, colour or transmission?",
+    a: "Yes. You can request the Philippines Hilux trim, model year, transmission, colour and preferred shipping method. Final availability is always subject to live stock and export eligibility.",
   },
   {
-    q: "What documents do you provide for the export?",
-    a: "We coordinate the proforma invoice, commercial invoice, packing list, and Bill of Lading. The exact documentation package depends on your destination port and shipping method. We communicate all documents clearly before and after shipment.",
+    q: "Do you sell to end users or only dealers?",
+    a: "We can sell to both dealers and end users. However, every buyer is responsible for checking destination-country import rules and local compliance before purchase.",
   },
   {
-    q: "Can you ship to any country?",
-    a: "We can deliver to the destination port of many countries worldwide. However, not all routes support RoRo. Container shipping is generally available to more destinations. Contact us with your specific destination and we will confirm route availability.",
+    q: "Are the photos and specs shown on the website final?",
+    a: "No. Website visuals and spec guides are for presentation and marketing. Final quotation should confirm the exact unit, trim, model year, condition, export documents and shipment method.",
   },
   {
-    q: "How do I confirm the exact Hilux unit before purchase?",
-    a: "Our verification flow includes confirming photos, trim level, model year, transmission, engine details, colour, mileage (if applicable) and export eligibility for each specific unit before issuing a proforma invoice.",
-  },
-  {
-    q: "How many Hilux units fit in one container?",
-    a: "Typically, 2 Toyota Hilux Double Cab units can be loaded into a single 40FT container. The final arrangement depends on the vehicle dimensions and actual packing confirmation at the time of loading.",
-  },
-  {
-    q: "How long does shipping take?",
-    a: "Transit time varies by destination. Container shipping to nearby Asian destinations may take 7–14 days. Longer routes (Africa, Middle East) can take 3–6 weeks. We provide estimated transit times at the time of quotation.",
-  },
-  {
-    q: "Do you export left-hand drive (LHD) vehicles?",
-    a: "Our primary focus is Philippines-spec Hilux, which is right-hand drive (RHD). For LHD market enquiries, please contact us directly — we may be able to assist via our other-makes or alternative sourcing channels.",
-  },
-  {
-    q: "How do I start the process?",
-    a: "Submit an enquiry via our quote form or contact us on WhatsApp. Provide your required Hilux variant, destination country and port, quantity and preferred shipping method. We will respond with availability and pricing.",
+    q: "Which languages should the website support?",
+    a: "The main website language is English. Arabic is available for direct buyer communication. Spanish, Italian, French, Portuguese and other left-hand-drive market languages can be supported through the planned language API and translation workflow.",
   },
 ];
 
 export default function FaqPage() {
-  const [open, setOpen] = useState<number | null>(0);
-
   return (
-    <PageLayout>
-      <section className="section-title" aria-label="FAQ intro">
+    <main>
+      <Nav />
+
+      {/* Header */}
+      <section style={{ padding: "80px 0 40px", background: "var(--soft)" }} aria-label="FAQ Header">
         <div className="wrap">
-          <span className="variant-note-pill">Buyer FAQ</span>
-          <h1 style={{ marginTop: 12 }}>Frequently Asked Questions — Toyota Hilux Export</h1>
-          <p>
-            Answers to the most common questions from international Toyota Hilux export buyers. If your question is not listed here, contact us directly.
-          </p>
+          <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto" }}>
+            <div className="kicker">FAQ</div>
+            <h1 style={{ margin: "10px 0 16px", fontSize: "clamp(26px, 4vw, 44px)", color: "var(--navy)" }}>
+              Frequently Asked Questions
+            </h1>
+            <p style={{ color: "var(--muted)", fontSize: 16, lineHeight: 1.6 }}>
+              Below is a strong export-focused FAQ section for the website.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <div className="wrap">
-          <div className="faq-box">
-            {faqs.map((item, i) => (
-              <div key={i} className={`faq-item${open === i ? " open" : ""}`}>
-                <button
-                  className="faq-q"
-                  type="button"
-                  onClick={() => setOpen(open === i ? null : i)}
-                  aria-expanded={open === i}
-                >
-                  {item.q}
-                  <span className="plus">{open === i ? "−" : "+"}</span>
-                </button>
-                {open === i && (
-                  <div className="faq-a">
-                    {item.a}
-                  </div>
-                )}
+      {/* FAQ List */}
+      <section style={{ padding: "40px 0 80px", background: "var(--soft)" }} aria-label="FAQ Items">
+        <div className="wrap" style={{ maxWidth: 800 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                style={{
+                  background: "var(--paper)",
+                  border: "1px solid var(--line)",
+                  borderRadius: 16,
+                  overflow: "hidden",
+                  boxShadow: "0 8px 24px rgba(7,23,47,0.04)",
+                }}
+              >
+                <div style={{ padding: "24px 32px", background: "var(--navy)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+                  <h3 style={{ fontSize: 18, fontWeight: 900, color: "#fff", margin: 0, lineHeight: 1.4 }}>
+                    {faq.q}
+                  </h3>
+                </div>
+                <div style={{ padding: "28px 32px" }}>
+                  <p style={{ fontSize: 15, color: "var(--ink)", margin: 0, lineHeight: 1.7 }}>
+                    {faq.a}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ textAlign: "center", marginTop: 48 }}>
-            <p style={{ color: "var(--muted)", marginBottom: 20 }}>Still have a question? Reach us directly:</p>
-            <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-              <a className="btn dark" href="/quote">Submit an Enquiry</a>
-              <a className="btn wa" href="https://wa.me/6589874467" target="_blank" rel="noopener noreferrer">WhatsApp • English</a>
-              <a className="btn wa" href="https://wa.me/6581139145" target="_blank" rel="noopener noreferrer">WhatsApp • عربي</a>
-            </div>
+      {/* CTA Section */}
+      <section style={{ padding: "80px 0" }} aria-label="Contact CTA">
+        <div className="wrap" style={{ textAlign: "center", maxWidth: 640 }}>
+          <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>
+            Still have questions?
+          </h2>
+          <p style={{ color: "var(--muted)", fontSize: 16, margin: "0 0 32px" }}>
+            Contact us directly via WhatsApp or email. We respond promptly.
+          </p>
+          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="https://wa.me/6589874467" className="btn wa" target="_blank" rel="noopener noreferrer">
+              WhatsApp • English
+            </a>
+            <a href="https://wa.me/6581139145" className="btn wa" target="_blank" rel="noopener noreferrer">
+              WhatsApp • عربي
+            </a>
+            <a href="mailto:admin@jasmineglobalexport.com" className="btn dark">
+              Email Us
+            </a>
           </div>
         </div>
       </section>
-    </PageLayout>
+
+      <Footer />
+    </main>
   );
 }

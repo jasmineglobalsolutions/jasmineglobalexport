@@ -1,107 +1,229 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import PageLayout from "../components/PageLayout";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Philippines Hilux Source — Why We Buy From the Philippines",
+  title: "Philippines Source | Jasmine Global HI-Lux Export",
   description:
-    "Jasmine Global sources Philippines-spec Toyota Hilux units directly from the Philippines market. Learn why Philippines-spec Hilux is well-suited for export to many destinations worldwide.",
-  alternates: { canonical: "/source" },
+    "We specialise in Philippines-market Toyota Hilux units. Learn how we source, verify, purchase, lash and ship Toyota Hilux worldwide.",
+  alternates: {
+    canonical: "/source",
+  },
 };
-
-const gallery = [
-  {
-    img: "/images/hilux-white.jpg",
-    alt: "White Philippines-spec Toyota Hilux at port, ready for export",
-    title: "White Hilux",
-    desc: "The most popular fleet and retail colour. Clean export presentation for buyers who prefer the standard option.",
-    badge: "Most Popular",
-  },
-  {
-    img: "/images/hilux-black.jpg",
-    alt: "Black Philippines-spec Toyota Hilux — Conquest/GR-S export unit",
-    title: "Black Hilux",
-    desc: "Premium look for GR-S, Conquest and higher-tier quotations. High-demand colour for specialist buyers.",
-    badge: "Premium Spec",
-  },
-  {
-    img: "/images/hilux-silver.jpg",
-    alt: "Silver Philippines-spec Toyota Hilux export unit",
-    title: "Silver Hilux",
-    desc: "Clean metallic option. Suited to commercial and fleet buyers who need a neutral, durable finish.",
-    badge: "Commercial Ready",
-  },
-];
-
-const advantages = [
-  { icon: "🇵🇭", title: "Right-Hand Drive Market", desc: "Philippines is a right-hand drive market — ideal for RHD destination countries across Africa, Pacific Islands and Southeast Asia." },
-  { icon: "🏭", title: "Toyota Philippines Spec", desc: "Philippines-spec Hilux units are produced to Toyota Motor Philippines specifications, suitable for many export destinations." },
-  { icon: "⚙️", title: "Full Diesel Range", desc: "Both 2.4L and 2.8L diesel variants are available in the Philippines market, covering multiple buyer requirements." },
-  { icon: "🔍", title: "Verified Sourcing", desc: "We verify each unit — trim, year, VIN, engine, condition — before preparing an export quote." },
-];
 
 export default function SourcePage() {
   return (
-    <PageLayout>
-      <section className="hero" aria-label="Philippines source overview">
+    <main>
+      <Nav />
+
+      {/* Hero section */}
+      <section
+        style={{
+          background: "linear-gradient(135deg,#071b35 0%,#0d2b55 100%)",
+          color: "#dcecff",
+          padding: "80px 0 60px",
+        }}
+        aria-label="Hero section"
+      >
         <div className="wrap">
-          <div className="section-title">
-            <span className="variant-note-pill">Sourcing Market</span>
-            <h1 style={{ marginTop: 12 }}>Why We Source Toyota Hilux from the Philippines</h1>
-            <p>
-              The Philippines is our primary sourcing market for Toyota Hilux exports. We operate from Singapore (Main HQ) and the Philippines (Operations HQ), giving us direct access to Philippines-spec units across the full Hilux range.
+          <div style={{ textAlign: "center", maxWidth: 800, margin: "0 auto" }}>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "rgba(215,164,74,0.15)",
+                border: "1px solid rgba(215,164,74,0.35)",
+                borderRadius: 999,
+                padding: "6px 16px",
+                fontSize: 12,
+                fontWeight: 800,
+                color: "var(--gold)",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                marginBottom: 20,
+              }}
+            >
+              Toyota Hilux Export Specialist
+            </div>
+            <h1 style={{ margin: "0 0 16px", fontSize: "clamp(32px, 5vw, 56px)", color: "#fff", lineHeight: 1.1, fontWeight: 900 }}>
+              Specialised in Toyota Hilux Exports
+            </h1>
+            <div
+              style={{
+                display: "inline-block",
+                background: "var(--blue)",
+                color: "#fff",
+                padding: "4px 12px",
+                borderRadius: 6,
+                fontSize: 14,
+                fontWeight: 800,
+                marginBottom: 24,
+              }}
+            >
+              Philippines Spec
+            </div>
+            <p style={{ fontSize: 18, color: "#94b4d4", lineHeight: 1.6, margin: "0 0 36px" }}>
+              We source, verify, purchase, lash and ship Toyota Hilux units worldwide by container or RoRo. We deliver to the destination country or port only. <strong style={{ color: "#fff" }}>Destination customs clearance, taxes, registration and local compliance are handled by the buyer.</strong>
+            </p>
+            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="/specs" className="btn primary" style={{ background: "linear-gradient(135deg,var(--gold),#ffd778)", color: "#111827" }}>
+                View Available Specs
+              </a>
+              <a href="/quote" className="btn outline" style={{ borderColor: "rgba(255,255,255,0.3)", color: "#dcecff", background: "rgba(255,255,255,0.08)" }}>
+                Request a Quote
+              </a>
+            </div>
+          </div>
+
+          {/* Feature Grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24, marginTop: 64 }}>
+            {[
+              { title: "Container Shipping", desc: "Controlled lashing and documentation", icon: "📦" },
+              { title: "RoRo Shipping", desc: "Port-to-port export coordination", icon: "🚢" },
+              { title: "Global Delivery", desc: "Worldwide destination-country supply", icon: "🌍" },
+              { title: "Export Documentation", desc: "Invoice, packing list and BL coordination", icon: "📄" },
+            ].map((f) => (
+              <div key={f.title} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "24px", textAlign: "center" }}>
+                <div style={{ fontSize: 32, marginBottom: 12 }}>{f.icon}</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", marginBottom: 6 }}>{f.title}</div>
+                <div style={{ fontSize: 13, color: "#94b4d4", lineHeight: 1.5 }}>{f.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section style={{ padding: "40px 0", background: "var(--navy)", borderTop: "1px solid rgba(255,255,255,0.1)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+        <div className="wrap">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24, textAlign: "center" }}>
+            {[
+              { val: "1", label: "Core sourcing market: Philippines" },
+              { val: "2", label: "Shipping modes: Container and RoRo" },
+              { val: "190+", label: "Country-location SEO pages supported" },
+              { val: "1", label: "Clear scope: export supply only — no destination clearance or registration" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div style={{ fontSize: 32, fontWeight: 900, color: "var(--gold)", marginBottom: 8 }}>{stat.val}</div>
+                <div style={{ fontSize: 13, color: "#dcecff", lineHeight: 1.4 }}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How the business works */}
+      <section style={{ padding: "80px 0", background: "var(--soft)" }}>
+        <div className="wrap">
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>How the business works</h2>
+            <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16 }}>
+              Keep the customer journey simple, visual and professional. The website should communicate a clean export-only scope from sourcing to international delivery.
             </p>
           </div>
 
-          {/* Advantages */}
-          <div className="trust-grid" style={{ marginBottom: "56px" }}>
-            {advantages.map((a) => (
-              <div key={a.title} className="trust-card">
-                <div className="trust-icon">{a.icon}</div>
-                <strong>{a.title}</strong>
-                <span>{a.desc}</span>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }} className="how-steps">
+            {[
+              { step: "1", title: "Source", desc: "Identify available Toyota Hilux units from the Philippines based on live market supply, spec, trim and export eligibility." },
+              { step: "2", title: "Verify", desc: "Confirm basic vehicle details, condition, photos, trim, year, transmission, engine type and export paperwork before final quotation." },
+              { step: "3", title: "Buy & Lash", desc: "Secure purchase, prepare unit for export, arrange lashing/stuffing or RoRo booking, and coordinate invoice, packing list and BL details." },
+              { step: "4", title: "Ship", desc: "Ship to the destination country or port only. Buyer handles destination clearance, taxes, registration and all local compliance matters." },
+            ].map((s) => (
+              <div key={s.step} style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 16, padding: "32px 24px", position: "relative" }}>
+                <div style={{ position: "absolute", top: 16, right: 16, fontSize: 12, fontWeight: 900, color: "var(--gold)", background: "rgba(215,164,74,0.1)", padding: "4px 10px", borderRadius: 999 }}>STEP {s.step}</div>
+                <h3 style={{ fontSize: 20, fontWeight: 900, color: "var(--navy)", margin: "24px 0 12px" }}>{s.title}</h3>
+                <p style={{ fontSize: 14, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust section */}
+      <section style={{ padding: "80px 0" }}>
+        <div className="wrap">
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>Built for serious international Hilux buyers</h2>
+            <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16 }}>
+              This section adds the trust layer needed for high-value export buyers before they send documents, deposits or purchase funds.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32 }}>
+            {[
+              { icon: "🇸🇬", title: "Singapore-based coordination", desc: "Use the Singapore office as the professional contact point for buyer enquiries, quotation, documentation coordination and export communication." },
+              { icon: "🔍", title: "Vehicle verification flow", desc: "Before final quotation, confirm photos, trim, year, transmission, engine, condition notes and export eligibility." },
+              { icon: "🚢", title: "RoRo & container options", desc: "Guide buyers clearly between port-to-port RoRo and controlled 40HC container loading, depending on route and buyer needs." },
+              { icon: "🤝", title: "Multilingual buyer support", desc: "English and Arabic buyers can communicate directly by WhatsApp. Buyers using other languages can still enquire; our team will support the conversation using translation tools and the planned language API." },
+            ].map((t) => (
+              <div key={t.title} style={{ display: "flex", gap: 20, alignItems: "flex-start", background: "var(--paper)", border: "1px solid var(--line)", padding: 24, borderRadius: 16 }}>
+                <div style={{ fontSize: 40, lineHeight: 1 }}>{t.icon}</div>
+                <div>
+                  <h3 style={{ fontSize: 18, fontWeight: 900, color: "var(--navy)", margin: "0 0 8px" }}>{t.title}</h3>
+                  <p style={{ fontSize: 14, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{t.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Gallery */}
-          <div>
-            <h2 style={{ marginBottom: 24, textAlign: "center" }}>Export-Ready Hilux — Available Colours</h2>
-            <div className="market-showcase">
-              <div className="market-gallery" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
-                {gallery.map((g) => (
-                  <article key={g.title} className="market-tile">
-                    <div className="market-photo" style={{ borderRadius: 12, overflow: "hidden", aspectRatio: "16/10" }}>
-                      <Image
-                        src={g.img}
-                        alt={g.alt}
-                        width={480}
-                        height={300}
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                      />
-                    </div>
-                    <div className="market-caption" style={{ padding: "16px 0 0" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                        <h3 style={{ margin: 0, fontSize: 17 }}>{g.title}</h3>
-                        <span style={{ background: "var(--sky)", color: "var(--blue)", fontSize: 11, fontWeight: 800, borderRadius: 999, padding: "3px 10px" }}>{g.badge}</span>
-                      </div>
-                      <p style={{ color: "var(--muted)", fontSize: 14, lineHeight: 1.6, margin: 0 }}>{g.desc}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="export-availability-note" style={{ marginTop: 40 }}>
-            <b>Note:</b> Colour availability depends on live stock at the time of enquiry. Contact us to confirm current available colours, trim levels and model years before requesting a quote.
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 40 }}>
-            <a className="btn dark" href="/quote">Request a Hilux Export Quote</a>
+          <div style={{ marginTop: 32, padding: 24, background: "rgba(21,90,157,0.06)", border: "1px solid rgba(21,90,157,0.2)", borderRadius: 12, display: "flex", gap: 16, alignItems: "flex-start" }}>
+            <div style={{ fontSize: 24 }}>🌐</div>
+            <p style={{ margin: 0, fontSize: 14, color: "var(--navy)", lineHeight: 1.6 }}>
+              <strong>Language API ready:</strong> English and Arabic are direct communication channels. Spanish, Italian, French, Portuguese and other left-hand-drive market languages can be supported through the planned website translation API and internal translation workflow.
+            </p>
           </div>
         </div>
       </section>
-    </PageLayout>
+
+      {/* Proof section */}
+      <section style={{ padding: "80px 0", background: "var(--soft)" }}>
+        <div className="wrap">
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>Proof, documentation and buyer confidence</h2>
+            <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16 }}>
+              Export buyers need to see how you protect the process.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+            <div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+                {[
+                  { num: "1", title: "Photo and video confirmation", desc: "Send buyer photos or video of the selected Hilux, including exterior, interior, odometer, chassis plate where appropriate, and condition notes." },
+                  { num: "2", title: "Proforma invoice before payment", desc: "Issue a clear proforma with buyer name, vehicle description, unit price, shipping scope, payment terms and buyer destination responsibilities." },
+                  { num: "3", title: "Loading and shipping proof", desc: "Show photos of container loading, lashing, port delivery or RoRo handover where available, then share shipping milestones and BL details." },
+                  { num: "4", title: "Buyer scope transparency", desc: "Repeat clearly that destination customs clearance, tax, registration, homologation and local compliance are handled by the buyer or local agent." },
+                ].map((item) => (
+                  <div key={item.num} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
+                    <div style={{ width: 32, height: 32, borderRadius: "50%", background: "var(--navy)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, flexShrink: 0 }}>{item.num}</div>
+                    <div>
+                      <h4 style={{ fontSize: 16, fontWeight: 900, color: "var(--navy)", margin: "0 0 6px" }}>{item.title}</h4>
+                      <p style={{ fontSize: 14, color: "var(--ink)", margin: 0, lineHeight: 1.5 }}>{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 20, padding: 32, boxShadow: "0 12px 40px rgba(7,23,47,0.08)" }}>
+              <h3 style={{ fontSize: 18, fontWeight: 900, color: "var(--navy)", margin: "0 0 20px" }}>Evidence your team should upload later</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", display: "flex", flexDirection: "column", gap: 12 }}>
+                {["Vehicle walkaround photos", "Container lashing photos", "Port or yard handover photos", "Buyer collection photos", "Sample export documents", "Customer testimonials"].map((item) => (
+                  <li key={item} style={{ display: "flex", gap: 10, alignItems: "center", fontSize: 15, color: "var(--ink)" }}>
+                    <span style={{ color: "var(--gold)" }}>📸</span> {item}
+                  </li>
+                ))}
+              </ul>
+              <div style={{ padding: 16, background: "var(--soft)", borderRadius: 10, fontSize: 13, color: "var(--muted)", border: "1px solid var(--line)" }}>
+                <strong>Privacy note:</strong> use buyer name, company name or initials only when the buyer has consented.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }

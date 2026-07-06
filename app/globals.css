@@ -202,3 +202,110 @@ body {
   color: #071b35;
   background: #fff;
 }
+
+/* ─── Social icon buttons (circular) ─── */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f4f8;
+  border: 1px solid #dbe6f2;
+  box-shadow: 0 2px 8px rgba(7, 23, 47, 0.08);
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  flex-shrink: 0;
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(7, 23, 47, 0.16);
+  background: #fff;
+}
+
+/* ─── Social pill links (text + icon) ─── */
+.social-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #dbe6f2;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-pill-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(7, 23, 47, 0.12);
+}
+
+.social-pill-icon {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ─── Blog Cards ─── */
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(7,23,47,0.12) !important;
+}
+
+/* Toyota-style variant selector below the 3 colour showcase */
+    .toyota-variant-section{padding-top:18px;background:linear-gradient(180deg,#fff 0%,#f7fbff 100%)}
+    .toyota-variant-panel{background:#fff;border:1px solid var(--line);border-radius:34px;padding:30px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+    .toyota-variant-panel:before{content:'';position:absolute;inset:0 0 auto 0;height:7px;background:linear-gradient(90deg,var(--navy),var(--gold),#dc2626)}
+    .variant-title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:24px;flex-wrap:wrap}
+    .variant-title-row h2{margin:0;color:var(--navy);font-size:clamp(30px,4vw,48px);line-height:1.03;letter-spacing:-.04em}
+    .variant-title-row p{margin:10px 0 0;color:#53657d;line-height:1.65;max-width:710px}
+    .variant-note-pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:#fff7df;border:1px solid rgba(215,164,74,.38);color:#6a4a0a;font-weight:950;font-size:12px;padding:10px 13px;text-transform:uppercase;letter-spacing:.06em}
+    .toyota-variant-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .toyota-card{position:relative;display:flex;flex-direction:column;min-height:100%;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid #dce8f5;border-radius:26px;padding:18px;box-shadow:0 15px 38px rgba(7,23,47,.08);overflow:hidden;transition:.18s transform,.18s box-shadow,.18s border-color}
+    .toyota-card:hover{transform:translateY(-3px);box-shadow:0 24px 54px rgba(7,23,47,.14);border-color:rgba(21,90,157,.28)}
+    .toyota-card.featured{border-color:rgba(215,164,74,.72);background:linear-gradient(180deg,#fffaf0,#fff)}
+    .toyota-card.featured:after{content:'GR-S';position:absolute;right:-30px;top:20px;transform:rotate(28deg);font-weight:950;font-size:48px;letter-spacing:.04em;color:rgba(220,38,38,.07)}
+    .toyota-card-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px;position:relative;z-index:1}
+    .toyota-badge{display:inline-flex;align-items:center;gap:7px;border-radius:999px;background:#eef6ff;border:1px solid #cfe5ff;color:#0d3b6e;padding:8px 10px;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.06em}
+    .toyota-card.featured .toyota-badge{background:#fff1d0;border-color:#e4bf69;color:#6c4a00}
+    .toyota-drive{font-size:12px;font-weight:950;color:#fff;background:var(--navy);border-radius:999px;padding:8px 10px;white-space:nowrap}
+    .toyota-vehicle{height:168px;border-radius:22px;background:linear-gradient(135deg,#eef6ff,#ffffff);border:1px solid #dce8f5;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden}
+    .toyota-vehicle.real-photo-card{background:#eef6ff;box-shadow:inset 0 -30px 48px rgba(7,23,47,.05)}
+    .toyota-vehicle.real-photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:.22s transform}
+    .toyota-card:hover .toyota-vehicle.real-photo-card img{transform:scale(1.035)}
+    .toyota-vehicle.real-photo-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,23,47,.02),rgba(7,23,47,.14));pointer-events:none}
+    .toyota-vehicle .vehicle-icon{position:relative;z-index:1;font-size:64px;filter:drop-shadow(0 12px 10px rgba(7,23,47,.18))}
+    .paint-white{color:#eef3f8;text-shadow:0 0 0 #0c1f3a, 0 0 1px #0c1f3a}.paint-black{color:#111827}.paint-red{color:#d62121}.paint-silver{color:#b7c1cc}.paint-bronze{color:#88714b}
+    .color-dots{display:flex;gap:6px;position:absolute;right:14px;bottom:12px}.color-dots span{width:13px;height:13px;border-radius:50%;border:1px solid rgba(7,23,47,.18);box-shadow:0 1px 3px rgba(0,0,0,.10)}
+    .dot-white{background:#fff}.dot-black{background:#111}.dot-red{background:#9b111e}.dot-silver{background:#cfd6df}.dot-gray{background:#555}.dot-blue{background:#0b1f47}.dot-bronze{background:#776247}
+    .toyota-card h3{margin:0;color:var(--navy);font-size:20px;line-height:1.18;letter-spacing:-.02em;position:relative;z-index:1}
+    .toyota-price{margin:8px 0 2px;color:#0d2b55;font-weight:950;font-size:16px}.toyota-month{margin:0 0 12px;color:#728196;font-weight:800;font-size:12px}
+    .short-specs{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px;color:#53657d;font-size:13px;line-height:1.45;position:relative;z-index:1}
+    .short-specs li{border-top:1px dashed #e5edf7;padding-top:8px}.short-specs b{color:#12243d}
+    .full-spec-btn{margin-top:auto;align-self:flex-start;background:transparent;color:#d61f2c;border:0;padding:8px 0;font-weight:950;letter-spacing:.14em;font-size:12px;cursor:pointer;text-transform:uppercase}
+    .full-spec-btn:hover{text-decoration:underline;text-underline-offset:5px}
+    .export-availability-note{margin-top:20px;border:1px dashed rgba(21,90,157,.32);background:#f7fbff;border-radius:20px;padding:15px 18px;color:#44576f;line-height:1.55;font-size:14px}
+    .spec-modal-backdrop{position:fixed;inset:0;background:rgba(7,27,53,.62);z-index:120;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(7px)}
+    .spec-modal-backdrop.open{display:flex}
+    .spec-modal{width:min(980px,96vw);max-height:90vh;overflow:auto;background:#fff;border-radius:30px;border:1px solid rgba(255,255,255,.48);box-shadow:0 35px 100px rgba(0,0,0,.30)}
+    .spec-modal-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:26px 28px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#f8fbff,#fff7df)}
+    .spec-modal-head h3{margin:0;color:var(--navy);font-size:30px;letter-spacing:-.03em}.spec-modal-head p{margin:7px 0 0;color:#53657d;font-weight:800}.modal-close{border:1px solid var(--line);background:#fff;border-radius:50%;width:42px;height:42px;font-size:22px;font-weight:900;cursor:pointer;color:var(--navy)}
+    .spec-modal-body{padding:24px 28px 28px}.modal-spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.modal-spec-box{border:1px solid var(--line);border-radius:20px;padding:17px;background:#fff;box-shadow:0 8px 22px rgba(7,23,47,.04)}.modal-spec-box h4{margin:0 0 10px;color:var(--navy);font-size:15px;text-transform:uppercase;letter-spacing:.06em}.modal-spec-box p{margin:0;color:#52647d;line-height:1.6;font-size:14px}.modal-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .other-modal-note{background:#f8fbff;border:1px dashed #cfe0f3;border-radius:18px;padding:14px 16px;color:#52647d;line-height:1.55;margin-bottom:16px}.other-modal-note b{color:#07214f}.other-modal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.other-modal-grid .field{min-width:0;border-radius:18px}.other-summary{grid-column:1/-1;background:#fff7df;border:1px solid #f0d39d;border-radius:18px;padding:13px 16px;color:#745109;line-height:1.55;font-weight:800}
+    @media(max-width:1180px){.toyota-variant-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){.toyota-variant-panel{padding:22px 16px}.toyota-variant-grid,.modal-spec-grid,.other-modal-grid{grid-template-columns:1fr}.spec-modal-head{padding:22px}.spec-modal-body{padding:20px}.toyota-vehicle{height:120px}}
+
+  
+    @media (max-width: 820px){
+      #other-makes [style*="grid-template-columns:minmax(260px,0.9fr)"]{grid-template-columns:1fr!important}
+      #other-makes [style*="grid-template-columns:repeat(2,minmax(0,1fr))"]{grid-template-columns:1fr!important}
+    }
+
+
+    

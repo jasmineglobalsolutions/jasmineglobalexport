@@ -1,93 +1,128 @@
 import type { Metadata } from "next";
-import PageLayout from "../components/PageLayout";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Toyota Hilux Export Blog — Guides, Tips & Insights",
+  title: "Blog | Jasmine Global HI-Lux Export",
   description:
-    "Export guides, buyer tips and shipping insights for Toyota Hilux international buyers. Learn about Philippines-spec Hilux, container vs RoRo shipping, export documentation and more.",
-  alternates: { canonical: "/blog" },
+    "Read our guides on exporting Philippines-spec Toyota Hilux units, shipping methods, and destination-country compliance.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
-const posts = [
+const blogArticles = [
   {
-    cat: "Buyer Guide",
-    catColor: "#155a9d",
-    title: "Philippines Spec Toyota Hilux Export Guide — What Buyers Need to Know",
-    excerpt: "A practical buyer guide covering trim selection, export eligibility, colour options and how to prepare your Hilux export order from the Philippines.",
-    readTime: "5 min read",
+    tag: "Buyer Guide",
+    title: "Philippines Spec Toyota Hilux Export Guide",
+    desc: "A practical buyer guide explaining Philippines-sourced Hilux trims, export checks, shipping options and how to request the right export-ready unit.",
   },
   {
-    cat: "Shipping",
-    catColor: "#d7a44a",
-    title: "RoRo or Container: Which Shipping Method Is Best for Hilux Export?",
-    excerpt: "Explain route differences, loading methods, transit times and buyer trade-offs between RoRo and container shipping for a Toyota Hilux export.",
-    readTime: "4 min read",
+    tag: "Shipping",
+    title: "RoRo or Container: Which shipping method is better for Toyota Hilux exports?",
+    desc: "Explain when to choose RoRo, when to choose a 40HC container, and how lashing, port handling, route availability and cargo control differ.",
   },
   {
-    cat: "Export Process",
-    catColor: "#25a244",
-    title: "What Documents Are Needed to Export a Toyota Hilux?",
-    excerpt: "Cover proforma invoice, commercial invoice, packing list, bill of lading and any export permits involved in a Philippines Hilux export.",
-    readTime: "6 min read",
+    tag: "Export Process",
+    title: "What documents are usually needed to export a Toyota Hilux?",
+    desc: "Cover invoice, packing list, bill of lading instructions, export documents, Philippines export paperwork and why destination documents remain buyer-managed.",
   },
   {
-    cat: "Specs",
-    catColor: "#8b1a9e",
-    title: "Toyota Hilux 2.8 GR-S vs 2.8 Conquest — Which Variant Should You Export?",
-    excerpt: "A detailed comparison of the top two Philippines Hilux variants. Engine specs, feature differences, export price range and which buyers each suits.",
-    readTime: "7 min read",
+    tag: "Market Insights",
+    title: "Best Toyota Hilux trims for Africa and the Middle East",
+    desc: "Discuss common buyer preferences, workhorse trims, lifestyle trims, LHD destination requirements, and how destination use-case affects the ideal Philippines spec and trim selection.",
   },
   {
-    cat: "Buyer Guide",
-    catColor: "#155a9d",
-    title: "How to Verify a Philippines-Spec Toyota Hilux Before Export",
-    excerpt: "Steps buyers should confirm — trim, VIN, model year, engine, colour, condition — before committing to a Hilux purchase for export.",
-    readTime: "4 min read",
+    tag: "How It Works",
+    title: "How to buy a Toyota Hilux from our Singapore export office",
+    desc: "Show the buyer journey: enquiry, stock confirmation, quotation, payment terms, lashing, shipping booking and delivery to destination country or port.",
   },
   {
-    cat: "Shipping",
-    catColor: "#d7a44a",
-    title: "Understanding Destination Customs and Import Duties for Toyota Hilux",
-    excerpt: "We ship to the destination port only. This guide helps buyers understand what to expect at the destination country side — duties, registration, compliance.",
-    readTime: "5 min read",
+    tag: "Compliance",
+    title: "Important destination-country responsibilities every buyer must know",
+    desc: "Make your scope clear: customs clearance, taxes, registration, homologation and local compliance remain the buyer's responsibility after arrival.",
   },
 ];
 
 export default function BlogPage() {
   return (
-    <PageLayout>
-      <section className="section-title" aria-label="Blog intro">
-        <div className="wrap">
-          <span className="variant-note-pill">Export Knowledge Base</span>
-          <h1 style={{ marginTop: 12 }}>Toyota Hilux Export — Guides &amp; Insights</h1>
-          <p>
-            Practical guides for international Toyota Hilux buyers. Learn about Philippines-spec variants, export documentation, shipping methods and what to expect at destination.
-          </p>
-        </div>
-      </section>
+    <main>
+      <Nav />
 
-      <section>
+      <section style={{ padding: "80px 0" }} aria-label="Blog section">
         <div className="wrap">
-          <div className="blog-grid">
-            {posts.map((post, i) => (
-              <article key={i} className="blog-card">
-                <div className="blog-thumb" style={{ background: `linear-gradient(135deg, ${post.catColor}22, ${post.catColor}08)`, border: `1px solid ${post.catColor}33` }}>
-                  <span style={{ background: post.catColor, color: "#fff", borderRadius: 999, padding: "4px 12px", fontSize: 11, fontWeight: 800 }}>{post.cat}</span>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <div className="kicker">Blog</div>
+            <h1 style={{ margin: "10px 0 16px", fontSize: "clamp(26px, 4vw, 44px)", color: "var(--navy)" }}>
+              Blog section
+            </h1>
+            <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16, lineHeight: 1.6 }}>
+              Add a real blog to strengthen SEO and educate buyers. These article cards are ready for your developer to convert into dynamic blog pages later.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "28px" }}>
+            {blogArticles.map((article, i) => (
+              <div
+                key={i}
+                className="blog-card"
+                style={{
+                  background: "var(--paper)",
+                  border: "1px solid var(--line)",
+                  borderRadius: 20,
+                  padding: "32px 28px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  boxShadow: "0 8px 24px rgba(7,23,47,0.06)",
+                  transition: "transform 0.2s, box-shadow 0.2s",
+                }}
+              >
+                <div
+                  style={{
+                    background: "rgba(215,164,74,0.15)",
+                    color: "#997330",
+                    border: "1px solid rgba(215,164,74,0.3)",
+                    padding: "4px 12px",
+                    borderRadius: 999,
+                    fontSize: 11,
+                    fontWeight: 800,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                    marginBottom: 20,
+                  }}
+                >
+                  {article.tag}
                 </div>
-                <div className="blog-body">
-                  <h2 style={{ fontSize: 16, margin: "0 0 8px", lineHeight: 1.4, color: "var(--navy)" }}>{post.title}</h2>
-                  <p style={{ color: "var(--muted)", fontSize: 14, lineHeight: 1.6, margin: "0 0 12px" }}>{post.excerpt}</p>
-                  <div style={{ fontSize: 12, color: "var(--muted)", fontWeight: 700 }}>{post.readTime}</div>
-                </div>
-              </article>
+                <h3 style={{ fontSize: 20, fontWeight: 900, color: "var(--navy)", margin: "0 0 16px", lineHeight: 1.4 }}>
+                  {article.title}
+                </h3>
+                <p style={{ fontSize: 15, color: "var(--ink)", margin: "0 0 24px", lineHeight: 1.6, flexGrow: 1 }}>
+                  {article.desc}
+                </p>
+                <a
+                  href="#"
+                  style={{
+                    color: "var(--navy)",
+                    fontSize: 14,
+                    fontWeight: 800,
+                    textDecoration: "none",
+                    borderBottom: "2px solid var(--gold)",
+                    paddingBottom: 2,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
+                  Read article &rarr;
+                </a>
+              </div>
             ))}
           </div>
-
-          <div style={{ textAlign: "center", marginTop: 48 }}>
-            <a className="btn outline" href="/quote">Have a Question? Request a Quote</a>
-          </div>
         </div>
       </section>
-    </PageLayout>
+
+      <Footer />
+    </main>
   );
 }

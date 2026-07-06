@@ -7,9 +7,10 @@ const navLinks = [
   { href: "/trust", label: "Trust & Process" },
   { href: "/specs", label: "Hilux Specs" },
   { href: "/shipping", label: "Shipping" },
+  { href: "/vehicle-carrier", label: "Vehicle Carrier" },
   { href: "/testimonials", label: "Testimonials" },
-  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
+  { href: "/terms", label: "Terms" },
 ];
 
 export default function Nav() {

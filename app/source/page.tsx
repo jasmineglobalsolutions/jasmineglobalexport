@@ -97,13 +97,13 @@ export default function SourcePage() {
       {/* Stats Bar */}
       <section style={{ padding: "40px 0", background: "var(--navy)", borderTop: "1px solid rgba(255,255,255,0.1)", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
         <div className="wrap">
-          <div className="grid-4" style={{ gap: 24, textAlign: "center" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 24, textAlign: "center" }}>
             {[
               { val: "1", label: "Core sourcing market: Philippines" },
               { val: "2", label: "Shipping modes: Container and RoRo" },
               { val: "3", label: "Clear scope: export supply only — no destination clearance or registration" },
             ].map((stat) => (
-              <div key={stat.label}>
+              <div key={stat.label} style={{ flex: "0 1 260px" }}>
                 <div style={{ fontSize: 32, fontWeight: 900, color: "var(--gold)", marginBottom: 8 }}>{stat.val}</div>
                 <div style={{ fontSize: 13, color: "#dcecff", lineHeight: 1.4 }}>{stat.label}</div>
               </div>

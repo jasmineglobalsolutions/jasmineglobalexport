@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SocialIconButtons } from "./SocialIcons";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -134,32 +134,102 @@ export default function Footer() {
 
       </div>
 
-      {/* Floating WhatsApp button */}
-      <a
-        href="https://wa.me/6589874467"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Contact us on WhatsApp"
-        className="floating-wa-btn"
-        style={{
-          position: "fixed",
-          bottom: "24px",
-          left: "24px",
-          width: "60px",
-          height: "60px",
-          backgroundColor: "#25D366",
-          color: "white",
-          borderRadius: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
-          zIndex: 1000,
-          textDecoration: "none"
-        }}
-      >
-        <FaWhatsapp size={32} />
-      </a>
+      {/* ── Floating action buttons (bottom-left stack) ── */}
+      <div style={{
+        position: "fixed",
+        bottom: "24px",
+        left: "16px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
+        zIndex: 1000,
+        alignItems: "flex-start",
+      }}>
+
+        {/* WhatsApp — English */}
+        <a
+          href="https://wa.me/6589874467"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp us in English"
+          className="float-fab float-fab-wa"
+        >
+          <span className="float-fab-icon"><FaWhatsapp size={20} /></span>
+          <span className="float-fab-label">WhatsApp • English</span>
+        </a>
+
+        {/* WhatsApp — Arabic */}
+        <a
+          href="https://wa.me/6581139145"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp us in Arabic"
+          className="float-fab float-fab-wa"
+        >
+          <span className="float-fab-icon"><FaWhatsapp size={20} /></span>
+          <span className="float-fab-label">واتساب • عربي</span>
+        </a>
+
+        {/* Email */}
+        <a
+          href="mailto:admin@jasmineglobalexport.com"
+          aria-label="Email us"
+          className="float-fab float-fab-email"
+        >
+          <span className="float-fab-icon"><FaEnvelope size={18} /></span>
+          <span className="float-fab-label">Email Us</span>
+        </a>
+
+      </div>
+
+      <style>{`
+        .float-fab {
+          display: inline-flex;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 800;
+          letter-spacing: 0.02em;
+          white-space: nowrap;
+          overflow: hidden;
+          box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+          transition: width 0.25s cubic-bezier(0.4,0,0.2,1),
+                      box-shadow 0.2s ease,
+                      transform 0.2s ease;
+          cursor: pointer;
+        }
+        .float-fab:hover {
+          width: 190px;
+          box-shadow: 0 6px 24px rgba(0,0,0,0.36);
+          transform: translateY(-1px);
+        }
+        .float-fab-wa  { background: #25D366; color: #fff; }
+        .float-fab-email { background: #071b35; color: #fff; }
+
+        .float-fab-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 50px;
+          height: 50px;
+        }
+        .float-fab-label {
+          flex-shrink: 0;
+          padding-right: 16px;
+          opacity: 0;
+          transform: translateX(-8px);
+          transition: opacity 0.2s ease 0.08s, transform 0.2s ease 0.08s;
+          pointer-events: none;
+        }
+        .float-fab:hover .float-fab-label {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      `}</style>
     </footer>
   );
 }

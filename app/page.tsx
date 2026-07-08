@@ -61,11 +61,10 @@ export default function Home() {
       {/* Stats */}
       <section aria-label="Key facts">
         <div className="wrap">
-          <div className="stats">
-            <div className="stat"><b>1</b><span>Core sourcing market: Philippines</span></div>
-            <div className="stat"><b>2</b><span>Shipping modes: Container and RoRo</span></div>
-            <div className="stat"><b>190+</b><span>Country-location SEO pages supported</span></div>
-            <div className="stat"><b>1</b><span>Clear scope: export supply only — no destination clearance or registration</span></div>
+          <div className="stats" style={{ justifyContent: "center" }}>
+            <div className="stat" style={{ textAlign: "center" }}><b>1</b><span>Core sourcing market: Philippines</span></div>
+            <div className="stat" style={{ textAlign: "center" }}><b>2</b><span>Shipping modes: Container and RoRo</span></div>
+            <div className="stat" style={{ textAlign: "center" }}><b>3</b><span>Worldwide destination enquiry support</span></div>
           </div>
         </div>
       </section>

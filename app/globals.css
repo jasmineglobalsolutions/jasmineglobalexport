@@ -7,6 +7,19 @@
   transform: scale(1.05);
 }
 
+/* ── Stats grid — centred for 3 items ── */
+.stats {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.stat {
+  flex: 0 1 260px;
+  text-align: center;
+}
+
+
 /* Global base — imports Inter from next/font via CSS variable */
 body {
   font-family: var(--font-inter, Inter, "Segoe UI", Roboto, Arial, sans-serif);

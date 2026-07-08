@@ -90,10 +90,32 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Scope Highlights */}
-      <section style={{ padding: "40px 0", background: "var(--soft)" }}>
+      {/* Important Buyer Notice */}
+      <section style={{ padding: "20px 0 24px", background: "var(--soft)" }}>
         <div className="wrap">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginTop: -80 }}>
+          <div
+            style={{
+              background: "linear-gradient(135deg, #fff7e6 0%, #fffdf7 100%)",
+              border: "2px solid rgba(215,164,74,0.35)",
+              borderRadius: 18,
+              padding: "24px 28px",
+              boxShadow: "0 10px 24px rgba(7,23,47,0.06)",
+            }}
+          >
+            <h2 style={{ fontSize: 20, fontWeight: 900, color: "var(--navy)", margin: "0 0 10px" }}>
+              Important Buyer Notice
+            </h2>
+            <p style={{ fontSize: 15, color: "var(--ink)", margin: 0, lineHeight: 1.7 }}>
+              Jasmine Global HI-Lux Export supplies and coordinates export shipment only. Destination customs clearance, import duties, taxes, registration, local compliance and local delivery are the buyer’s responsibility unless separately agreed in writing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Scope Highlights */}
+      <section style={{ padding: "20px 0 40px", background: "var(--soft)" }}>
+        <div className="wrap">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginTop: -30 }}>
             {[
               {
                 title: "Export supply only",

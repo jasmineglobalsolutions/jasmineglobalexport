@@ -41,6 +41,13 @@ body {
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-4, .trust-grid, .how-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
+.proof-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
 /* Mobile-first responsive breakpoints */
 @media (max-width: 900px) {
   .nav-hamburger {
@@ -145,6 +152,10 @@ body {
   .how-steps, .grid-3, .grid-4, .trust-grid {
     grid-template-columns: 1fr 1fr !important;
   }
+
+  .proof-cards-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -161,6 +172,10 @@ body {
   }
 
   .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .proof-cards-grid {
     grid-template-columns: 1fr !important;
   }
 }

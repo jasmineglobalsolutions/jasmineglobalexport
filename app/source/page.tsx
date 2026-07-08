@@ -101,8 +101,7 @@ export default function SourcePage() {
             {[
               { val: "1", label: "Core sourcing market: Philippines" },
               { val: "2", label: "Shipping modes: Container and RoRo" },
-              { val: "190+", label: "Country-location SEO pages supported" },
-              { val: "1", label: "Clear scope: export supply only — no destination clearance or registration" },
+              { val: "3", label: "Clear scope: export supply only — no destination clearance or registration" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div style={{ fontSize: 32, fontWeight: 900, color: "var(--gold)", marginBottom: 8 }}>{stat.val}</div>
@@ -119,7 +118,7 @@ export default function SourcePage() {
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>How the business works</h2>
             <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16 }}>
-              Keep the customer journey simple, visual and professional. The website should communicate a clean export-only scope from sourcing to international delivery.
+              We keep the buyer journey clear from the first enquiry to shipment. Our role is to source, verify, purchase, prepare and coordinate export shipment of Toyota Hilux units from the Philippines.
             </p>
           </div>
 
@@ -146,13 +145,13 @@ export default function SourcePage() {
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>Built for serious international Hilux buyers</h2>
             <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16 }}>
-              This section adds the trust layer needed for high-value export buyers before they send documents, deposits or purchase funds.
+              Built for serious international buyers who need clear communication, vehicle verification and transparent export scope before sending documents, deposits or purchase funds.
             </p>
           </div>
 
           <div className="grid-2" style={{ gap: 32 }}>
             {[
-              { icon: "🇸🇬", title: "Singapore-based coordination", desc: "Use the Singapore office as the professional contact point for buyer enquiries, quotation, documentation coordination and export communication." },
+              { icon: "🇸🇬", title: "Singapore-based coordination", desc: "Our Singapore office acts as the main coordination point for buyer enquiries, quotation, documentation communication and export updates." },
               { icon: "🔍", title: "Vehicle verification flow", desc: "Before final quotation, confirm photos, trim, year, transmission, engine, condition notes and export eligibility." },
               { icon: "🚢", title: "RoRo & container options", desc: "Guide buyers clearly between port-to-port RoRo and controlled 40HC container loading, depending on route and buyer needs." },
               { icon: "🤝", title: "Multilingual buyer support", desc: "English and Arabic buyers can communicate directly by WhatsApp. Buyers using other languages can still enquire; our team will support the conversation using translation tools and the planned language API." },
@@ -170,7 +169,7 @@ export default function SourcePage() {
           <div style={{ marginTop: 32, padding: 24, background: "rgba(21,90,157,0.06)", border: "1px solid rgba(21,90,157,0.2)", borderRadius: 12, display: "flex", gap: 16, alignItems: "flex-start" }}>
             <div style={{ fontSize: 24 }}>🌐</div>
             <p style={{ margin: 0, fontSize: 14, color: "var(--navy)", lineHeight: 1.6 }}>
-              <strong>Language API ready:</strong> English and Arabic are direct communication channels. Spanish, Italian, French, Portuguese and other left-hand-drive market languages can be supported through the planned website translation API and internal translation workflow.
+              <strong>Language API ready:</strong> English and Arabic support are available through direct WhatsApp communication. Buyers using other languages may also enquire, and our team can assist using translation support where required.
             </p>
           </div>
         </div>
@@ -209,7 +208,7 @@ export default function SourcePage() {
             <div style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 20, padding: 32, boxShadow: "0 12px 40px rgba(7,23,47,0.08)" }}>
               <h3 style={{ fontSize: 18, fontWeight: 900, color: "var(--navy)", margin: "0 0 20px" }}>Evidence your team should upload later</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", display: "flex", flexDirection: "column", gap: 12 }}>
-                {["Vehicle walkaround photos", "Container lashing photos", "Port or yard handover photos", "Buyer collection photos", "Sample export documents", "Customer testimonials"].map((item) => (
+                {["Vehicle walkaround photos", "Container lashing photos", "Port or yard handover photos", "Buyer collection photos", "Sample export documents", "Customer testimonials","Sample export documents with private details hidden","Customer collection proof where buyer approval is given"].map((item) => (
                   <li key={item} style={{ display: "flex", gap: 10, alignItems: "center", fontSize: 15, color: "var(--ink)" }}>
                     <span style={{ color: "var(--gold)" }}>📸</span> {item}
                   </li>

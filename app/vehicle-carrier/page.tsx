@@ -62,7 +62,7 @@ const shippingModes = [
       "Maximum protection from weather, salt air, and physical damage during transit",
       "Professional lashing and securing by our team at the port",
       "Suitable for most worldwide destinations",
-      "Door-to-port or port-to-port service",
+      "Port-to-port export shipment unless another written arrangement is confirmed in the quotation. Destination clearance, local delivery and registration remain the buyer’s responsibility.",
       "Competitive rates for single and multi-unit shipments",
     ],
     desc: "Container shipping is the most widely used method for our Hilux exports. The vehicle is loaded into a standard ISO shipping container, professionally lashed, and sealed for ocean transit. This method provides maximum protection and is accepted at virtually all ports worldwide.",
@@ -140,10 +140,10 @@ export default function VehicleCarrierPage() {
                   fontWeight: 900,
                 }}
               >
-                Vehicle Carrier Transfer — Container &amp; RoRo Shipping
+                Vehicle Carrier Transfer Before Export Shipment
               </h1>
               <p style={{ color: "#94b4d4", fontSize: 16, lineHeight: 1.75, margin: "0 0 32px", maxWidth: 520 }}>
-                From the Philippines port to your destination worldwide. We professionally coordinate vehicle carrier transfer for Toyota Hilux exports via container shipping or Roll-on/Roll-off (RoRo) vessels.
+                Before export shipment, Toyota Hilux units may be moved by professional vehicle carrier from the dealer, yard or holding location to the designated loading area or port. This helps reduce unnecessary road mileage and protects the vehicle condition before container loading or RoRo handover.
               </p>
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
                 <a

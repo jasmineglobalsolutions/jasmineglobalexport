@@ -76,7 +76,7 @@ export default function Home() {
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <h2 style={{ margin: "8px 0 12px" }}>Philippines Hilux export positioning</h2>
             <p style={{ color: "var(--muted)", maxWidth: 700, margin: "0 auto" }}>
-              Position the company as a specialist in Philippines-market spec Toyota Hilux units. The showcase below displays three separate Hilux colour examples in one clean row for export buyers.
+              Jasmine Global HI-Lux Export specialises in sourcing and exporting Philippines-market Toyota Hilux units for international buyers. The showcase below gives buyers a clear view of popular export colour options. Final colour, trim, model year and availability will always be confirmed based on live stock before quotation.
             </p>
           </div>
           <div className="grid-3" style={{ gap: "28px" }}>
@@ -166,7 +166,7 @@ export default function Home() {
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <h2 style={{ margin: "8px 0 12px" }}>How the business works</h2>
             <p style={{ color: "var(--muted)", maxWidth: 560, margin: "0 auto" }}>
-              Keep the customer journey simple, visual and professional. The website should communicate a clean export-only scope from sourcing to international delivery.
+              Our export process is designed to be clear and transparent from enquiry to shipment. Buyers receive confirmation of vehicle details, export scope, shipping method and destination responsibilities before payment and shipment.
             </p>
           </div>
           <div className="how-steps" style={{ display: "grid", gap: "28px" }}>

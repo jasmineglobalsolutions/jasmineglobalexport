@@ -24,10 +24,10 @@ export default function ShippingPage() {
             <div>
               <div className="kicker">Pre-shipment handling</div>
               <h2 style={{ margin: "10px 0 16px", fontSize: "clamp(26px, 4vw, 44px)", color: "var(--navy)" }}>
-                Vehicle carrier transfer
+                Shipping Options: Container or RoRo
               </h2>
               <p style={{ color: "var(--ink)", fontSize: 16, lineHeight: 1.7, margin: 0 }}>
-                All brand-new Toyota Hilux units are transported by professional vehicle carrier to the designated loading area before export shipment. This controlled transfer process helps preserve vehicle condition, minimise unnecessary road exposure, and ensure our customers receive their vehicles in the best possible condition.
+                Jasmine Global HI-Lux Export coordinates international shipment of Toyota Hilux units from the Philippines by container or RoRo, depending on destination route, vehicle quantity, carrier availability and buyer requirements.
               </p>
             </div>
             <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 12px 32px rgba(7,23,47,0.12)" }}>
@@ -76,7 +76,7 @@ export default function ShippingPage() {
               Shipping Options: Container or RoRo
             </h2>
             <p style={{ color: "var(--muted)", maxWidth: 700, margin: "0 auto", fontSize: 16 }}>
-              Use this section to explain the difference clearly. Container shipping is for secured loading inside a container. RoRo shipping is for a driveable Hilux that is driven onto the vessel at the port.
+              Buyers can choose between container shipping and RoRo shipping, subject to route availability. Container shipping is for secured loading inside a container. RoRo shipping is for a driveable Hilux that is driven onto the vessel at the port.
             </p>
           </div>
 
@@ -172,7 +172,7 @@ export default function ShippingPage() {
 
           <div style={{ marginTop: 40, padding: 32, background: "var(--navy)", color: "#fff", borderRadius: 20, textAlign: "center" }}>
             <p style={{ margin: 0, fontSize: 16, fontWeight: 600, lineHeight: 1.6 }}>
-              <strong style={{ color: "var(--gold)" }}>Clear message for customers:</strong> Container shipping gives more controlled loading and lashing. RoRo shipping is simpler when the Hilux is driveable and the route has RoRo vessel availability.
+              <strong style={{ color: "var(--gold)" }}>Clear message for customers:</strong> Container shipping gives more controlled loading and lashing. RoRo shipping may be suitable for single units or routes where drive-on / drive-off vessel service is available. Final shipping method will be confirmed before quotation.
             </p>
           </div>
         </div>

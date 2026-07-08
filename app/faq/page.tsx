@@ -37,8 +37,12 @@ const faqs = [
     a: "No. Website visuals and spec guides are for presentation and marketing. Final quotation should confirm the exact unit, trim, model year, condition, export documents and shipment method.",
   },
   {
-    q: "Which languages should the website support?",
-    a: "The main website language is English. Arabic is available for direct buyer communication. Spanish, Italian, French, Portuguese and other left-hand-drive market languages can be supported through the planned language API and translation workflow.",
+    q: "Which languages do you support?",
+    a: "Our main communication language is English. Arabic support is available through direct WhatsApp communication. Buyers using other languages may also enquire, and our team can assist with translation support where required.",
+  },
+  {
+    q: "Will I receive a proforma invoice before payment?",
+    a: "Yes. A formal proforma invoice or quotation will be issued before payment, showing confirmed vehicle details, export scope, payment terms and buyer responsibilities.",
   },
 ];
 
@@ -56,7 +60,7 @@ export default function FaqPage() {
               Frequently Asked Questions
             </h1>
             <p style={{ color: "var(--muted)", fontSize: 16, lineHeight: 1.6 }}>
-              Below is a strong export-focused FAQ section for the website.
+            Find answers to common questions about Toyota Hilux export, shipping methods, buyer responsibilities, quotations and destination compliance.
             </p>
           </div>
         </div>

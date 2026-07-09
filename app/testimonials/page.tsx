@@ -37,24 +37,24 @@ export default function TestimonialsPage() {
                 tags: ["Name withheld", "Collection proof", "Customer privacy"],
                 photoHint: "Customer with collected Hilux / vehicle handover",
               },
-              {
-                title: "Vehicle Proof",
-                quote: "Vehicle walkaround photos, chassis and engine verification, trim, year and colour confirmation may be shared where available.",
-                tags: ["Walkaround photos", "Chassis check", "Vehicle verification"],
-                photoHint: "Vehicle walkaround and inspection photos",
-              },
-              {
-                title: "Movement Proof",
-                quote: "Yard handover, vehicle carrier loading, port handover, container loading and lashing photos may be shared during the export process.",
-                tags: ["Yard handover", "Carrier loading", "Port movement"],
-                photoHint: "Loading, lashing and port handling photos",
-              },
-              {
-                title: "Document Proof",
-                quote: "Sample proforma invoice, packing list, bill of lading and export document samples may be shared with private details hidden.",
-                tags: ["Invoice sample", "Packing list", "Export documents"],
-                photoHint: "Sample export documents and paperwork",
-              },
+              // {
+              //   title: "Vehicle Proof",
+              //   quote: "Vehicle walkaround photos, chassis and engine verification, trim, year and colour confirmation may be shared where available.",
+              //   tags: ["Walkaround photos", "Chassis check", "Vehicle verification"],
+              //   photoHint: "Vehicle walkaround and inspection photos",
+              // },
+              // {
+              //   title: "Movement Proof",
+              //   quote: "Yard handover, vehicle carrier loading, port handover, container loading and lashing photos may be shared during the export process.",
+              //   tags: ["Yard handover", "Carrier loading", "Port movement"],
+              //   photoHint: "Loading, lashing and port handling photos",
+              // },
+              // {
+              //   title: "Document Proof",
+              //   quote: "Sample proforma invoice, packing list, bill of lading and export document samples may be shared with private details hidden.",
+              //   tags: ["Invoice sample", "Packing list", "Export documents"],
+              //   photoHint: "Sample export documents and paperwork",
+              // },
             ].map((card, i) => (
               <div
                 key={i}

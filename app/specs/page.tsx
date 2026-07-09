@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 // ── Spec modal data keyed by variant grade ───────────────────────────────────
-const hiluxSpecData: Record<string, { title: string; sub: string; boxes: string }> = {
+const hiluxSpecData: Record<string, { title: string; sub: string; boxes: string; carImage?: string }> = {
   grs: {
     title: `2.8 GR-S 4x4 A/T`,
     sub: `Philippines Spec • 4x4 A/T • Top-Spec Sport`,
@@ -45,6 +45,11 @@ const hiluxSpecData: Record<string, { title: string; sub: string; boxes: string 
     title: `2.4 E 4x2 M/T`,
     sub: `Philippines Spec • 4x2 M/T`,
     boxes: `<div class="modal-spec-box"><h4>Dimensions &amp; Capacity</h4><p>Entry/workhorse manual option; final data checked before invoice.</p></div><div class="modal-spec-box"><h4>Engine</h4><p>2.4L diesel, 4-cylinder, 16-valve DOHC variable nozzle turbo (VNT) with air-cooled intercooler.</p></div><div class="modal-spec-box"><h4>Transmission</h4><p>6-speed manual transmission.</p></div><div class="modal-spec-box"><h4>Chassis</h4><p>Ventilated front discs, drum rear brakes; double wishbone / leaf spring rear layout.</p></div><div class="modal-spec-box"><h4>Interior &amp; Function</h4><p>Lowest-cost workhorse positioning for export buyers needing simple, durable supply.</p></div><div class="modal-spec-box"><h4>Safety &amp; Security</h4><p>SRS Airbag – Driver + Passenger + Knee (DR); safety specs checked per final dealer confirmation.</p></div>`,
+  },
+  bev: {
+    title: `Hilux 4x4 BEV`,
+    sub: `Philippines Spec • 4x4 BEV • Battery Electric Vehicle`,
+    boxes: `<div class="modal-spec-box"><div class="spec-icon">📐</div><h4>Dimensions &amp; Capacity</h4><p>Double-cab Hilux body; approx. 5,320 mm length, 1,855 mm width, 1,845 mm height, and 287 mm ground clearance. Final payload and GVW to be confirmed per unit and Toyota release.</p></div><div class="modal-spec-box"><div class="spec-icon">⚡</div><h4>Powertrain</h4><p>Battery Electric Vehicle with dual electric motors, front and rear eAxles, permanent 4x4 / all-wheel drive, and estimated output of 196 PS and 473 Nm torque.</p></div><div class="modal-spec-box"><div class="spec-icon">🔋</div><h4>Battery</h4><p>59.2 kWh lithium-ion battery pack. High-voltage battery details and warranty confirmation should be checked before invoice.</p></div><div class="modal-spec-box"><div class="spec-icon">🔌</div><h4>Range &amp; Charging</h4><p>Up to 315 km NEDC range / around 240 km WLTP. Charging: AC Type 2 and DC CCS2 fast charging. Actual charging time depends on charger type and battery condition.</p></div><div class="modal-spec-box"><div class="spec-icon">🔧</div><h4>Suspension &amp; Steering</h4><p>Double Wishbone front suspension / Leaf Spring Rigid Axle rear. Electric Power Steering.</p></div><div class="modal-spec-box"><div class="spec-icon">🖥️</div><h4>Interior &amp; Technology</h4><p>12.3-inch display audio, wireless Apple CarPlay and Android Auto, 360-degree camera, synthetic leather seating, and 8-way power driver seat.</p></div><div class="modal-spec-box"><div class="spec-icon">🛡️</div><h4>Safety &amp; Security</h4><p>Toyota Safety Sense 3.0 / SRS airbags / driver-assist features. Exact final safety specification subject to confirmed dealer release.</p></div><div class="modal-spec-box"><div class="spec-icon">ℹ️</div><h4>Important EV Information</h4><p>Driving range varies by load, speed, road conditions, terrain, temperature and driving style. Charging compatibility, stock, colour, VIN, warranty, export documents and destination-country charging suitability must be confirmed before proforma invoice.</p></div>`,
   },
 };
 
@@ -242,6 +247,22 @@ const variantCards = [
       { label: "Safety", value: "SRS Airbag Driver + Passenger + Knee DR" },
     ],
   },
+  // 13 — Hilux 4x4 BEV
+  {
+    key: "bev",
+    badge: "Battery Electric",
+    drive: "4x4 BEV",
+    featured: true,
+    img: "/images/hilux bev.jpeg",
+    imgAlt: "Hilux 4x4 BEV – Philippines Battery Electric Vehicle export",
+    title: "Hilux 4x4 BEV",
+    colour: "Electric White",
+    specs: [
+      { label: "Powertrain", value: "Dual Electric Motors, Permanent 4x4 AWD" },
+      { label: "Battery", value: "59.2 kWh Lithium-Ion" },
+      { label: "Range", value: "Up to 315 km NEDC / ~240 km WLTP" },
+    ],
+  },
 ];
 
 // Colour dot map
@@ -249,11 +270,12 @@ const colourDotMap: Record<string, string> = {
   "Emotional Red": "#9b111e",
   "Attitude Black Mica": "#111827",
   "Super White II": "#f0f0ef",
+  "Electric Blue": "#0057b8",
 };
 
 export default function SpecsPage() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalData, setModalData] = useState<{ title: string; sub: string; boxes: string } | null>(null);
+  const [modalData, setModalData] = useState<{ title: string; sub: string; boxes: string; carImage?: string } | null>(null);
 
   const openHiluxSpec = (key: string) => {
     const data = hiluxSpecData[key];
@@ -392,6 +414,15 @@ export default function SpecsPage() {
             </button>
           </div>
           <div className="spec-modal-body">
+            {modalData?.carImage && (
+              <div className="modal-car-image-wrap">
+                <img
+                  src={modalData.carImage}
+                  alt={modalData.title}
+                  className="modal-car-image"
+                />
+              </div>
+            )}
             <div
               className="modal-spec-grid"
               id="specModalGrid"

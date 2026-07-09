@@ -11,7 +11,44 @@ export const metadata: Metadata = {
     canonical: "/shipping",
   },
 };
-
+const processSteps = [
+  {
+    step: "01",
+    icon: "🔍",
+    title: "Vehicle Inspection & Verification",
+    desc: "Every Toyota Hilux is thoroughly inspected before carrier transfer. We verify the chassis number, engine number, trim level, and condition. All units must pass our pre-export checklist.",
+  },
+  {
+    step: "02",
+    icon: "📋",
+    title: "Export Documentation Preparation",
+    desc: "We prepare all required export documents including Commercial Invoice, Packing List, Export Declaration, and arrange the Bill of Lading with the shipping line.",
+  },
+  {
+    step: "03",
+    icon: "🏗️",
+    title: "Professional Vehicle Lashing",
+    desc: "For container shipments, the vehicle is professionally lashed and secured inside the ISO container using certified tie-down straps and wheel chocks to international standards.",
+  },
+  {
+    step: "04",
+    icon: "🚢",
+    title: "Carrier Loading & Departure",
+    desc: "The container or RoRo booking is confirmed with the shipping line. The vehicle is loaded at the Philippines port of origin and the vessel departure is monitored by our team.",
+  },
+  {
+    step: "05",
+    icon: "📍",
+    title: "Transit Tracking",
+    desc: "We provide shipping details including the vessel name, voyage number, and estimated arrival at destination port. You can track your shipment via the shipping line's website.",
+  },
+  {
+    step: "06",
+    icon: "🏁",
+    title: "Arrival at Destination Port",
+    desc: "Upon arrival at your destination port, you or your appointed customs broker will arrange for customs clearance and release of the vehicle. This is the buyer's full responsibility.",
+  },
+];
 export default function ShippingPage() {
   return (
     <main>
@@ -39,6 +76,53 @@ export default function ShippingPage() {
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Steps */}
+      <section style={{ padding: "80px 0", background: "var(--soft)" }} aria-label="Vehicle carrier transfer process">
+        <div className="wrap">
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <div className="kicker">How It Works</div>
+            <h2 style={{ margin: "10px 0 14px" }}>Vehicle Carrier Transfer Process</h2>
+            <p style={{ color: "var(--muted)", maxWidth: 560, margin: "0 auto" }}>
+              From vehicle inspection to arrival at your destination port — a transparent, step-by-step process.
+            </p>
+          </div>
+
+          <div className="grid-3" style={{ gap: "24px" }}>
+            {processSteps.map((step) => (
+              <div
+                key={step.step}
+                style={{
+                  background: "var(--paper)",
+                  border: "1px solid var(--line)",
+                  borderRadius: 18,
+                  padding: "32px 28px",
+                  position: "relative",
+                  boxShadow: "0 8px 24px rgba(7,23,47,0.07)",
+                }}
+              >
+                <div style={{
+                  position: "absolute",
+                  top: 20,
+                  right: 20,
+                  fontWeight: 900,
+                  fontSize: 11,
+                  color: "var(--gold)",
+                  letterSpacing: "0.1em",
+                  background: "rgba(215,164,74,0.1)",
+                  padding: "4px 10px",
+                  borderRadius: 999,
+                }}>
+                  {step.step}
+                </div>
+                <div style={{ fontSize: 36, marginBottom: 16 }}>{step.icon}</div>
+                <h3 style={{ fontSize: 17, fontWeight: 900, color: "var(--navy)", margin: "0 0 12px" }}>{step.title}</h3>
+                <p style={{ fontSize: 14, color: "var(--muted)", margin: 0, lineHeight: 1.7 }}>{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -177,7 +261,56 @@ export default function ShippingPage() {
           </div>
         </div>
       </section>
-
+{/* CTA */}
+      <section
+        style={{
+          padding: "72px 0",
+          background: "linear-gradient(135deg,#071b35 0%,#0d2b55 100%)",
+          color: "#dcecff",
+        }}
+        aria-label="Get a shipping quote"
+      >
+        <div className="wrap" style={{ textAlign: "center" }}>
+          <h2 style={{ fontSize: "clamp(24px, 4vw, 36px)", color: "#fff", margin: "0 0 14px" }}>
+            Ready to Ship Your Toyota Hilux?
+          </h2>
+          <p style={{ color: "#94b4d4", margin: "0 0 32px", maxWidth: 520, marginLeft: "auto", marginRight: "auto", fontSize: 16 }}>
+            Contact us with your destination, vehicle variant and quantity. We will confirm available shipping modes and provide a freight estimate.
+          </p>
+          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+            <a
+              href="/quote"
+              className="btn primary"
+              style={{ background: "linear-gradient(135deg,var(--gold),#ffd778)", color: "#111827" }}
+            >
+              Request Shipping Quote
+            </a>
+            <a
+              href="https://wa.me/6589874467"
+              className="btn wa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp • English
+            </a>
+            <a
+              href="https://wa.me/6581139145"
+              className="btn wa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp • عربي
+            </a>
+            <a
+              href="mailto:admin@jasmineglobalexport.com"
+              className="btn outline"
+              style={{ borderColor: "rgba(255,255,255,0.3)", color: "#dcecff", background: "rgba(255,255,255,0.08)" }}
+            >
+              Email Us
+            </a>
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   );

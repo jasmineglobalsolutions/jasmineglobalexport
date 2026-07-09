@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/source", label: "Philippines Source" },
-  { href: "/trust", label: "Process" },
+  { href: "/procedure", label: "Export Procedure" },
+
   { href: "/specs", label: "Hilux Specs" },
   { href: "/shipping", label: "Shipping" },
-  { href: "/vehicle-carrier", label: "Vehicle Carrier" },
   { href: "/testimonials", label: "Testimonials" },
+    { href: "/blog", label: "Blogs" },
   { href: "/faq", label: "FAQ" },
   { href: "/terms", label: "Terms" },
 ];

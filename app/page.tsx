@@ -141,9 +141,6 @@ export default function Home() {
                 <a href="/shipping" className="btn primary" style={{ background: "linear-gradient(135deg,var(--gold),#ffd778)", color: "#111827" }}>
                   Shipping Details
                 </a>
-                <a href="/vehicle-carrier" className="btn outline" style={{ borderColor: "rgba(255,255,255,0.3)", color: "#dcecff", background: "rgba(255,255,255,0.08)" }}>
-                  Vehicle Carrier Transfer
-                </a>
               </div>
             </div>
             <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 32px 80px rgba(0,0,0,0.4)" }}>

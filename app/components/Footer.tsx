@@ -25,7 +25,7 @@ export default function Footer() {
               Serving 30+ countries with transparent, door-to-port service.
             </p>
             <div className="footer-brand-badges">
-              <span className="footer-badge">🇵🇭 Philippines Source</span>
+              <span className="footer-badge">🇵🇭 Export Procedure</span>
               <span className="footer-badge">🚢 Global Shipping</span>
               <span className="footer-badge">✅ Verified Exporter</span>
             </div>
@@ -39,8 +39,9 @@ export default function Footer() {
             <h3 className="footer-col-title">Quick Links</h3>
             <nav className="footer-nav-links">
               <Link href="/">Home</Link>
+              <Link href="/blog">Blog</Link>
               <Link href="/specs">Hilux Specs &amp; Variants</Link>
-              <Link href="/source">Philippines Source</Link>
+              <Link href="/procedure">Export Procedure</Link>
               <Link href="/shipping">Shipping Options</Link>
               <Link href="/other-makes">Other Makes &amp; Models</Link>
               <Link href="/testimonials">Testimonials</Link>

@@ -5,13 +5,13 @@ import Footer from "../components/Footer";
 export const metadata: Metadata = {
   title: "Export Procedure | Jasmine Global HI-Lux Export",
   description:
-    "We specialise in Philippines-market Toyota Hilux units. Learn how we source, verify, purchase, lash and ship Toyota Hilux worldwide.",
+    "Learn the export procedure we follow to source, verify, purchase, lash and ship Toyota Hilux units from the Philippines.",
   alternates: {
     canonical: "/procedure",
   },
 };
 
-export default function SourcePage() {
+export default function ProcedurePage() {
   return (
     <main>
       <Nav />
@@ -44,10 +44,10 @@ export default function SourcePage() {
                 marginBottom: 20,
               }}
             >
-              Toyota Hilux Export Specialist
+              Toyota Hilux Export Procedure
             </div>
             <h1 style={{ margin: "0 0 16px", fontSize: "clamp(32px, 5vw, 56px)", color: "#fff", lineHeight: 1.1, fontWeight: 900 }}>
-              Specialised in Toyota Hilux Exports
+              The Hilux Export Procedure
             </h1>
             <div
               style={{
@@ -61,10 +61,10 @@ export default function SourcePage() {
                 marginBottom: 24,
               }}
             >
-              Philippines Spec
+              Philippines Procedure
             </div>
             <p style={{ fontSize: 18, color: "#94b4d4", lineHeight: 1.6, margin: "0 0 36px" }}>
-              We source, verify, purchase, lash and ship Toyota Hilux units worldwide by container or RoRo. We deliver to the destination country or port only. <strong style={{ color: "#fff" }}>Destination customs clearance, taxes, registration and local compliance are handled by the buyer.</strong>
+              We follow a clear export procedure for Toyota Hilux units worldwide by container or RoRo. We deliver to the destination country or port only. <strong style={{ color: "#fff" }}>Destination customs clearance, taxes, registration and local compliance are handled by the buyer.</strong>
             </p>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="/specs" className="btn primary" style={{ background: "linear-gradient(135deg,var(--gold),#ffd778)", color: "#111827" }}>
@@ -112,11 +112,11 @@ export default function SourcePage() {
         </div>
       </section>
 
-      {/* How the business works */}
+      {/* How the procedure works */}
       <section style={{ padding: "80px 0", background: "var(--soft)" }}>
         <div className="wrap">
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>How the business works</h2>
+            <h2 style={{ fontSize: "clamp(24px, 3.5vw, 36px)", color: "var(--navy)", margin: "0 0 16px" }}>How the procedure works</h2>
             <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16 }}>
               We keep the buyer journey clear from the first enquiry to shipment. Our role is to source, verify, purchase, prepare and coordinate export shipment of Toyota Hilux units from the Philippines.
             </p>
@@ -208,7 +208,7 @@ export default function SourcePage() {
             <div style={{ background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 20, padding: 32, boxShadow: "0 12px 40px rgba(7,23,47,0.08)" }}>
               <h3 style={{ fontSize: 18, fontWeight: 900, color: "var(--navy)", margin: "0 0 20px" }}>Evidence your team should upload later</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", display: "flex", flexDirection: "column", gap: 12 }}>
-                {["Vehicle walkaround photos", "Container lashing photos", "Port or yard handover photos", "Buyer collection photos", "Sample export documents", "Customer testimonials","Sample export documents with private details hidden","Customer collection proof where buyer approval is given"].map((item) => (
+                {["Vehicle walkaround photos", "Container lashing photos", "Port or yard handover photos", "Buyer collection photos", "Sample export documents", "Customer testimonials", "Sample export documents with private details hidden", "Customer collection proof where buyer approval is given"].map((item) => (
                   <li key={item} style={{ display: "flex", gap: 10, alignItems: "center", fontSize: 15, color: "var(--ink)" }}>
                     <span style={{ color: "var(--gold)" }}>📸</span> {item}
                   </li>

@@ -50,9 +50,13 @@ export default function Home() {
               <strong>Destination customs clearance, taxes, registration and local compliance are handled by the buyer.</strong>
             </p>
 
+            <p style={{ fontSize: 13, color: "#8fa8c4", margin: "0 0 20px", lineHeight: 1.6, fontStyle: "italic" }}>
+              For left-hand-drive destination markets only. Buyers must confirm import eligibility, duty/tax exposure, local registration rules and compliance requirements in their destination country before purchase.
+            </p>
+
             <div className="hero-actions">
-              <a className="btn btn-navy" href="/specs">View Available Specs <span>→</span></a>
-              <a className="btn btn-outline" href="/quote">Request a Quote <span>→</span></a>
+              <a className="btn btn-navy" href="/quote">Request Export Quote <span>→</span></a>
+              <a className="btn btn-outline" href="/specs">View Hilux Variants <span>→</span></a>
             </div>
           </div>
         </div>
@@ -169,8 +173,8 @@ export default function Home() {
             {[
               { step: "1", title: "Source", desc: "Identify available Toyota Hilux units from the Philippines based on live market supply, spec, trim and export eligibility." },
               { step: "2", title: "Verify", desc: "Confirm basic vehicle details, condition, photos, trim, year, transmission, engine type and export paperwork before final quotation." },
-              { step: "3", title: "Buy & Lash", desc: "Secure purchase, prepare unit for export, arrange lashing/stuffing or RoRo booking, and coordinate invoice, packing list and BL details." },
-              { step: "4", title: "Ship", desc: "Ship to the destination country or port only. Buyer handles destination clearance, taxes, registration and all local compliance matters." },
+              { step: "3", title: "Purchase & Prepare", desc: "Secure purchase, prepare unit for export, arrange lashing/stuffing or RoRo booking, and coordinate invoice, packing list and BL details." },
+              { step: "4", title: "Ship to Destination Port", desc: "Ship to the destination port only. Buyer handles destination clearance, taxes, registration and all local compliance matters." },
             ].map((s) => (
               <div key={s.step} style={{ background: "var(--paper)", borderRadius: 16, padding: "28px 24px", border: "1px solid var(--line)", position: "relative" }}>
                 <div style={{ position: "absolute", top: 20, right: 20, fontWeight: 900, fontSize: 11, color: "var(--gold)", letterSpacing: "0.1em" }}>STEP {s.step}</div>
@@ -183,17 +187,26 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section aria-label="Trust signals" style={{ padding: "56px 0", background: "var(--navy)", color: "#dcecff" }}>
+      <section aria-label="Why buyers trust us" style={{ padding: "56px 0", background: "var(--navy)", color: "#dcecff" }}>
         <div className="wrap">
-          <div className="trust-grid" style={{ display: "grid", gap: "32px", textAlign: "center" }}>
+          <div style={{ textAlign: "center", marginBottom: 40 }}>
+            <h2 style={{ color: "#fff", fontSize: "clamp(20px, 3vw, 30px)", margin: "0 0 10px" }}>Why buyers trust us</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
             {[
-              { title: "Singapore-based coordination" },
-              { title: "Vehicle verified" },
-              { title: "Container & RoRo" },
-              { title: "Worldwide delivery" },
+              { icon: "🇸🇬", title: "Singapore-based coordination", desc: "Our Singapore office handles buyer enquiries, quotation, export documentation and communication." },
+              { icon: "🇵🇭", title: "Philippines operations", desc: "Direct access to Philippines-market Toyota Hilux stock, verified before export." },
+              { icon: "✅", title: "Live stock confirmation", desc: "Vehicle trim, colour, year and export eligibility confirmed before quotation — no guessing." },
+              { icon: "📄", title: "Proforma before payment", desc: "A formal proforma invoice is issued before any payment is requested." },
+              { icon: "🚢", title: "Shipping document support", desc: "We prepare commercial invoice, packing list and coordinate bill of lading with the shipping line." },
+              { icon: "🔒", title: "Buyer-scope transparency", desc: "Scope is clear: destination clearance, duties, tax and registration are the buyer's responsibility." },
             ].map((t) => (
-              <div key={t.title}>
-                <div style={{ fontWeight: 900, fontSize: 16, color: "#fff" }}>{t.title}</div>
+              <div key={t.title} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 16, padding: "24px 20px", display: "flex", gap: 14, alignItems: "flex-start" }}>
+                <div style={{ fontSize: 28, lineHeight: 1, flexShrink: 0 }}>{t.icon}</div>
+                <div>
+                  <div style={{ fontWeight: 900, fontSize: 15, color: "#fff", marginBottom: 6 }}>{t.title}</div>
+                  <div style={{ fontSize: 13, color: "#94b4d4", lineHeight: 1.6 }}>{t.desc}</div>
+                </div>
               </div>
             ))}
           </div>

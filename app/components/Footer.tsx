@@ -21,7 +21,7 @@ export default function Footer() {
               style={{ objectFit: "contain", maxHeight: 56 }}
             />
             <p style={{ marginTop: 14 }}>
-              Your trusted partner for Toyota Hilux export sourcing and shipment coordination from the Philippines. We ship to the agreed destination port only; destination clearance, tax, registration and local compliance remain the buyer&apos;s responsibility.
+              Your trusted partner for Toyota Hilux export sourcing and shipment coordination from the Philippines. We arrange export supply and shipment coordination to the agreed destination port only. Destination customs clearance, taxes, registration and local compliance are handled by the buyer.
             </p>
             <div className="footer-brand-badges">
               <span className="footer-badge">🇵🇭 Export Procedure</span>
@@ -43,7 +43,10 @@ export default function Footer() {
               <Link href="/procedure">Export Procedure</Link>
               <Link href="/shipping">Shipping Options</Link>
               <Link href="/other-makes">Other Makes &amp; Models</Link>
+              <Link href="/trust">Buyer Trust &amp; Payment Safety</Link>
               <Link href="/testimonials">Testimonials</Link>
+              <Link href="/about">About Us</Link>
+              <Link href="/contact">Contact</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/quote">Request a Quote</Link>
             </nav>
@@ -126,6 +129,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Jasmine Global Process Solutions OPC. All rights reserved. Jasmine Global HI-Lux Export is a trading/export brand.</p>
           <div className="footer-bottom-links">
             <Link href="/terms">Terms &amp; Conditions</Link>
+            <Link href="/privacy">Privacy Policy</Link>
             <Link href="/faq">FAQ</Link>
             <Link href="/quote">Get a Quote</Link>
           </div>

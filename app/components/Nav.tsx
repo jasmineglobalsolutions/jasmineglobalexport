@@ -4,11 +4,11 @@ import Link from "next/link";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/procedure", label: "Export Procedure" },
-
   { href: "/specs", label: "Hilux Specs" },
   { href: "/shipping", label: "Shipping" },
+  { href: "/other-makes", label: "Other Makes" },
   { href: "/testimonials", label: "Testimonials" },
-    { href: "/blog", label: "Blogs" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/terms", label: "Terms" },
 ];

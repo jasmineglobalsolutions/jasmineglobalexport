@@ -6,7 +6,6 @@ const navLinks = [
   { href: "/procedure", label: "Export Procedure" },
   { href: "/specs", label: "Hilux Specs" },
   { href: "/shipping", label: "Shipping" },
-  { href: "/other-makes", label: "Other Makes" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },

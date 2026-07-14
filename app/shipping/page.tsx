@@ -256,7 +256,7 @@ export default function ShippingPage() {
 
           <div style={{ marginTop: 40, padding: 32, background: "var(--navy)", color: "#fff", borderRadius: 20, textAlign: "center" }}>
             <p style={{ margin: 0, fontSize: 16, fontWeight: 600, lineHeight: 1.6 }}>
-              <strong style={{ color: "var(--gold)" }}>Clear message for customers:</strong> Container shipping gives more controlled loading and lashing. RoRo shipping may be suitable for single units or routes where drive-on / drive-off vessel service is available. Final shipping method will be confirmed before quotation.
+              Container shipping provides more controlled loading and lashing. RoRo may be suitable for single units or routes where drive-on / drive-off vessel service is available. Final method is confirmed before quotation.
             </p>
           </div>
         </div>

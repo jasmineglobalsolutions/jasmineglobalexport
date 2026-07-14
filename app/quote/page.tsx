@@ -38,7 +38,7 @@ export default function QuotePage() {
 
               <label className="field">
                 <span>🏢</span>
-                <input placeholder="Company Name (if applicable)" type="text" name="company" />
+                <input placeholder="Company Name *" type="text" name="company" required />
               </label>
 
               <label className="field">
@@ -136,6 +136,19 @@ export default function QuotePage() {
                   <option value="RoRo Shipping">RoRo Shipping</option>
                   <option value="Container Shipping (40FT)">Container Shipping (40FT)</option>
                   <option value="Not Sure / Please Advise">Not Sure / Please Advise</option>
+                </select>
+              </label>
+
+              <label className="field">
+                <span>📅</span>
+                <select name="timeline">
+                  <option value="">Estimated Timeline / Urgency</option>
+                  <option value="As soon as possible">As soon as possible</option>
+                  <option value="Within 1 month">Within 1 month</option>
+                  <option value="1–3 months">1–3 months</option>
+                  <option value="3–6 months">3–6 months</option>
+                  <option value="6+ months / planning stage">6+ months / planning stage</option>
+                  <option value="Not Sure">Not Sure</option>
                 </select>
               </label>
 

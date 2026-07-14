@@ -21,8 +21,7 @@ export default function Footer() {
               style={{ objectFit: "contain", maxHeight: 56 }}
             />
             <p style={{ marginTop: 14 }}>
-              Your trusted partner for Toyota Hilux exports from the Philippines to the world.
-              Serving 30+ countries with transparent, door-to-port service.
+              Your trusted partner for Toyota Hilux export sourcing and shipment coordination from the Philippines. We ship to the agreed destination port only; destination clearance, tax, registration and local compliance remain the buyer&apos;s responsibility.
             </p>
             <div className="footer-brand-badges">
               <span className="footer-badge">🇵🇭 Export Procedure</span>
@@ -79,9 +78,8 @@ export default function Footer() {
             <h3 className="footer-col-title">Contact &amp; Support</h3>
 
             <div className="footer-languages-list">
-              {["English", "العربية", "Español", "Italiano", "Português"].map((lang) => (
-                <span key={lang} className="footer-lang-pill">{lang}</span>
-              ))}
+              <span className="footer-lang-pill" style={{ fontWeight: 700, color: "#c2d5e8" }}>Languages / Buyer Support:</span>
+              <span className="footer-lang-pill">English &ndash; Arabic &ndash; Spanish &ndash; Italian &ndash; Portuguese</span>
             </div>
 
             <div className="footer-contact-item">
@@ -125,7 +123,7 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Jasmine Global Export Pte. Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Jasmine Global Process Solutions OPC. All rights reserved. Jasmine Global HI-Lux Export is a trading/export brand.</p>
           <div className="footer-bottom-links">
             <Link href="/terms">Terms &amp; Conditions</Link>
             <Link href="/faq">FAQ</Link>

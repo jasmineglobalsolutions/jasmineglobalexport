@@ -16,31 +16,37 @@ const blogArticles = [
     tag: "Buyer Guide",
     title: "Philippines Spec Toyota Hilux Export Guide",
     desc: "A practical buyer guide explaining Philippines-sourced Hilux trims, export checks, shipping options and how to request the right export-ready unit.",
+    href: "/blog/philippines-spec-toyota-hilux-export-guide",
   },
   {
     tag: "Shipping",
     title: "RoRo or Container: Which shipping method is better for Toyota Hilux exports?",
     desc: "Explain when to choose RoRo, when to choose a 40HC container, and how lashing, port handling, route availability and cargo control differ.",
+    href: "/blog/roro-vs-container-shipping-toyota-hilux",
   },
   {
     tag: "Export Process",
     title: "What documents are usually needed to export a Toyota Hilux?",
     desc: "Cover invoice, packing list, bill of lading instructions, export documents, Philippines export paperwork and why destination documents remain buyer-managed.",
+    href: "/blog/toyota-hilux-export-documents",
   },
   {
     tag: "Market Insights",
     title: "Best Toyota Hilux trims for Africa and the Middle East",
     desc: "Discuss common buyer preferences, workhorse trims, lifestyle trims, LHD destination requirements, and how destination use-case affects the ideal Philippines spec and trim selection.",
+    href: "/blog/best-hilux-trims-africa-middle-east",
   },
   {
     tag: "How It Works",
     title: "How to buy a Toyota Hilux from our Singapore export office",
     desc: "Show the buyer journey: enquiry, stock confirmation, quotation, payment terms, lashing, shipping booking and delivery to destination country or port.",
+    href: "/blog/how-to-buy-toyota-hilux-from-singapore-export-office",
   },
   {
     tag: "Compliance",
     title: "Important destination-country responsibilities every buyer must know",
     desc: "Make your scope clear: customs clearance, taxes, registration, homologation and local compliance remain the buyer's responsibility after arrival.",
+    href: "/blog/buyer-responsibilities-after-vehicle-arrival",
   },
 ];
 
@@ -52,12 +58,12 @@ export default function BlogPage() {
       <section style={{ padding: "80px 0" }} aria-label="Blog section">
         <div className="wrap">
           <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <div className="kicker">Blog</div>
+            <div className="kicker">Export Guides</div>
             <h1 style={{ margin: "10px 0 16px", fontSize: "clamp(26px, 4vw, 44px)", color: "var(--navy)" }}>
-              Blog section
+              Toyota Hilux Export Guides
             </h1>
             <p style={{ color: "var(--muted)", maxWidth: 640, margin: "0 auto", fontSize: 16, lineHeight: 1.6 }}>
-              Add a real blog to strengthen SEO and educate buyers. These article cards are ready for your developer to convert into dynamic blog pages later.
+              Read practical buyer guides about Philippines-spec Toyota Hilux sourcing, export documentation, container and RoRo shipping, and destination-country responsibilities.
             </p>
           </div>
 
@@ -101,7 +107,7 @@ export default function BlogPage() {
                   {article.desc}
                 </p>
                 <a
-                  href="#"
+                  href={article.href}
                   style={{
                     color: "var(--navy)",
                     fontSize: 14,

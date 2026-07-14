@@ -12,17 +12,17 @@ const hiluxSpecData: Record<string, { title: string; sub: string; boxes: string;
     boxes: `<div class="modal-spec-box"><h4>Dimensions &amp; Capacity</h4><p>Double-cab Hilux body; final dimensions, payload and GVW to be confirmed per unit and Toyota dealer release.</p></div><div class="modal-spec-box"><h4>Engine</h4><p>2.8L diesel, 4-cylinder, 16-valve DOHC variable nozzle turbo (VNT) with air-cooled intercooler.</p></div><div class="modal-spec-box"><h4>Transmission</h4><p>6-speed automatic transmission; 4x4 drivetrain with multi-terrain select.</p></div><div class="modal-spec-box"><h4>Suspension</h4><p>Double Wishbone + Monotube Shock Absorber (front) / Leaf Spring Rigid Axle + Monotube (rear).</p></div><div class="modal-spec-box"><h4>Steering</h4><p>Power Steering + Variable Flow Control.</p></div><div class="modal-spec-box"><h4>Exterior</h4><p>GR-S sport styling, black/red accent trim, alloy wheels and premium exterior positioning.</p></div><div class="modal-spec-box"><h4>Interior &amp; Function</h4><p>Premium cabin for showroom-grade export buyers; exact seat, audio and convenience items confirmed per VIN.</p></div><div class="modal-spec-box"><h4>Safety &amp; Security</h4><p>Toyota Safety Sense / SRS airbags; full safety spec subject to confirmed Philippines dealer release.</p></div>`,
   },
   conquest28at: {
-    title: `2.8 CONQUEST 4x4 A/T`,
+    title: `2.8 Conquest 4x4 A/T`,
     sub: `Philippines Spec • 4x4 A/T`,
     boxes: `<div class="modal-spec-box"><h4>Dimensions &amp; Capacity</h4><p>Premium double-cab 4x4 export option; dimensions/capacity confirmed per final unit.</p></div><div class="modal-spec-box"><h4>Engine</h4><p>2.8L diesel, 4-cylinder, 16-valve DOHC variable nozzle turbo (VNT) with air-cooled intercooler.</p></div><div class="modal-spec-box"><h4>Transmission</h4><p>6-speed automatic transmission.</p></div><div class="modal-spec-box"><h4>Chassis</h4><p>Double wishbone front suspension, leaf spring rigid axle rear suspension.</p></div><div class="modal-spec-box"><h4>Brakes</h4><p>ABS with Brake Assist + EBD.</p></div><div class="modal-spec-box"><h4>Exterior</h4><p>Conquest styling; sports bar / overfender look depending on confirmed unit.</p></div><div class="modal-spec-box"><h4>Safety &amp; Security</h4><p>SRS airbag, ABS with Brake Assist + EBD depending on confirmed variant.</p></div>`,
   },
   conquest28mt: {
-    title: `2.8 CONQUEST 4x4 M/T`,
+    title: `2.8 Conquest 4x4 M/T`,
     sub: `Philippines Spec • 4x4 M/T`,
     boxes: `<div class="modal-spec-box"><h4>Dimensions &amp; Capacity</h4><p>Manual premium 4x4 double-cab option; final data confirmed per VIN.</p></div><div class="modal-spec-box"><h4>Engine</h4><p>2.8L diesel, 4-cylinder, 16-valve DOHC variable nozzle turbo (VNT) with air-cooled intercooler.</p></div><div class="modal-spec-box"><h4>Transmission</h4><p>6-speed manual transmission with iMT (intelligent Manual Transmission).</p></div><div class="modal-spec-box"><h4>Chassis</h4><p>Double wishbone front suspension, leaf spring rigid axle rear suspension.</p></div><div class="modal-spec-box"><h4>Brakes</h4><p>ABS with Brake Assist + EBD.</p></div><div class="modal-spec-box"><h4>Exterior</h4><p>Conquest exterior trim for buyers who prefer manual 4x4.</p></div><div class="modal-spec-box"><h4>Safety &amp; Security</h4><p>ABS with Brake Assist + EBD; SRS items confirmed against dealer release.</p></div>`,
   },
   conquest24at: {
-    title: `2.4 CONQUEST 4x2 A/T`,
+    title: `2.4 Conquest 4x2 A/T`,
     sub: `Philippines Spec • 4x2 A/T`,
     boxes: `<div class="modal-spec-box"><h4>Dimensions &amp; Capacity</h4><p>Premium 4x2 double-cab option; capacity and dimension data confirmed before quotation.</p></div><div class="modal-spec-box"><h4>Engine</h4><p>2.4L diesel, 4-cylinder, 16-valve DOHC variable nozzle turbo (VNT) with air-cooled intercooler.</p></div><div class="modal-spec-box"><h4>Transmission</h4><p>6-speed automatic transmission.</p></div><div class="modal-spec-box"><h4>Chassis</h4><p>Ventilated front discs and rear drum type brakes; double wishbone / leaf spring layout.</p></div><div class="modal-spec-box"><h4>Exterior</h4><p>Conquest 4x2 styling with premium appearance at lower entry cost than 4x4.</p></div><div class="modal-spec-box"><h4>Safety &amp; Security</h4><p>SRS Airbag – Driver + Passenger + Knee (DR); safety items confirmed against live dealer specification.</p></div>`,
   },
@@ -95,7 +95,7 @@ const variantCards = [
     featured: false,
     img: "/images/extracted-11-red-toyota-hilux-philippines-export-unit-at-port.jpg",
     imgAlt: "2.8 Conquest 4x4 A/T Emotional Red – Philippines export",
-    title: "2.8 CONQUEST 4x4 A/T",
+    title: "2.8 Conquest 4x4 A/T",
     colour: "Emotional Red",
     specs: [
       { label: "Engine", value: "2.8L Diesel DOHC VNT with intercooler" },
@@ -111,7 +111,7 @@ const variantCards = [
     featured: false,
     img: "/images/extracted-2-white-philippines-spec-toyota-hilux-at-port.jpg",
     imgAlt: "2.8 Conquest 4x4 A/T Super White II – Philippines export",
-    title: "2.8 CONQUEST 4x4 A/T",
+    title: "2.8 Conquest 4x4 A/T",
     colour: "Super White II",
     specs: [
       { label: "Engine", value: "2.8L Diesel DOHC VNT with intercooler" },
@@ -127,7 +127,7 @@ const variantCards = [
     featured: false,
     img: "/images/extracted-8-red-toyota-hilux-philippines-export-unit-at-port.jpg",
     imgAlt: "2.8 Conquest 4x4 M/T Emotional Red – Philippines export",
-    title: "2.8 CONQUEST 4x4 M/T",
+    title: "2.8 Conquest 4x4 M/T",
     colour: "Emotional Red",
     specs: [
       { label: "Engine", value: "2.8L Diesel DOHC VNT with intercooler" },
@@ -143,7 +143,7 @@ const variantCards = [
     featured: false,
     img: "/images/extracted-5-white-toyota-hilux-philippines-export-unit-at-port.jpg",
     imgAlt: "2.8 Conquest 4x4 M/T Super White II – Philippines export",
-    title: "2.8 CONQUEST 4x4 M/T",
+    title: "2.8 Conquest 4x4 M/T",
     colour: "Super White II",
     specs: [
       { label: "Engine", value: "2.8L Diesel DOHC VNT with intercooler" },
@@ -159,7 +159,7 @@ const variantCards = [
     featured: false,
     img: "/images/extracted-4-red-philippines-spec-toyota-hilux-at-port.jpg",
     imgAlt: "2.4 Conquest 4x2 A/T Emotional Red – Philippines export",
-    title: "2.4 CONQUEST 4x2 A/T",
+    title: "2.4 Conquest 4x2 A/T",
     colour: "Emotional Red",
     specs: [
       { label: "Engine", value: "2.4L Diesel DOHC VNT with intercooler" },
@@ -175,7 +175,7 @@ const variantCards = [
     featured: false,
     img: "/images/extracted-9-white-toyota-hilux-philippines-export-unit-at-port.jpg",
     imgAlt: "2.4 Conquest 4x2 A/T Super White II – Philippines export",
-    title: "2.4 CONQUEST 4x2 A/T",
+    title: "2.4 Conquest 4x2 A/T",
     colour: "Super White II",
     specs: [
       { label: "Engine", value: "2.4L Diesel DOHC VNT with intercooler" },
@@ -313,9 +313,8 @@ export default function SpecsPage() {
                   <span className="variant-note-pill">Philippines Variant Guide</span>
                   <h2>Choose your Hilux variant</h2>
                   <p>
-                    All 12 Philippines-market Hilux variant and colour combinations available for export.
-                    Pricing is not displayed — click <b>FULL SPECS</b> for detailed specifications,
-                    then request a live export quote.
+                    Browse the main Philippines-market Toyota Hilux variants available for export.
+                    Colours, model year, trim and availability are subject to live stock confirmation before quotation.
                   </p>
                 </div>
                 <a className="btn dark" href="/quote">

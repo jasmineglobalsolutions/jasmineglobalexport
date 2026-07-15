@@ -18,19 +18,16 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <section className="hero">
+        <section className="hero">
         <div className="hero-visual" aria-hidden="true">
           <Image
-            src="/images/hero.png"
-            alt="Three Toyota Hilux variants — Base, Conquest and GR-S — lined up for export"
+            src="/images/hero-bev.jpeg"
+            alt="Toyota Hilux BEV — Philippines-spec export unit ready for shipment"
             width={1600}
             height={640}
             priority
+            className="hero-image-desktop"
             style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              objectPosition: "right center",
               filter: "saturate(1.04) contrast(1.02) brightness(1.01)"
             }}
           />

@@ -101,14 +101,14 @@ export default function QuotePage() {
                 <span>🚙</span>
                 <select name="hilux_variant">
                   <option value="">Preferred Hilux Variant</option>
-                  <option value="2.8 GR-S 4x4 A/T">2.8 GR-S 4×4 A/T</option>
+                  <option value="Hilux 4x4 BEV">Hilux 4×4 BEV (Battery Electric)</option>
                   <option value="2.8 Conquest 4x4 A/T">2.8 Conquest 4×4 A/T</option>
-                  <option value="2.8 Conquest 4x4 M/T">2.8 Conquest 4×4 M/T</option>
-                  <option value="2.4 Conquest 4x2 A/T">2.4 Conquest 4×2 A/T</option>
-                  <option value="2.4 G 4x2 A/T">2.4 G 4×2 A/T</option>
-                  <option value="2.4 G 4x2 M/T">2.4 G 4×2 M/T</option>
-                  <option value="2.4 E 4x2 A/T">2.4 E 4×2 A/T</option>
-                  <option value="2.4 E 4x2 M/T">2.4 E 4×2 M/T</option>
+                  <option value="2.8 V 4x4 M/T">2.8 V 4×4 M/T</option>
+                  <option value="2.8 Conquest 4x2 A/T">2.8 Conquest 4×2 A/T</option>
+                  <option value="2.8 G 4x2 A/T">2.8 G 4×2 A/T</option>
+                  <option value="2.8 G 4x2 M/T">2.8 G 4×2 M/T</option>
+                  <option value="2.8 E 4x4 M/T">2.8 E 4×4 M/T</option>
+                  <option value="2.8 E 4x2 A/T">2.8 E 4×2 A/T</option>
                   <option value="Not Sure / Please Advise">Not Sure / Please Advise</option>
                 </select>
               </label>

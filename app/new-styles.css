@@ -50,11 +50,30 @@
     .hero-visual img {
       width: 100%;
       height: 100%;
-      /* contain = never crop the image → all 3 trucks always visible */
-      object-fit: contain;
-      /* Anchor image to the right so trucks stay right, white space left */
+      object-fit: cover;
       object-position: right center;
       filter: saturate(1.04) contrast(1.02) brightness(1.01);
+    }
+
+    /* Desktop: image occupies the right 80%, leaves room for text overlay */
+    .hero-image-desktop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+    }
+
+    /* Mobile: full-width, no crop */
+    @media (max-width: 900px) {
+      .hero-image-desktop {
+        position: static;
+        width: 100% !important;
+        height: 100% !important;
+        object-position: center center !important;
+      }
     }
 
     /*

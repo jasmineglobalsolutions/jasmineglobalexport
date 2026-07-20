@@ -16,7 +16,7 @@ export default function AboutPage() {
           <span className="variant-note-pill">About Us</span>
           <h1 style={{ marginTop: 12 }}>About Jasmine Global HI-Lux Export</h1>
           <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
-            Jasmine Global HI-Lux Export is a Toyota Hilux export specialist. We source, verify, purchase and ship Philippines-spec Toyota Hilux units to international buyers via container or RoRo shipping. Our coordination is based in Singapore, with direct operations at Subic Bay Freeport Zone, Philippines.
+            Jasmine Global HI-Lux Export is the dedicated vehicle export division of Jasmine Global Process Solutions. We specialise in sourcing, verifying, preparing and exporting Philippines-spec Toyota Hilux vehicles to approved international markets.
           </p>
         </div>
       </section>

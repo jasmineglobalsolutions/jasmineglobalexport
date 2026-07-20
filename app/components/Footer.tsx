@@ -80,11 +80,6 @@ export default function Footer() {
           <div className="footer-col">
             <h3 className="footer-col-title">Contact &amp; Support</h3>
 
-            <div className="footer-languages-list">
-              <span className="footer-lang-pill" style={{ fontWeight: 700, color: "#c2d5e8" }}>Languages / Buyer Support:</span>
-              <span className="footer-lang-pill">English &ndash; Arabic &ndash; Spanish &ndash; Italian &ndash; Portuguese</span>
-            </div>
-
             <div className="footer-contact-item">
               <span className="footer-contact-icon">✉</span>
               <a href="mailto:admin@jasmineglobalexport.com">
@@ -108,6 +103,11 @@ export default function Footer() {
               <a href="https://wa.me/6581139145" target="_blank" rel="noopener noreferrer">
                 WhatsApp (عربي)
               </a>
+            </div>
+
+            <div className="footer-languages-list" style={{ marginTop: 24 }}>
+              <span className="footer-lang-pill" style={{ fontWeight: 700, color: "#c2d5e8" }}>Languages / Buyer Support:</span>
+              <span className="footer-lang-pill">English &ndash; Arabic &ndash; Spanish &ndash; Italian &ndash; Portuguese</span>
             </div>
 
             <div className="footer-scope-box">

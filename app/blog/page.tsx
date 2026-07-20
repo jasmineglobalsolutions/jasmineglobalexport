@@ -13,40 +13,40 @@ export const metadata: Metadata = {
 
 const blogArticles = [
   {
-    tag: "Buyer Guide",
-    title: "Philippines Spec Toyota Hilux Export Guide",
-    desc: "A practical buyer guide explaining Philippines-sourced Hilux trims, export checks, shipping options and how to request the right export-ready unit.",
-    href: "/blog/philippines-spec-toyota-hilux-export-guide",
-  },
-  {
     tag: "Shipping",
-    title: "RoRo or Container: Which shipping method is better for Toyota Hilux exports?",
-    desc: "Explain when to choose RoRo, when to choose a 40HC container, and how lashing, port handling, route availability and cargo control differ.",
+    title: "RoRo or Container",
+    desc: "Compare RoRo and 40HC container shipping, including loading protection, route availability, port handling and the most suitable option for single or multiple Hilux units.",
     href: "/blog/roro-vs-container-shipping-toyota-hilux",
   },
   {
     tag: "Export Process",
-    title: "What documents are usually needed to export a Toyota Hilux?",
-    desc: "Cover invoice, packing list, bill of lading instructions, export documents, Philippines export paperwork and why destination documents remain buyer-managed.",
+    title: "Export Documents",
+    desc: "Understand the commercial invoice, packing list, bill of lading and other documents commonly required when exporting a Toyota Hilux from the Philippines.",
     href: "/blog/toyota-hilux-export-documents",
   },
   {
     tag: "Market Insights",
-    title: "Best Toyota Hilux trims for Africa and the Middle East",
-    desc: "Discuss common buyer preferences, workhorse trims, lifestyle trims, LHD destination requirements, and how destination use-case affects the ideal Philippines spec and trim selection.",
+    title: "Best Hilux Trims",
+    desc: "Compare popular workhorse and lifestyle Hilux variants for approved left-hand-drive markets in Africa and the Middle East.",
     href: "/blog/best-hilux-trims-africa-middle-east",
   },
   {
     tag: "How It Works",
-    title: "How to buy a Toyota Hilux from our Singapore export office",
-    desc: "Show the buyer journey: enquiry, stock confirmation, quotation, payment terms, lashing, shipping booking and delivery to destination country or port.",
+    title: "How to Buy",
+    desc: "Follow the buyer journey from enquiry and live-stock confirmation to proforma invoice, payment, loading, shipping and destination-port arrival.",
     href: "/blog/how-to-buy-toyota-hilux-from-singapore-export-office",
   },
   {
     tag: "Compliance",
-    title: "Important destination-country responsibilities every buyer must know",
-    desc: "Make your scope clear: customs clearance, taxes, registration, homologation and local compliance remain the buyer's responsibility after arrival.",
+    title: "Buyer Responsibilities",
+    desc: "Understand the customs clearance, duties, taxes, registration, homologation and local compliance requirements that remain the buyer’s responsibility.",
     href: "/blog/buyer-responsibilities-after-vehicle-arrival",
+  },
+  {
+    tag: "Buyer Guide",
+    title: "Philippines-Spec Guide",
+    desc: "A practical guide to Philippines-sourced Hilux variants, export checks, shipping options and selecting the right export-ready unit.",
+    href: "/blog/philippines-spec-toyota-hilux-export-guide",
   },
 ];
 

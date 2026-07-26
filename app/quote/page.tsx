@@ -12,12 +12,17 @@ export default function QuotePage() {
   const [hiluxVariant, setHiluxVariant] = useState<string>("");
   const [otherMake, setOtherMake] = useState<string>("");
   const [otherModel, setOtherModel] = useState<string>("");
+  const [shippingMethod, setShippingMethod] = useState<string>("");
+  const [otherShippingMethod, setOtherShippingMethod] = useState<string>("");
   const [vehicleError, setVehicleError] = useState<string>("");
   const [buyerTypeError, setBuyerTypeError] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const requiresCompany = COMPANY_BUYER_TYPES.includes(buyerType);
 
-  function validateAndSubmit(e: FormEvent<HTMLFormElement>) {
+  async function validateAndSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     let valid = true;
@@ -31,7 +36,7 @@ export default function QuotePage() {
     }
 
     // At least a Hilux variant or an Other Make + Model must be provided
-    const hasHilux = hiluxVariant !== "";
+    const hasHilux = hiluxVariant !== "" && hiluxVariant !== "Other Variant";
     const hasOther = otherMake.trim() !== "" || otherModel.trim() !== "";
     if (!hasHilux && !hasOther) {
       setVehicleError(
@@ -44,8 +49,41 @@ export default function QuotePage() {
 
     if (!valid) return;
 
-    // Native form submission (adjust action/method as needed for your back-end)
-    (e.target as HTMLFormElement).submit();
+    setIsSubmitting(true);
+    setSubmitError("");
+    setSubmitSuccess(false);
+
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/v1/leads/quote`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to submit quote request. Please try again.");
+      }
+
+      setSubmitSuccess(true);
+      form.reset();
+      setBuyerType("");
+      setHiluxVariant("");
+      setOtherMake("");
+      setOtherModel("");
+      setShippingMethod("");
+      setOtherShippingMethod("");
+    } catch (err: any) {
+      setSubmitError(err.message || "An error occurred while submitting.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -66,13 +104,22 @@ export default function QuotePage() {
       <section>
         <div className="wrap">
           <div className="quote-box">
-            <form
+              <form
               className="quote-grid"
               onSubmit={validateAndSubmit}
-              method="post"
-              action="/api/quote"
               noValidate
             >
+
+              {submitSuccess && (
+                <div className="full" style={{ padding: "16px", background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: "12px", color: "#166534", marginBottom: "16px", fontWeight: "600" }}>
+                  ✅ Your quote request has been successfully submitted! We will get back to you shortly.
+                </div>
+              )}
+              {submitError && (
+                <div className="full" style={{ padding: "16px", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "12px", color: "#991b1b", marginBottom: "16px", fontWeight: "600" }}>
+                  ❌ {submitError}
+                </div>
+              )}
 
               {/* ── SECTION: Contact Details ── */}
               <div className="full quote-section-label">
@@ -170,7 +217,7 @@ export default function QuotePage() {
                     <label className="buyer-type-option" key={value}>
                       <input
                         type="radio"
-                        name="buyer_type"
+                        name="buyerType"
                         value={value}
                         checked={buyerType === value}
                         onChange={() => {
@@ -202,7 +249,7 @@ export default function QuotePage() {
                 <span className="field-input-row">
                   <span className="field-icon">🚙</span>
                   <select
-                    name="hilux_variant"
+                    name="hiluxVariant"
                     value={hiluxVariant}
                     onChange={(e) => {
                       setHiluxVariant(e.target.value);
@@ -218,7 +265,7 @@ export default function QuotePage() {
                     <option value="2.8 G 4x2 M/T">2.8 G 4×2 M/T</option>
                     <option value="2.8 E 4x4 M/T">2.8 E 4×4 M/T</option>
                     <option value="2.8 E 4x2 A/T">2.8 E 4×2 A/T</option>
-                    <option value="Not Sure / Please Advise">Not Sure / Please Advise</option>
+                    <option value="Other Variant">Other Variant</option>
                   </select>
                 </span>
               </label>
@@ -228,7 +275,7 @@ export default function QuotePage() {
                 <span className="field-label">Preferred Colour</span>
                 <span className="field-input-row">
                   <span className="field-icon">🎨</span>
-                  <select name="preferred_colour">
+                  <select name="preferredColour">
                     <option value="">— Select a colour —</option>
                     <option value="White Pearl">White Pearl</option>
                     <option value="Phantom Matte Black">Phantom Matte Black</option>
@@ -248,14 +295,31 @@ export default function QuotePage() {
                 <span className="field-label">Preferred Shipping Method</span>
                 <span className="field-input-row">
                   <span className="field-icon">🚢</span>
-                  <select name="shipping_method">
+                  <select name="shippingMethod" value={shippingMethod} onChange={(e) => setShippingMethod(e.target.value)}>
                     <option value="">— Select a method —</option>
                     <option value="RoRo Shipping">RoRo Shipping</option>
                     <option value="Container Shipping (40FT)">Container Shipping (40FT)</option>
-                    <option value="Not Sure / Please Advise">Not Sure / Please Advise</option>
+                    <option value="Other shipping method">Other shipping method</option>
                   </select>
                 </span>
               </label>
+
+              {shippingMethod === "Other shipping method" && (
+                <label className="field field-stacked">
+                  <span className="field-label">Please specify shipping method <span className="req">*</span></span>
+                  <span className="field-input-row">
+                    <span className="field-icon">✏️</span>
+                    <input
+                      placeholder="e.g. Air Freight..."
+                      type="text"
+                      name="otherShippingMethod"
+                      value={otherShippingMethod}
+                      onChange={(e) => setOtherShippingMethod(e.target.value)}
+                      required
+                    />
+                  </span>
+                </label>
+              )}
 
               {/* Timeline */}
               <label className="field field-stacked">
@@ -283,14 +347,6 @@ export default function QuotePage() {
                 </span>
               </label>
 
-              {/* ── Other Make & Model Request ── */}
-              <div className="full quote-section-label" style={{ marginTop: 4 }}>
-                <span>🔍</span> Other Make &amp; Model Request{" "}
-                <span style={{ fontWeight: 600, fontSize: 13, color: "#728196" }}>
-                  (if not requesting a Hilux)
-                </span>
-              </div>
-
               {/* Vehicle error banner */}
               {vehicleError && (
                 <div className="full">
@@ -300,41 +356,53 @@ export default function QuotePage() {
                 </div>
               )}
 
-              {/* Other Make */}
-              <label className="field field-stacked">
-                <span className="field-label">Other Make</span>
-                <span className="field-input-row">
-                  <span className="field-icon">🚗</span>
-                  <input
-                    placeholder="e.g. Mitsubishi, Ford, Isuzu…"
-                    type="text"
-                    name="other_make"
-                    value={otherMake}
-                    onChange={(e) => {
-                      setOtherMake(e.target.value);
-                      setVehicleError("");
-                    }}
-                  />
-                </span>
-              </label>
+              {hiluxVariant === "Other Variant" && (
+                <>
+                  {/* ── Other Make & Model Request ── */}
+                  <div className="full quote-section-label" style={{ marginTop: 4 }}>
+                    <span>🔍</span> Other Make &amp; Model Request{" "}
+                    <span style={{ fontWeight: 600, fontSize: 13, color: "#728196" }}>
+                      (if not requesting a Hilux)
+                    </span>
+                  </div>
 
-              {/* Other Model */}
-              <label className="field field-stacked">
-                <span className="field-label">Other Model</span>
-                <span className="field-input-row">
-                  <span className="field-icon">📋</span>
-                  <input
-                    placeholder="e.g. Strada, Ranger, D-Max…"
-                    type="text"
-                    name="other_model"
-                    value={otherModel}
-                    onChange={(e) => {
-                      setOtherModel(e.target.value);
-                      setVehicleError("");
-                    }}
-                  />
-                </span>
-              </label>
+                  {/* Other Make */}
+                  <label className="field field-stacked">
+                    <span className="field-label">Other Make</span>
+                    <span className="field-input-row">
+                      <span className="field-icon">🚗</span>
+                      <input
+                        placeholder="e.g. Mitsubishi, Ford, Isuzu…"
+                        type="text"
+                        name="otherMake"
+                        value={otherMake}
+                        onChange={(e) => {
+                          setOtherMake(e.target.value);
+                          setVehicleError("");
+                        }}
+                      />
+                    </span>
+                  </label>
+
+                  {/* Other Model */}
+                  <label className="field field-stacked">
+                    <span className="field-label">Other Model</span>
+                    <span className="field-input-row">
+                      <span className="field-icon">📋</span>
+                      <input
+                        placeholder="e.g. Strada, Ranger, D-Max…"
+                        type="text"
+                        name="otherModel"
+                        value={otherModel}
+                        onChange={(e) => {
+                          setOtherModel(e.target.value);
+                          setVehicleError("");
+                        }}
+                      />
+                    </span>
+                  </label>
+                </>
+              )}
 
               {/* ── Message Box ── */}
               <div className="full quote-section-label">
@@ -358,7 +426,7 @@ export default function QuotePage() {
                 <label className="responsibility-check">
                   <input
                     type="checkbox"
-                    name="responsibility_agreed"
+                    name="responsibilityAgreed"
                     required
                     id="responsibility_agreed"
                   />
@@ -399,8 +467,8 @@ export default function QuotePage() {
                   marginTop: "8px",
                 }}
               >
-                <button className="btn dark" type="submit" id="submit-enquiry-btn">
-                  Submit Enquiry
+                <button className="btn dark" type="submit" id="submit-enquiry-btn" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit Enquiry"}
                 </button>
                 <a
                   className="btn wa"

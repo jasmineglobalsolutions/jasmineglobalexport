@@ -127,12 +127,14 @@
       align-items:center !important;
     }
     .nav-links-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
       gap:8px 16px;
       font-size:13px;
       font-weight:700;
-      text-align:right;
+      text-align:center;
     }
     .nav-actions{
       display:flex;

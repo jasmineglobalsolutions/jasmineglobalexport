@@ -3,6 +3,8 @@
 import PageLayout from "../components/PageLayout";
 import Link from "next/link";
 import { useState, FormEvent } from "react";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 // Buyer types that require a company name
 const COMPANY_BUYER_TYPES = ["Dealer", "Company", "Broker", "Fleet Buyer"];
@@ -14,6 +16,7 @@ export default function QuotePage() {
   const [otherModel, setOtherModel] = useState<string>("");
   const [shippingMethod, setShippingMethod] = useState<string>("");
   const [otherShippingMethod, setOtherShippingMethod] = useState<string>("");
+  const [whatsapp, setWhatsapp] = useState<string | undefined>("");
   const [vehicleError, setVehicleError] = useState<string>("");
   const [buyerTypeError, setBuyerTypeError] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,7 +59,11 @@ export default function QuotePage() {
     try {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
-      const payload = Object.fromEntries(formData.entries());
+      const payload = { 
+        ...Object.fromEntries(formData.entries()), 
+        source: "Website",
+        whatsapp 
+      };
 
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const res = await fetch(`${apiUrl}/api/v1/leads/quote`, {
@@ -79,6 +86,7 @@ export default function QuotePage() {
       setOtherModel("");
       setShippingMethod("");
       setOtherShippingMethod("");
+      setWhatsapp("");
     } catch (err: any) {
       setSubmitError(err.message || "An error occurred while submitting.");
     } finally {
@@ -168,13 +176,15 @@ export default function QuotePage() {
               {/* WhatsApp */}
               <label className="field field-stacked">
                 <span className="field-label">WhatsApp Number <span className="req">*</span></span>
-                <span className="field-input-row">
-                  <span className="field-icon">📱</span>
-                  <input
-                    placeholder="Include country code, e.g. +971 50 123 4567"
-                    type="tel"
-                    name="whatsapp"
+                <span className="field-input-row phone-input-wrapper">
+                  <PhoneInput
+                    international
+                    defaultCountry="SG"
+                    placeholder="Enter phone number"
+                    value={whatsapp}
+                    onChange={setWhatsapp}
                     required
+                    style={{ width: "100%" }}
                   />
                 </span>
               </label>
@@ -694,6 +704,30 @@ export default function QuotePage() {
         .field textarea {
           resize: vertical;
           min-height: 100px;
+        }
+
+        /* ── Phone Input Styling ── */
+        .phone-input-wrapper .PhoneInput {
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .phone-input-wrapper .PhoneInputInput {
+          flex: 1;
+          min-width: 0;
+          border: 1px solid var(--line, #dbe6f2);
+          border-radius: 12px;
+          padding: 12px 14px;
+          outline: none;
+          font-family: inherit;
+          font-size: 14px;
+          transition: border-color 0.2s;
+        }
+        .phone-input-wrapper .PhoneInputInput:focus {
+          border-color: var(--navy, #071b35);
+        }
+        .phone-input-wrapper .PhoneInputCountry {
+          margin-right: 12px;
         }
       `}</style>
     </PageLayout>

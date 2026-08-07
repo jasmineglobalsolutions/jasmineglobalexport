@@ -49,6 +49,7 @@ export default function Footer() {
               <Link href="/contact">Contact</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/quote">Request a Quote</Link>
+              <Link href="/ocean-freight-quotation-form-container-type">Ocean Freight Quotation Form</Link>
             </nav>
           </div>
 

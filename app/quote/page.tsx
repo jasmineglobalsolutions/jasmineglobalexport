@@ -309,6 +309,7 @@ export default function QuotePage() {
                     <option value="">— Select a method —</option>
                     <option value="RoRo Shipping">RoRo Shipping</option>
                     <option value="Container Shipping (40FT)">Container Shipping (40FT)</option>
+                    <option value="Container Shipping (20FT)">Container Shipping (20FT)</option>
                     <option value="Other shipping method">Other shipping method</option>
                   </select>
                 </span>
@@ -350,7 +351,7 @@ export default function QuotePage() {
 
               {/* Quantity */}
               <label className="field field-stacked">
-                <span className="field-label">Quantity Required <span className="req">*</span></span>
+                <span className="field-label">Quantity of Cars Required <span className="req">*</span></span>
                 <span className="field-input-row">
                   <span className="field-icon">🔢</span>
                   <input min="1" placeholder="e.g. 1" type="number" name="quantity" required />
@@ -466,7 +467,12 @@ export default function QuotePage() {
                 </div>
               </div>
 
-              {/* ── Submit Buttons ── */}
+              {submitSuccess && (
+  <div className="full" style={{ padding: "16px", background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: "12px", color: "#166534", marginBottom: "16px", fontWeight: "600" }}>
+    ✅ Your quote request has been successfully submitted! A member of our sales team will reach out to you directly for more information about your purchase.
+  </div>
+)}             
+               {/* ── Submit Buttons ── */}
               <div
                 className="full"
                 style={{

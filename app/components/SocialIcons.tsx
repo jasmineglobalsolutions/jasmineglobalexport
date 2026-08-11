@@ -1,25 +1,31 @@
 "use client";
 
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 const socialLinks = [
   {
     name: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61591332737862",
+    href: "https://www.facebook.com/share/19JyHb8zeJ/?mibextid=wwXIfr",
     color: "#1877f2",
     Icon: FaFacebook,
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/jasmineglobalexport/",
+    href: "https://www.instagram.com/jasmineglobalhiluxexport/",
     color: "#c13584",
     Icon: FaInstagram,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/company/jasmine-global-export/",
+    href: "https://www.linkedin.com/in/jasmine-global-hilux-export-9a9418421",
     color: "#0a66c2",
     Icon: FaLinkedin,
+  },
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@jasmine.global.hil?_r=1&_t=ZS-98lNcxBJP89",
+    color: "#010101",
+    Icon: FaTiktok,
   },
 ];
 

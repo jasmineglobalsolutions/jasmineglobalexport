@@ -4,7 +4,7 @@ import PageLayout from "../components/PageLayout";
 export const metadata: Metadata = {
   title: "About Jasmine Global HI-Lux Export | Philippines Toyota Hilux Export Specialist",
   description:
-    "Jasmine Global HI-Lux Export is a Toyota Hilux export specialist coordinated from Singapore with Philippines operations in Subic Bay. We source, verify, purchase and ship Philippines-spec Hilux units to approved international markets.",
+    "Jasmine Global HI-Lux Export is a Toyota Hilux export specialist coordinated from Singapore with Philippines operations in Manila. We source, verify, purchase and ship Philippines-spec Hilux units to approved international markets.",
   alternates: { canonical: "/about" },
 };
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
               {
                 flag: "🇵🇭",
                 label: "Philippines — Operations",
-                address: "Regus RM 401, 4th Floor, The Aurora Suites & Pavilion, Canal Road cor. Labitan St., Central Business District, Subic Bay 2222, Freeport Zone, Zambales",
+                address: "Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay, Brgy. 122, Zone 09, Tondo I/II NCR, City of Manila, First District, Philippines",
                 role: "Vehicle sourcing · Verification · Lashing & loading · Port operations",
               },
             ].map((office) => (

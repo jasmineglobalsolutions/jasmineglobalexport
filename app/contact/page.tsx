@@ -119,7 +119,7 @@ export default function ContactPage() {
                 flag: "🇵🇭",
                 label: "Philippines — Operations",
                 address:
-                  "Regus RM 401, 4th Floor, The Aurora Suites & Pavilion, Canal Road cor. Labitan St., Central Business District, Subic Bay 2222, Freeport Zone, Zambales",
+                  "Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay, Brgy. 122, Zone 09, Tondo I/II NCR, City of Manila, First District, Philippines",
                 note: "Vehicle sourcing · Verification · Lashing & shipping",
               },
             ].map((o) => (

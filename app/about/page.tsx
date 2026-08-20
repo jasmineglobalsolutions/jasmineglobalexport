@@ -66,7 +66,7 @@ export default function AboutPage() {
               {
                 flag: "🇵🇭",
                 label: "Philippines — Operations",
-                address: "Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay, Brgy. 122, Zone 09, Tondo I/II NCR, City of Manila, First District, Philippines",
+                address: "Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay, Brgy. 122, Zone 09, Tondo I/II NCR, City of Manila, First District, Philippines 1012",
                 role: "Vehicle sourcing · Verification · Lashing & loading · Port operations",
               },
             ].map((office) => (

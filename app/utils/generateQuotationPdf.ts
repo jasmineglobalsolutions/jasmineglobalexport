@@ -236,7 +236,7 @@ export function generateQuotationPdf(data: QuotationPdfParams) {
             width: "40%",
             stack: [
               { text: "Philippines Operations", bold: true, fontSize: 8.5, color: "#111820" },
-              { text: "Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay, Brgy. 122, Zone 09, Tondo I/II NCR, City of Manila, First District, Philippines", fontSize: 7.5, color: "#555555" },
+              { text: "Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay, Brgy. 122, Zone 09, Tondo I/II NCR, City of Manila, First District, Philippines 1012", fontSize: 7.5, color: "#555555" },
             ],
           },
           {

@@ -72,7 +72,7 @@ export default function Footer() {
                 <strong style={{ color: "#c2d5e8", fontSize: 12, fontWeight: 800, display: "block", marginBottom: 3 }}>Philippines Operations</strong>
                 Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay,
                 Brgy. 122, Zone 09, Tondo I/II NCR,
-                City of Manila, First District, Philippines
+                City of Manila, First District, Philippines 1012
               </div>
             </div>
           </div>

@@ -51,9 +51,10 @@ export default function Home() {
               For left-hand-drive destination markets only. Buyers must confirm import eligibility, duty/tax exposure, local registration rules and compliance requirements in their destination country before purchase.
             </p>
 
-            <div className="hero-actions">
+            <div className="hero-actions" style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
               <a className="btn btn-navy" href="/quote">Request Export Quote <span>→</span></a>
               <a className="btn btn-outline" href="/specs">View Hilux Variants <span>→</span></a>
+              <a className="btn btn-outline" href="/price-list" style={{ borderColor: "rgba(217,154,40,.8)", color: "var(--navy)" }}>Price List <span>→</span></a>
             </div>
           </div>
         </div>
@@ -219,6 +220,7 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <a className="btn dark" href="/quote">Request Export Quote</a>
+            <a className="btn btn-outline" href="/price-list" style={{ border: "1px solid var(--line)", padding: "12px 20px", borderRadius: "999px", fontWeight: 700, color: "var(--navy)" }}>Browse Price List</a>
             <a className="btn wa" href="https://wa.me/6589874467" target="_blank" rel="noopener noreferrer">WhatsApp • English</a>
             <a className="btn wa" href="https://wa.me/6581139145" target="_blank" rel="noopener noreferrer">WhatsApp • عربي</a>
           </div>

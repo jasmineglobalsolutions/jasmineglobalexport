@@ -1,0 +1,644 @@
+.catalogue-page {
+  padding: 48px 0 64px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #627286;
+  margin: 0 0 28px;
+}
+
+.breadcrumb a {
+  color: #155a9d;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: #071b35;
+  text-decoration: underline;
+}
+
+.breadcrumb span:last-child {
+  color: #071b35;
+  font-weight: 700;
+}
+
+.catalogue-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #155a9d;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  margin: 0 0 12px;
+}
+
+.catalogue-eyebrow:before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: #d7a44a;
+}
+
+.catalogue-heading {
+  margin: 0;
+  color: #071b35;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.catalogue-intro {
+  margin: 14px 0 0;
+  max-width: 720px;
+  color: #4e6178;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.catalogue-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 36px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dbe6f2;
+}
+
+.catalogue-toolbar h2 {
+  margin: 0;
+  color: #071b35;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.availability-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #627286;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.availability-note:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d7a44a;
+  flex: none;
+}
+
+/* Brand Grid */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  padding: 16px 18px;
+  border: 1px solid #dbe4ed;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fffcf5 0%, #ffffff 100%);
+  border-color: rgba(215, 164, 74, 0.4);
+  box-shadow: 0 4px 18px rgba(7, 23, 47, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-2px);
+  border-color: #d7a44a;
+  box-shadow: 0 10px 24px rgba(215, 164, 74, 0.18);
+}
+
+.brand-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.brand-card-title {
+  font-size: 16px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #071b35;
+  margin: 0;
+}
+
+.brand-card-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: #94691e;
+  background: #fff3d6;
+  padding: 2px 7px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.brand-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.brand-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.brand-action-view {
+  color: #071b35;
+  background: #eef5fc;
+  border: 1px solid #d0e1f3;
+}
+
+.brand-action-view:hover {
+  background: #071b35;
+  color: #ffffff;
+  border-color: #071b35;
+}
+
+.brand-action-download {
+  color: #6a4a0c;
+  background: linear-gradient(135deg, #fff3d2, #ffe6a4);
+  border: 1px solid rgba(215, 164, 74, 0.5);
+}
+
+.brand-action-download:hover {
+  background: linear-gradient(135deg, #efc466, #ffd778);
+  color: #071b35;
+}
+
+.brand-action-quote {
+  color: #155a9d;
+  background: #ffffff;
+  border: 1px solid #dbe4ed;
+  margin-left: auto;
+}
+
+.brand-action-quote:hover {
+  background: #155a9d;
+  color: #ffffff;
+  border-color: #155a9d;
+}
+
+/* Customer Journeys (Purchase & Payment) */
+.customer-journey {
+  margin-top: 48px;
+  padding: 38px 36px 42px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #071b35 0%, #0d2b55 100%);
+  border: 1px solid rgba(215, 164, 74, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(7, 23, 47, 0.25);
+  scroll-margin-top: 30px;
+}
+
+.purchase-journey {
+  margin-top: 56px;
+}
+
+.journey-eyebrow {
+  color: #f4c86a;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 10px;
+}
+
+.journey-heading {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.2vw, 36px);
+  line-height: 1.2;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+.journey-intro {
+  margin: 12px 0 0;
+  max-width: 1000px;
+  color: #c6d7e9;
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+
+.customer-journey strong {
+  color: #f4c86a;
+  font-weight: 800;
+}
+
+.customer-journey a {
+  color: #f4c86a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.customer-journey a:hover {
+  color: #ffe0a2;
+}
+
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+  list-style: none;
+  margin: 34px 0 0;
+  padding: 0;
+}
+
+.journey-step {
+  position: relative;
+  min-width: 0;
+}
+
+.journey-step:before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  right: -24px;
+  height: 1px;
+  background: rgba(215, 164, 74, 0.32);
+}
+
+.journey-step:nth-child(4n):before {
+  display: none;
+}
+
+.journey-number {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #f4c86a;
+  background: #0b2445;
+  border: 1px solid rgba(244, 200, 106, 0.7);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 850;
+  margin-bottom: 18px;
+}
+
+.journey-step h3 {
+  min-height: 44px;
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.journey-step p {
+  margin: 0;
+  color: #c6d7e9;
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+
+/* Payment Top Layout */
+.payment-top-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr);
+  gap: 36px;
+  margin-top: 32px;
+}
+
+.payment-section-heading {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.payment-caption {
+  margin: 0 0 16px;
+  color: #c6d7e9;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.journey-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.journey-table th,
+.journey-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(198, 215, 233, 0.2);
+  vertical-align: top;
+}
+
+.journey-table thead th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #f4c86a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(244, 200, 106, 0.45);
+  border-bottom: 1px solid rgba(244, 200, 106, 0.45);
+}
+
+.journey-table tbody th {
+  color: #dce8f4;
+  font-weight: 500;
+}
+
+.journey-table td {
+  color: #c6d7e9;
+}
+
+.booking-fee-table th:first-child {
+  width: 65%;
+}
+
+.booking-fee-table td {
+  color: #f4c86a;
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.booking-payment-note {
+  margin: 16px 0 0;
+  color: #c6d7e9;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* Payment Paths */
+.payment-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.payment-path h4 {
+  margin: 0;
+  padding: 8px 0 12px;
+  border-bottom: 1px solid rgba(244, 200, 106, 0.45);
+  color: #f4c86a;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.payment-path ol {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.payment-path li + li {
+  border-top: 1px solid rgba(198, 215, 233, 0.2);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.payment-path h5 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.payment-path p {
+  margin: 0;
+  color: #c6d7e9;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.payment-path .payment-method {
+  margin-top: 8px;
+  color: #c6d7e9;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.warehouse-payment-note {
+  margin: 32px 0 0;
+  padding: 16px 18px;
+  background: rgba(244, 200, 106, 0.08);
+  border-left: 3px solid #f4c86a;
+  border-radius: 0 8px 8px 0;
+  color: #c6d7e9;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.shipping-payment-block {
+  margin-top: 34px;
+}
+
+.shipping-schedule-note {
+  margin: 14px 0 0;
+}
+
+.shipping-fee-table th:first-child {
+  width: 32%;
+}
+
+.payment-requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(244, 200, 106, 0.3);
+}
+
+.payment-requirements p {
+  margin: 0;
+  color: #c6d7e9;
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+
+.payment-requirements p + p {
+  margin-top: 10px;
+}
+
+/* Catalogue Help CTA */
+.catalogue-help {
+  margin: 44px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 32px 0 0;
+  border-top: 1px solid #dbe6f2;
+}
+
+.catalogue-help h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  color: #071b35;
+}
+
+.catalogue-help p {
+  margin: 0;
+  font-size: 15px;
+  color: #627286;
+  line-height: 1.65;
+}
+
+.help-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .brand-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .customer-journey {
+    padding: 32px 28px;
+  }
+  .journey-steps {
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .journey-steps:before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
+    left: 21px;
+    width: 1px;
+    background: rgba(215, 164, 74, 0.32);
+  }
+  .journey-step {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .journey-step:before {
+    display: none;
+  }
+  .journey-number {
+    margin-bottom: 0;
+  }
+  .journey-step h3 {
+    min-height: 0;
+    margin: 3px 0 7px;
+    font-size: 17px;
+  }
+  .payment-top-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .catalogue-page {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+  .customer-journey {
+    margin-top: 32px;
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+  .journey-heading {
+    font-size: 26px;
+  }
+  .journey-intro {
+    font-size: 13px;
+  }
+  .journey-step {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .journey-number {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+  .journey-steps:before {
+    top: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+  .journey-step h3 {
+    font-size: 15px;
+  }
+  .journey-step p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .payment-paths,
+  .payment-requirements {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .catalogue-help {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-grid {
+    grid-template-columns: 1fr;
+  }
+}

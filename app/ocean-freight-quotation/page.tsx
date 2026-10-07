@@ -1,1 +1,5 @@
-export { default } from "../ocean-freight-quotation-form-container-type/page";
+import { redirect } from "next/navigation";
+
+export default function OceanFreightRedirect() {
+  redirect("/quote");
+}

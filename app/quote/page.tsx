@@ -98,13 +98,12 @@ export default function QuotePage() {
     <PageLayout>
       <section className="section-title" aria-label="Quote request intro">
         <div className="wrap">
-          <span className="variant-note-pill">Export Enquiry</span>
-          <h1 style={{ marginTop: 12 }}>Request a Vehicle Export Quote</h1>
+          <span className="variant-note-pill">Export &amp; Freight Enquiry</span>
+          <h1 style={{ marginTop: 12 }}>Request an Export &amp; Freight Quotation</h1>
           <p>
-            Fill in the form below to request an export quote. We supply
-            Philippines-spec Toyota Hilux vehicles globally, and can also source
-            other makes and models. Please note that destination customs
-            clearance and local registration are not included.
+            Tell us the vehicles and destination. Our team confirms the actual loading port, route and charges.
+            We supply Philippines-spec Toyota Hilux vehicles globally and source other makes and models.
+            Please note that destination customs clearance and local registration are handled by the buyer.
           </p>
         </div>
       </section>
@@ -302,16 +301,20 @@ export default function QuotePage() {
 
               {/* Shipping Method */}
               <label className="field field-stacked">
-                <span className="field-label">Preferred Shipping Method</span>
+                <span className="field-label">Shipping Preference</span>
                 <span className="field-input-row">
                   <span className="field-icon">🚢</span>
                   <select name="shippingMethod" value={shippingMethod} onChange={(e) => setShippingMethod(e.target.value)}>
-                    <option value="">— Select a method —</option>
-                    <option value="RoRo Shipping">RoRo Shipping</option>
+                    <option value="">— Select shipping preference —</option>
                     <option value="Container Shipping (40FT)">Container Shipping (40FT)</option>
                     <option value="Container Shipping (20FT)">Container Shipping (20FT)</option>
+                    <option value="RoRo Shipping">RoRo Shipping</option>
+                    <option value="Container / RoRo / Advice needed">Container / RoRo / Advice needed</option>
                     <option value="Other shipping method">Other shipping method</option>
                   </select>
+                </span>
+                <span style={{ fontSize: 12, color: "#627286", marginTop: 4 }}>
+                  Shipping and lashing charges are confirmed separately in the quotation. Loading port is confirmed on quotation based on actual vehicle origin.
                 </span>
               </label>
 
@@ -478,14 +481,28 @@ export default function QuotePage() {
                 style={{
                   display: "flex",
                   gap: "14px",
+                  alignItems: "center",
                   flexWrap: "wrap",
                   justifyContent: "flex-start",
                   marginTop: "8px",
                 }}
               >
                 <button className="btn dark" type="submit" id="submit-enquiry-btn" disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : "Submit Enquiry"}
+                  {isSubmitting ? "Submitting..." : "Submit Freight &amp; Vehicle Enquiry"}
                 </button>
+                <span style={{ fontSize: 13, color: "#627286" }}>
+                  Shipping and lashing charges are confirmed separately in the quotation.
+                </span>
+              </div>
+              <div
+                className="full"
+                style={{
+                  display: "flex",
+                  gap: "14px",
+                  flexWrap: "wrap",
+                  justifyContent: "flex-start",
+                }}
+              >
                 <a
                   className="btn wa"
                   href="https://wa.me/6589874467"

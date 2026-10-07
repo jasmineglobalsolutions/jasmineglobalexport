@@ -131,10 +131,11 @@
       flex-wrap:wrap;
       justify-content:flex-end;
       align-items:center;
-      gap:8px 16px;
-      font-size:13px;
+      gap:6px 10px;
+      font-size:12px;
       font-weight:700;
       text-align:center;
+      max-width:470px;
     }
     .nav-actions{
       display:flex;
@@ -142,7 +143,7 @@
       align-items:center;
       gap:6px;
       border-left:1px solid #dbe6f2;
-      padding-left:20px;
+      padding-left:16px;
     }
     .navlinks a:not(.btn){
       padding:4px 6px;border-radius:6px;transition:.18s ease;white-space:nowrap;

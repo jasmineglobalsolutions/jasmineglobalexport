@@ -38,6 +38,9 @@ export default function Footer() {
             <h3 className="footer-col-title">Quick Links</h3>
             <nav className="footer-nav-links">
               <Link href="/">Home</Link>
+              <Link href="/price-list">Price List</Link>
+              <Link href="/price-list#purchase-journey">Purchase Journey</Link>
+              <Link href="/price-list#payment-journey">Payment Journey</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/specs">Hilux Specs &amp; Variants</Link>
               <Link href="/procedure">Export Procedure</Link>
@@ -49,7 +52,7 @@ export default function Footer() {
               <Link href="/contact">Contact</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/quote">Request a Quote</Link>
-              <Link href="/ocean-freight-quotation-form-container-type">Ocean Freight Quotation Form</Link>
+              <Link href="/quote">Freight Enquiry</Link>
             </nav>
           </div>
 

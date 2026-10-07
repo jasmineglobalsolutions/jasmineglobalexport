@@ -24,12 +24,13 @@ export default function FloatingContact() {
       <div style={{
         position: "fixed",
         bottom: "24px",
-        left: "16px",
+        right: "16px",
+        left: "auto",
         display: "flex",
         flexDirection: "column",
         gap: "10px",
         zIndex: 1000,
-        alignItems: "flex-start",
+        alignItems: "flex-end",
       }}>
 
         {/* WhatsApp Group */}

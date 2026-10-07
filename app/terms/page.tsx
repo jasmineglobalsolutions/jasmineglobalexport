@@ -30,7 +30,7 @@ const terms = [
   {
     num: "4",
     title: "Payment and reservation",
-    content: "Payment terms will be stated in the proforma invoice or sales agreement. Bank charges, intermediary bank fees, currency conversion costs and delayed payment consequences are borne by the buyer unless otherwise agreed. A vehicle reservation may be cancelled if payment is delayed, incomplete or cannot be verified.",
+    content: "Payment terms are governed by the signed proforma invoice. Ready-stock orders require a 30% deposit via telegraphic transfer (MT103 required), with the remaining 70% due only after actual warehouse photos are received and verified. Factory/indent orders require a non-refundable booking fee per unit via Stripe (credited toward the vehicle price), with the vehicle balance due by TT after warehouse photo verification. Shipping and lashing fees are separate charges due according to vessel arrival schedules. Bank charges and currency conversion costs follow the written PI terms.",
   },
   {
     num: "5",
@@ -49,8 +49,8 @@ const terms = [
   },
   {
     num: "8",
-    title: "Inspection and handover proof",
-    content: "We may provide available dealer photos, yard photos, loading photos, shipping documents and handover records where applicable. Buyer-requested third-party inspection, special photos, detailed condition report or additional verification may involve extra cost and must be requested before shipment.",
+    title: "Inspection and warehouse verification milestone",
+    content: "The balance-payment milestone requires receipt and verification of actual warehouse photos showing the customer's selected unit, VIN/chassis number matched to the order documents, loading preparation and secured lashing. For RoRo shipments, evidence arrangements are confirmed with the carrier prior to order acceptance and stated in the PI.",
   },
   {
     num: "9",

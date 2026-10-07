@@ -165,8 +165,48 @@ export default function TrustPage() {
             }}
           >
             <p style={{ fontSize: 16, color: "var(--ink)", lineHeight: 1.8, marginBottom: 20 }}>
-              Payment instructions will be stated only in the official proforma invoice or written confirmation from Jasmine Global. Buyers should verify bank account details directly with our official email or WhatsApp before making payment. Bank charges, intermediary fees and currency conversion costs are borne by the buyer unless otherwise agreed in writing.
+              Payment instructions are issued only after the official proforma invoice (PI) is signed. We maintain strict separation between ready-stock orders and factory/indent orders:
             </p>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginBottom: 24 }}>
+              <div style={{ background: "var(--soft)", padding: "20px 22px", borderRadius: 14, border: "1px solid var(--line)" }}>
+                <h3 style={{ margin: "0 0 8px", fontSize: 17, color: "var(--navy)", fontWeight: 850 }}>Ready Stock</h3>
+                <p style={{ margin: "0 0 6px", fontSize: 14, color: "var(--ink)", lineHeight: 1.6 }}>
+                  <strong>30% deposit</strong> on confirmed reservation.
+                </p>
+                <p style={{ margin: "0 0 12px", fontSize: 14, color: "var(--ink)", lineHeight: 1.6 }}>
+                  <strong>Remaining 70%</strong> due only after actual warehouse photos are verified.
+                </p>
+                <div style={{ fontSize: 12.5, fontWeight: 800, color: "var(--navy)", background: "#eef5fc", padding: "6px 10px", borderRadius: 6, display: "inline-block" }}>
+                  Telegraphic transfer only &middot; MT103 required
+                </div>
+              </div>
+
+              <div style={{ background: "var(--soft)", padding: "20px 22px", borderRadius: 14, border: "1px solid var(--line)" }}>
+                <h3 style={{ margin: "0 0 8px", fontSize: 17, color: "var(--navy)", fontWeight: 850 }}>Factory / Indent Order</h3>
+                <p style={{ margin: "0 0 6px", fontSize: 14, color: "var(--ink)", lineHeight: 1.6 }}>
+                  <strong>Booking fee</strong> via supplied Stripe link (USD 2,000 &ndash; 5,000 credited to price).
+                </p>
+                <p style={{ margin: "0 0 12px", fontSize: 14, color: "var(--ink)", lineHeight: 1.6 }}>
+                  <strong>Balance</strong> due after actual warehouse photo verification.
+                </p>
+                <div style={{ fontSize: 12.5, fontWeight: 800, color: "var(--navy)", background: "#eef5fc", padding: "6px 10px", borderRadius: 6, display: "inline-block" }}>
+                  Balance: TT only &middot; MT103 required
+                </div>
+              </div>
+            </div>
+
+            <div style={{ background: "#fffcf2", borderLeft: "4px solid #d7a44a", padding: "14px 18px", borderRadius: 4, marginBottom: 20 }}>
+              <strong style={{ color: "#071b35", fontSize: 14 }}>Shipping &amp; lashing &middot; separate charges &middot; TT only &middot; MT103 required:</strong>
+              <p style={{ margin: "6px 0 0", fontSize: 13.5, color: "#334458", lineHeight: 1.6 }}>
+                Due 3 weeks before vessel arrival if 3+ weeks to arrival; otherwise payable in full with the remaining vehicle balance.
+              </p>
+            </div>
+
+            <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.7, marginBottom: 20 }}>
+              No customer is asked for a generic booking fee and a 30% deposit for the same ready-stock order. View the complete schedule on our <a href="/price-list#payment-journey" style={{ color: "var(--blue)", fontWeight: 700, textDecoration: "underline" }}>Payment Journey</a> page.
+            </p>
+
             <div
               style={{
                 background: "rgba(215,164,74,0.08)",
@@ -180,7 +220,7 @@ export default function TrustPage() {
             >
               <span style={{ fontSize: 20, flexShrink: 0 }}>⚠️</span>
               <p style={{ margin: 0, fontSize: 14, color: "var(--navy)", lineHeight: 1.6, fontWeight: 600 }}>
-                Always verify bank account details directly with our official email (<a href="mailto:admin@jasmineglobalexport.com" style={{ color: "var(--navy)" }}>admin@jasmineglobalexport.com</a>) or WhatsApp before any transfer. Do not act on payment instructions received through unofficial channels.
+                Always verify beneficiary bank details directly with our official email (<a href="mailto:admin@jasmineglobalexport.com" style={{ color: "var(--navy)" }}>admin@jasmineglobalexport.com</a>) or WhatsApp before any transfer. Quote your order/invoice reference on the MT103.
               </p>
             </div>
           </div>

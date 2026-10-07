@@ -16,37 +16,37 @@ const blogArticles = [
     tag: "Shipping",
     title: "RoRo or Container",
     desc: "Compare RoRo and 40HC container shipping, including loading protection, route availability, port handling and the most suitable option for single or multiple Hilux units.",
-    href: "/blog/roro-vs-container-shipping-toyota-hilux",
+    href: "/shipping",
   },
   {
     tag: "Export Process",
     title: "Export Documents",
     desc: "Understand the commercial invoice, packing list, bill of lading and other documents commonly required when exporting a Toyota Hilux from the Philippines.",
-    href: "/blog/toyota-hilux-export-documents",
+    href: "/procedure",
   },
   {
     tag: "Market Insights",
     title: "Best Hilux Trims",
     desc: "Compare popular workhorse and lifestyle Hilux variants for approved left-hand-drive markets in Africa and the Middle East.",
-    href: "/blog/best-hilux-trims-africa-middle-east",
+    href: "/specs",
   },
   {
     tag: "How It Works",
     title: "How to Buy",
     desc: "Follow the buyer journey from enquiry and live-stock confirmation to proforma invoice, payment, loading, shipping and destination-port arrival.",
-    href: "/blog/how-to-buy-toyota-hilux-from-singapore-export-office",
+    href: "/price-list",
   },
   {
     tag: "Compliance",
     title: "Buyer Responsibilities",
     desc: "Understand the customs clearance, duties, taxes, registration, homologation and local compliance requirements that remain the buyer’s responsibility.",
-    href: "/blog/buyer-responsibilities-after-vehicle-arrival",
+    href: "/faq",
   },
   {
     tag: "Buyer Guide",
     title: "Philippines-Spec Guide",
     desc: "A practical guide to Philippines-sourced Hilux variants, export checks, shipping options and selecting the right export-ready unit.",
-    href: "/blog/philippines-spec-toyota-hilux-export-guide",
+    href: "/quote",
   },
 ];
 

@@ -66,6 +66,9 @@ export default function ShippingPage() {
               <p style={{ color: "var(--ink)", fontSize: 16, lineHeight: 1.7, margin: 0 }}>
                 Jasmine Global HI-Lux Export coordinates international shipment of Toyota Hilux units from the Philippines by container or RoRo, depending on destination route, vehicle quantity, carrier availability and buyer requirements.
               </p>
+              <div style={{ marginTop: 20, padding: 18, borderRadius: 14, background: "#eef5fc", border: "1px solid rgba(21,90,157,0.14)", color: "var(--navy)", fontWeight: 700, lineHeight: 1.7 }}>
+                Standard Hilux container arrangement: 2 vehicles in a 40FT / 40HC container. A 3-vehicle arrangement is a special request and requires an approved loading plan. Shipping and lashing are separate charges, TT only, and require MT103.
+              </div>
             </div>
             <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 12px 32px rgba(7,23,47,0.12)" }}>
               <Image
@@ -256,7 +259,7 @@ export default function ShippingPage() {
 
           <div style={{ marginTop: 40, padding: 32, background: "var(--navy)", color: "#fff", borderRadius: 20, textAlign: "center" }}>
             <p style={{ margin: 0, fontSize: 16, fontWeight: 600, lineHeight: 1.6 }}>
-              Container shipping provides more controlled loading and lashing. RoRo may be suitable for single units or routes where drive-on / drive-off vessel service is available. Final method is confirmed before quotation.
+              Container shipping provides more controlled loading and lashing. RoRo may be suitable for single units or routes where drive-on / drive-off vessel service is available. Final method is confirmed before quotation, and payment deadlines are based on scheduled arrival at the destination port, with TT / MT103 required for shipping and lashing.
             </p>
           </div>
         </div>

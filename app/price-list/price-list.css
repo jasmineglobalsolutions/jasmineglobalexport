@@ -642,3 +642,153 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Payment Journey Mockup 04 Layout ── */
+.payment-mockup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.payment-order-card {
+  background: #ffffff;
+  color: #071b35;
+  border: 1px solid #dce5ef;
+  border-radius: 14px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 18px rgba(7, 23, 47, 0.06);
+}
+
+.payment-order-card h3 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 850;
+  color: #071b35;
+}
+
+.payment-order-card p {
+  color: #2e3e52;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.payment-order-card strong {
+  color: #071b35;
+  font-weight: 800;
+}
+
+.payment-method-pill {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: #eef5fc;
+  border: 1px solid #d5e5f5;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #071b35;
+  text-align: center;
+}
+
+.payment-mockup-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 16px;
+  font-size: 13.5px;
+}
+
+.payment-mockup-table th {
+  background: #071b35;
+  color: #ffffff;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.payment-mockup-table th:last-child {
+  text-align: right;
+}
+
+.payment-mockup-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #e3edf7;
+  color: #2e3e52;
+}
+
+.payment-mockup-table td:last-child {
+  text-align: right;
+  font-weight: 800;
+  color: #071b35;
+}
+
+.payment-mockup-table tr:nth-child(even) td {
+  background: #f8fbff;
+}
+
+.payment-fee-note {
+  font-size: 13px !important;
+  color: #55667b !important;
+  margin-bottom: 14px !important;
+}
+
+.payment-shipping-banner {
+  margin-top: 24px;
+  background: #fffcf2;
+  border-left: 4px solid #d7a44a;
+  border-radius: 4px;
+  padding: 18px 22px;
+  color: #071b35;
+}
+
+.payment-shipping-banner h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 850;
+  color: #071b35;
+}
+
+.payment-shipping-banner p {
+  margin: 0 0 6px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #334458;
+}
+
+.payment-shipping-banner p:last-child {
+  margin-bottom: 0;
+}
+
+.payment-dispatch-note {
+  margin-top: 20px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #8faac8;
+}
+
+.journey-callout-box {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(215, 164, 74, 0.35);
+  border-radius: 12px;
+  color: #c6d7e9;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.journey-callout-box strong {
+  color: #f4c86a;
+}
+
+@media (max-width: 900px) {
+  .payment-mockup-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

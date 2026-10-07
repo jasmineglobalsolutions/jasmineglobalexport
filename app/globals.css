@@ -381,5 +381,104 @@ body {
       #other-makes [style*="grid-template-columns:repeat(2,minmax(0,1fr))"]{grid-template-columns:1fr!important}
     }
 
+/* ── Purchase Journey Mockup 03 Layout ── */
+.purchase-journey-card {
+  margin-top: 48px;
+  background: #ffffff;
+  border: 1px solid #dce5ef;
+  border-radius: 18px;
+  padding: 44px 48px;
+  box-shadow: 0 4px 24px rgba(7, 23, 47, 0.05);
+  scroll-margin-top: 30px;
+}
+
+.purchase-journey-kicker {
+  color: #b58128;
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 10px;
+}
+
+.purchase-journey-title {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 900;
+  color: #071b35;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.purchase-journey-subtitle {
+  margin: 0 0 36px;
+  font-size: 15.5px;
+  color: #55687d;
+  line-height: 1.6;
+}
+
+.purchase-journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 52px;
+}
+
+.journey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e3edf7;
+}
+
+.journey-item:nth-last-child(-n+2) {
+  border-bottom: none;
+  padding-bottom: 8px;
+}
+
+.journey-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #071b35;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 850;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.journey-content h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 850;
+  color: #071b35;
+  line-height: 1.35;
+}
+
+.journey-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #405368;
+  line-height: 1.65;
+}
+
+@media (max-width: 820px) {
+  .purchase-journey-card {
+    padding: 30px 22px;
+  }
+  .purchase-journey-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .journey-item:nth-last-child(2) {
+    border-bottom: 1px solid #e3edf7;
+    padding-bottom: 24px;
+  }
+}
+
 
     

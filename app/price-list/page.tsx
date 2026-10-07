@@ -6,7 +6,7 @@ import "./price-list.css";
 export const metadata: Metadata = {
   title: "2026 Vehicle Catalogues & Price List | Jasmine Global Export",
   description:
-    "Download Jasmine Global vehicle catalogues by brand, browse available models, and review the purchase and payment journey.",
+    "Download Jasmine Global vehicle catalogues by brand, browse available models, and review the verified 8-step purchase journey and payment schedule.",
   alternates: {
     canonical: "/price-list",
   },
@@ -53,7 +53,7 @@ export default function PriceListPage() {
           <h1 className="catalogue-heading">2026 Vehicle Catalogues</h1>
           <p className="catalogue-intro">
             Select a brand to view or download its complete export catalogue and browse available models.
-            Below you will also find our verified purchase steps, milestone schedule and payment terms.
+            Below you will also find our verified eight-step purchase journey, milestone schedule and payment terms.
           </p>
 
           {/* Section: Brand Catalogues */}
@@ -119,304 +119,233 @@ export default function PriceListPage() {
             </ul>
           </section>
 
-          {/* Section: Purchase Journey */}
+          {/* Section: Purchase Journey (Mockup 03 Layout) */}
           <section
-            className="customer-journey purchase-journey"
+            className="purchase-journey-card"
             id="purchase-journey"
             aria-labelledby="purchase-journey-title"
           >
-            <p className="journey-eyebrow">Ordering with Jasmine Global</p>
-            <h2 className="journey-heading" id="purchase-journey-title">
-              Your Purchase Journey
+            <p className="purchase-journey-kicker">BELOW THE BRAND CATALOGUES</p>
+            <h2 className="purchase-journey-title" id="purchase-journey-title">
+              Purchase Journey
             </h2>
-            <p className="journey-intro">
-              Your order, from vehicle selection to collection at the destination port.
+            <p className="purchase-journey-subtitle">
+              From vehicle selection to destination collection
             </p>
-            <ol className="journey-steps">
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  01
-                </span>
-                <div className="journey-step-body">
-                  <h3>Select &amp; Confirm</h3>
+
+            <div className="purchase-journey-grid">
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">1</div>
+                <div className="journey-content">
+                  <h3>Select your vehicle</h3>
+                  <p>Choose make, model, variant, colour, quantity and destination.</p>
+                </div>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">2</div>
+                <div className="journey-content">
+                  <h3>Confirm the order details</h3>
                   <p>
-                    Tell us your preferred model, specification and quantity. We confirm availability, lead time and any
-                    compulsory insurance or distributor accessories. Confirm destination import eligibility with your local
-                    agent and warranty coverage with us.
+                    Confirm availability, lead time, specifications, import eligibility, warranty, compulsory insurance
+                    and distributor accessories.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  02
-                </span>
-                <div className="journey-step-body">
-                  <h3>Shipping Details</h3>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">3</div>
+                <div className="journey-content">
+                  <h3>Sign the proforma invoice</h3>
                   <p>
-                    Provide your destination seaport. We confirm shipping options and freight costs. Where practical,
-                    group <strong>three vehicles per shipment</strong>, subject to the route and loading arrangement.
+                    Review the itemised PI. Ready stock: pay 30% by TT. Factory order: pay the applicable booking fee
+                    through the supplied Stripe link.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  03
-                </span>
-                <div className="journey-step-body">
-                  <h3>Proforma Invoice</h3>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">4</div>
+                <div className="journey-content">
+                  <h3>Verify warehouse photos</h3>
                   <p>
-                    Review and sign the proforma invoice confirming the vehicle specification, itemised charges, delivery
-                    terms, insurance cover, payment instructions and deadlines.
+                    Check the actual unit, VIN/chassis, loading preparation and secured lashing against your order.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  04
-                </span>
-                <div className="journey-step-body">
-                  <h3>Secure Your Order</h3>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">5</div>
+                <div className="journey-content">
+                  <h3>Pay the remaining balance</h3>
                   <p>
-                    Complete the initial payment for your order type. We then reserve the available stock or place your
-                    factory order. See the <a href="#payment-journey">payment journey below</a>.
+                    Ready stock: remaining 70%. Factory order: vehicle price less the credited booking fee. Pay
+                    shipping/lashing when due.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  05
-                </span>
-                <div className="journey-step-body">
-                  <h3>Warehouse Verification</h3>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">6</div>
+                <div className="journey-content">
+                  <h3>Submit MT103; funds are confirmed</h3>
                   <p>
-                    Verify <strong>actual warehouse photos</strong> showing your vehicle, loading preparation and secured
-                    lashing. Match the VIN/chassis number to your order documents.
+                    Provide a bank-issued MT103 for every TT. Jasmine confirms cleared funds before dispatch.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  06
-                </span>
-                <div className="journey-step-body">
-                  <h3>Balance &amp; Shipment Schedule</h3>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">7</div>
+                <div className="journey-content">
+                  <h3>Shipment and documents</h3>
                   <p>
-                    After photo verification, settle the remaining vehicle balance. Confirm the shipment schedule and pay
-                    shipping and lashing charges according to the arrival timeline below.
+                    Receive shipment updates, commercial invoice, packing list and Bill of Lading at the appropriate
+                    stages.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  07
-                </span>
-                <div className="journey-step-body">
-                  <h3>Vessel Departure &amp; Documents</h3>
+              </div>
+
+              <div className="journey-item">
+                <div className="journey-badge" aria-hidden="true">8</div>
+                <div className="journey-content">
+                  <h3>Arrival and local clearance</h3>
                   <p>
-                    After the required payments clear, we dispatch your vehicle on the confirmed vessel and provide the
-                    commercial invoice, packing list and Bill of Lading.
+                    Your local agent handles destination clearance, duties, taxes, registration and collection.
                   </p>
                 </div>
-              </li>
-              <li className="journey-step">
-                <span className="journey-number" aria-hidden="true">
-                  08
-                </span>
-                <div className="journey-step-body">
-                  <h3>Arrival &amp; Collection</h3>
-                  <p>
-                    Your local agent coordinates customs clearance, destination duties and taxes, registration and vehicle
-                    collection.
-                  </p>
-                </div>
-              </li>
-            </ol>
+              </div>
+            </div>
+
+            <div className="journey-callout-box" style={{ marginTop: 32 }}>
+              <strong style={{ display: "block", marginBottom: 6 }}>Confirm before placing the order:</strong>
+              Confirm the original manufacturer version, selected specification, colour, stock/order status, lead time,
+              destination eligibility and warranty. Confirm any compulsory insurance and distributor-supplied
+              accessories and itemise the applicable charges in the proforma invoice.
+              <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(215,164,74,0.25)" }}>
+                <strong>Container arrangement standard:</strong> Standard Hilux container arrangement: 2 vehicles in a
+                40FT / 40HC container. A 3-vehicle arrangement is a special request and requires an approved loading
+                plan. Other vehicles and routes are assessed individually.
+              </div>
+            </div>
           </section>
 
-          {/* Section: Payment Journey */}
+          {/* Section: Payment Journey (Mockup 04 Layout) */}
           <section
             className="customer-journey payment-journey"
             id="payment-journey"
             aria-labelledby="payment-journey-title"
           >
-            <p className="journey-eyebrow">Payments with Jasmine Global</p>
+            <p className="journey-eyebrow">Below the purchase journey</p>
             <h2 className="journey-heading" id="payment-journey-title">
-              Your Payment Journey
+              Payment Journey
             </h2>
             <p className="journey-intro">
-              <strong>Factory-order booking fees: Stripe.</strong> The 30% deposit, vehicle balance and shipping/lashing
-              charges require <strong>telegraphic transfer with MT103</strong>.
+              Confirm your order type before making a payment. Payment instructions are issued after the proforma
+              invoice is signed.
             </p>
 
-            <div className="payment-top-layout">
-              {/* Factory-Order Booking Fee */}
-              <div className="booking-fee-block">
-                <h3 className="payment-section-heading">Factory-Order Booking Fee</h3>
-                <p className="payment-caption">Non-refundable, per vehicle. Credited toward the vehicle price.</p>
-                <table className="journey-table booking-fee-table">
-                  <caption className="journey-sr-only">
-                    Factory-order booking fee per vehicle by vehicle price
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Vehicle price</th>
-                      <th scope="col">Booking fee</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">USD 40,000 or less</th>
-                      <td>USD 2,000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        Over USD 40,000
-                        <br />
-                        up to USD 100,000
-                      </th>
-                      <td>USD 4,000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Over USD 100,000</th>
-                      <td>USD 5,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="booking-payment-note">
-                  <strong>Pay through Stripe</strong> using the booking payment link we provide.
-                </p>
+            <div className="payment-mockup-grid">
+              {/* Box 1: Ready stock */}
+              <div className="payment-order-card">
+                <div>
+                  <h3>Ready stock</h3>
+                  <p>
+                    <strong>30% deposit</strong> on confirmed stock reservation.
+                  </p>
+                  <p>
+                    <strong>Remaining 70%</strong> after actual warehouse photos are received and verified.
+                  </p>
+                </div>
+                <div className="payment-method-pill">
+                  Telegraphic transfer only &middot; MT103 required
+                </div>
               </div>
 
-              {/* Vehicle Payment Milestones */}
-              <div className="payment-milestones-block">
-                <h3 className="payment-section-heading">Vehicle Payment Milestones</h3>
-                <div className="payment-paths">
-                  <div className="payment-path">
-                    <h4>Ready Stock</h4>
-                    <ol>
-                      <li>
-                        <h5>30% Deposit</h5>
-                        <p>Pay 30% of the vehicle price when we confirm your stock reservation.</p>
-                        <p className="payment-method">
-                          Telegraphic transfer only
-                          <br />
-                          <strong>MT103 required</strong>
-                        </p>
-                      </li>
-                      <li>
-                        <h5>Remaining 70%</h5>
-                        <p>Due after you receive and verify the warehouse photos.</p>
-                        <p className="payment-method">
-                          Telegraphic transfer only
-                          <br />
-                          <strong>MT103 required</strong>
-                        </p>
-                      </li>
-                    </ol>
-                  </div>
-                  <div className="payment-path">
-                    <h4>Factory Order / Indent</h4>
-                    <ol>
-                      <li>
-                        <h5>Booking Fee</h5>
-                        <p>Due per vehicle when you place your order.</p>
-                        <p className="payment-method">
-                          <strong>Pay through Stripe</strong>
-                        </p>
-                      </li>
-                      <li>
-                        <h5>Remaining Vehicle Balance</h5>
-                        <p>Due after photo verification. We deduct the booking fee from the vehicle price.</p>
-                        <p className="payment-method">
-                          Telegraphic transfer only
-                          <br />
-                          <strong>MT103 required</strong>
-                        </p>
-                      </li>
-                    </ol>
-                  </div>
+              {/* Box 2: Factory / indent order */}
+              <div className="payment-order-card">
+                <div>
+                  <h3>Factory / indent order</h3>
+                  <p>
+                    <strong>Booking fee</strong> after signing the PI, through the supplied Stripe booking link.
+                  </p>
+
+                  <table className="payment-mockup-table">
+                    <thead>
+                      <tr>
+                        <th>Vehicle price per unit</th>
+                        <th>Booking fee per unit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>USD 40,000 or less</td>
+                        <td>USD 2,000</td>
+                      </tr>
+                      <tr>
+                        <td>Above USD 40,000 up to USD 100,000</td>
+                        <td>USD 4,000</td>
+                      </tr>
+                      <tr>
+                        <td>Above USD 100,000</td>
+                        <td>USD 5,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p className="payment-fee-note">
+                    Non-refundable per vehicle; credited toward the vehicle price.
+                  </p>
+                  <p>
+                    <strong>Balance:</strong> vehicle price less the credited booking fee, after actual warehouse photo
+                    verification.
+                  </p>
+                </div>
+                <div className="payment-method-pill">
+                  Vehicle balance: TT only &middot; MT103 required
                 </div>
               </div>
             </div>
 
-            <p className="warehouse-payment-note">
-              <strong>Before paying the vehicle balance:</strong> verify actual warehouse photos showing your unit,
-              loading preparation and secured lashing.
-            </p>
-
-            {/* Shipping & Lashing Charges */}
-            <div className="shipping-payment-block">
-              <h3 className="payment-section-heading">Shipping &amp; Lashing Charges</h3>
-              <p className="payment-caption">
-                Charged separately from the vehicle price. Full payment by telegraphic transfer only; MT103 required.
-                Deadlines follow the scheduled vessel arrival at your destination port.
+            {/* Shipping & Lashing Banner */}
+            <div className="payment-shipping-banner">
+              <h4>Shipping &amp; lashing &middot; separate charges &middot; TT only &middot; MT103 required</h4>
+              <p>
+                <strong>3+ weeks to scheduled destination arrival:</strong> full fee due 3 weeks before vessel arrival.
               </p>
-              <table className="journey-table shipping-fee-table">
-                <caption className="journey-sr-only">
-                  Shipping and lashing payment deadline based on time until destination arrival
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Time until destination arrival</th>
-                    <th scope="col">When to pay</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">At least 3 weeks</th>
-                    <td>
-                      Pay the full shipping and lashing fee <strong>3 weeks before vessel arrival</strong> at the destination
-                      port.
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Less than 3 weeks</th>
-                    <td>
-                      Pay the full shipping and lashing fee{" "}
-                      <strong>together with the remaining vehicle balance</strong>.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <p className="payment-caption shipping-schedule-note">
-                Vessel schedules and arrival dates can change. We will confirm any revised payment deadline with you.
+              <p>
+                <strong>Less than 3 weeks:</strong> pay in full with the remaining vehicle balance.
               </p>
             </div>
 
-            {/* Payment Requirements Grid */}
+            <p className="payment-dispatch-note">
+              Actual unit, loading preparation and secured lashing must be verified. Send a bank-issued MT103 for every
+              TT; dispatch follows cleared funds.
+            </p>
+
+            {/* Additional verification & instruction details */}
             <div className="payment-requirements">
               <div>
-                <h3 className="payment-section-heading">Bank Transfer Confirmation</h3>
+                <h3 className="payment-section-heading">Bank Transfer &amp; Beneficiary Confirmation</h3>
                 <p>
-                  Use the beneficiary bank details and currency in your proforma invoice. Quote the invoice/order reference
-                  and send a bank-issued <strong>MT103 for every telegraphic transfer</strong>.
+                  Use the beneficiary bank details, currency and order/invoice reference stated in the signed PI. Quote
+                  the reference and send a bank-issued <strong>MT103 for every telegraphic transfer</strong>.
                 </p>
                 <p>
-                  We confirm payment when funds clear in our account. If your bank cannot issue an MT103,{" "}
-                  <strong>contact us before transferring</strong>.
+                  We confirm payment when funds clear in our account. If your bank cannot provide an MT103,{" "}
+                  <strong>contact Jasmine before transferring</strong>. Bank charges follow the written PI terms.
                 </p>
               </div>
               <div>
-                <h3 className="payment-section-heading">Model Requirements &amp; Insurance</h3>
+                <h3 className="payment-section-heading">Model Requirements &amp; Separate Freight</h3>
                 <p>
                   Some models require <strong>compulsory insurance and distributor-supplied accessories</strong>. Confirm
-                  the package and charges before ordering. Any shipping insurance cover must also be agreed and identified
-                  in your quotation.
+                  the package and charges before ordering, and ensure these are itemised in the PI.
                 </p>
-              </div>
-              <div>
-                <h3 className="payment-section-heading">Invoice &amp; Charges</h3>
                 <p>
-                  Your proforma invoice confirms the vehicle price, booking fee credit, freight/lashing charges and payment
-                  deadlines. Confirm responsibility for any bank or processing fees before paying. Request any order
-                  amendments in writing.
-                </p>
-              </div>
-              <div>
-                <h3 className="payment-section-heading">Destination Responsibilities</h3>
-                <p>
-                  The buyer and local agent arrange import approvals, customs clearance, local duties and taxes,
-                  registration and collection. Confirm destination requirements before committing to your order.
+                  Shipping and lashing charges are separate from the vehicle price. Confirm revised ETA and payment
+                  deadlines if the vessel schedule changes. Destination duties, taxes, clearance, registration and
+                  collection are handled by the buyer/local agent.
                 </p>
               </div>
             </div>

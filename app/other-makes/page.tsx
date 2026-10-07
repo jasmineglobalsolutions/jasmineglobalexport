@@ -39,19 +39,32 @@ export default function OtherMakesPage() {
           <span className="variant-note-pill">Alternative Sourcing</span>
           <h1 style={{ marginTop: 12 }}>Exporting Other Commercial Vehicles &amp; SUVs</h1>
           <p>
-            While our primary specialty is the Toyota Hilux, our direct access to the Philippines automotive market allows us to source and export other in-demand commercial vehicles, pickup trucks, and SUVs.
+            While our primary specialty is the Toyota Hilux, our direct access to the Philippines automotive market allows us to source and export other in-demand commercial vehicles, pickup trucks and SUVs.
           </p>
         </div>
       </section>
 
       <section>
         <div className="wrap">
+          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 30 }}>
+            <a className="btn dark" href="/price-list">Browse 2026 Vehicle Catalogues</a>
+            <a className="btn outline" href="/quote">Request a Custom Quote</a>
+          </div>
+
           <div className="trust-grid" style={{ marginBottom: 56 }}>
             {otherVehicles.map((v) => (
-              <div key={v.name} className="trust-card">
-                <div className="trust-icon">{v.icon}</div>
-                <strong style={{ fontSize: 18, marginBottom: 8, display: "block" }}>{v.name}</strong>
-                <span>{v.desc}</span>
+              <div
+                key={v.name}
+                className="trust-card"
+                style={{
+                  color: "#163152",
+                  background: "#f4f7fb",
+                  border: "1px solid rgba(17, 45, 82, 0.12)",
+                }}
+              >
+                <div className="trust-icon" style={{ color: "#0d2b55" }}>{v.icon}</div>
+                <strong style={{ fontSize: 18, marginBottom: 8, display: "block", color: "#0d2b55" }}>{v.name}</strong>
+                <span style={{ color: "#1f3553", lineHeight: 1.7 }}>{v.desc}</span>
               </div>
             ))}
           </div>
@@ -59,10 +72,11 @@ export default function OtherMakesPage() {
           <div style={{ background: "var(--soft)", padding: 40, borderRadius: 16, border: "1px solid var(--line)" }}>
             <h2 style={{ marginBottom: 16 }}>Looking for something specific?</h2>
             <p style={{ color: "var(--muted)", lineHeight: 1.6, marginBottom: 24, maxWidth: 600 }}>
-              If you require a specific commercial vehicle, LHD configuration, or fleet order not listed here, let us know. We can utilise our sourcing network to verify availability and provide an export quote.
+              The examples above are a sample of the approved 17-brand range. If you require a specific commercial vehicle, LHD configuration or fleet order not listed here, let us know and we can confirm availability before the signed PI.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <a className="btn dark" href="/quote">Request a Custom Quote</a>
+              <a className="btn dark" href="/price-list">Browse 2026 Vehicle Catalogues</a>
+              <a className="btn outline" href="/quote">Request a Custom Quote</a>
               <a className="btn outline" href="https://wa.me/6589874467" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
             </div>
           </div>

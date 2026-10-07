@@ -217,16 +217,21 @@ export default function SpecsPage() {
             <div className="toyota-variant-panel">
               <div className="variant-title-row">
                 <div>
-                  <span className="variant-note-pill">Philippines Variant Guide</span>
-                  <h2>Choose your Hilux variant</h2>
+                  <span className="variant-note-pill">Selected Toyota Hilux Variants</span>
+                  <h2>Selected Toyota Hilux Variants</h2>
                   <p>
                     Browse the main 2026 Philippines-market Toyota Hilux variants available for export.
                     Colours, model year, trim and availability are subject to live stock confirmation before quotation.
                   </p>
                 </div>
-                <a className="btn dark" href="/quote">
-                  Ask live stock &amp; export quote
-                </a>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "flex-end" }}>
+                  <a className="btn dark" href="/quote">
+                    Ask live stock &amp; export quote
+                  </a>
+                  <a className="btn outline" href="/price-list">
+                    Browse All Brand Catalogues
+                  </a>
+                </div>
               </div>
 
               {/* 8-card grid */}

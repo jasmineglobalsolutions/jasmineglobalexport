@@ -17,12 +17,12 @@ const sections = [
   {
     title: "2. What Data We Collect",
     content:
-      "When you submit an enquiry through our quote form, we may collect: full name, company name, email address, WhatsApp number, destination country, destination port, buyer type, vehicle preferences and any additional message you provide. We do not collect payment card details through this website.",
+      "When you submit an enquiry through our quote form, we may collect: full name, company name, email address, WhatsApp number, destination country, destination port, buyer type, vehicle preferences and any additional message you provide. We do not collect payment card details through this website. Booking fees, deposits or shipment payments are processed through our hosted payment provider or by telegraphic transfer according to the signed proforma invoice.",
   },
   {
     title: "3. How We Use Your Data",
     content:
-      "We use your enquiry data to respond to your export request, prepare a proforma invoice or quotation, communicate shipping options and buyer responsibilities, and follow up on your enquiry where you have not objected. We do not sell your personal data to third parties.",
+      "We use your enquiry data to respond to your export request, prepare a proforma invoice or quotation, communicate shipping options and buyer responsibilities, and follow up on your enquiry where you have not objected. Payment details are never stored on this website; hosted checkout or bank instructions are handled according to the signed invoice terms. We do not sell your personal data to third parties.",
   },
   {
     title: "4. WhatsApp & Email Communication",

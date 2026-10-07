@@ -14,35 +14,63 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Do you handle destination customs clearance and vehicle registration?",
-    a: "No. We supply and ship the Toyota Hilux to the destination country or port only. Destination customs clearance, taxes, registration, homologation and local compliance are handled by the buyer or the buyer's local agent.",
+    a: "No. We supply and ship the vehicle to the destination country or port only. Destination customs clearance, duties, taxes, registration, homologation and local compliance are handled by the buyer or the buyer's local agent.",
   },
   {
     q: "What is your main Philippines source?",
-    a: "We specialise in Philippines-spec Toyota Hilux units only.",
+    a: "We specialise in Philippines-spec Toyota Hilux vehicles and also offer selected vehicles from the Philippine market. View our 2026 catalogues for the current range.",
   },
   {
     q: "Do you offer both container shipping and RoRo shipping?",
-    a: "Yes. We can structure export supply by container shipping or RoRo shipping depending on vehicle type, route availability, loading strategy and buyer preference.",
+    a: "Yes. We coordinate export supply by container shipping or RoRo shipping depending on vehicle type, route availability, carrier arrangement and buyer preference.",
+  },
+  {
+    q: "What is the difference between ready stock and a factory/indent order?",
+    a: "Ready stock is a confirmed vehicle already available for immediate purchase. Factory/indent orders are for a new unit to be sourced and require the booking fee through the supplied Stripe link after the signed PI. The booking fee is non-refundable and credited toward the vehicle price.",
+  },
+  {
+    q: "How do booking fees and credits work?",
+    a: "The booking fee is charged per unit and credited toward the vehicle price. Ready-stock orders do not use the same generic booking fee schedule; a ready-stock order requires the 30% deposit by TT, with the remaining 70% due after warehouse photo verification.",
+  },
+  {
+    q: "Does Stripe apply to all payments?",
+    a: "No. Stripe is used only for the factory/indent booking fee after the signed PI. Ready-stock deposits, remaining balances, indent balances and shipping/lashing charges are TT only, with bank-issued MT103 required.",
+  },
+  {
+    q: "Do I need to provide an MT103 for every TT payment?",
+    a: "Yes. A bank-issued MT103 is required for every TT payment. Jasmine confirms cleared funds before dispatch and before document release on the relevant stages.",
+  },
+  {
+    q: "What is the photo-verification milestone?",
+    a: "The balance-payment milestone requires actual warehouse photos of the selected unit, matching VIN/chassis identity, loading preparation and secured lashing. Public gallery images are not a substitute for the buyer's own unit verification.",
+  },
+  {
+    q: "How are shipping and lashing deadlines handled?",
+    a: "Shipping and lashing are separate from the vehicle price. The due date is based on scheduled arrival at the destination port, and revised ETA or payment deadlines are confirmed if the vessel schedule changes.",
   },
   {
     q: "Can I request a specific trim, year, colour or transmission?",
-    a: "Yes. You can request the Philippines Hilux trim, model year, transmission, colour and preferred shipping method. Final availability is always subject to live stock and export eligibility.",
+    a: "Yes. You can request the Philippines Hilux trim, model year, transmission, colour and preferred shipping method. Final availability is always subject to live stock, export eligibility and the approved vehicle catalogue information.",
   },
   {
     q: "Do you sell to end users or only dealers?",
-    a: "We can sell to both dealers and end users. However, every buyer is responsible for checking destination-country import rules and local compliance before purchase.",
+    a: "We can sell to both dealers and end users. However, every buyer is responsible for checking destination-country import rules, local duties and compliance before purchase.",
   },
   {
     q: "Are the photos and specs shown on the website final?",
-    a: "No. Website visuals and spec guides are for presentation and marketing. Final quotation should confirm the exact unit, trim, model year, condition, export documents and shipment method.",
+    a: "No. Website visuals and spec guides are for presentation and marketing. Final quotation should confirm the exact unit, trim, model year, factory or stock status, colour, export documents, payment instructions and shipment method.",
   },
   {
     q: "Which languages do you support?",
-    a: "Our main communication language is English. Arabic support is available through direct WhatsApp communication. Buyers using other languages may also enquire, and our team can assist with translation support where required.",
+    a: "We support English and Arabic through published WhatsApp contacts. Other language needs can be discussed by enquiry.",
   },
   {
     q: "Will I receive a proforma invoice before payment?",
-    a: "Yes. A formal proforma invoice or quotation will be issued before payment, showing confirmed vehicle details, export scope, payment terms and buyer responsibilities.",
+    a: "Yes. A formal proforma invoice or quotation is issued before payment, showing the confirmed vehicle details, scope, pricing and payment terms. Payment instructions are only issued through the signed PI.",
+  },
+  {
+    q: "How do payment milestones and deposits work?",
+    a: "Ready stock orders require a 30% deposit by TT on confirmed stock reservation, with the remaining 70% due after actual warehouse photo verification. Factory/indent orders use the per-unit booking fee via Stripe, credited toward the vehicle price, then the remaining balance by TT after warehouse photo verification. Shipping and lashing charges are separate and due according to vessel arrival timelines.",
   },
 ];
 

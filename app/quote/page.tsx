@@ -9,9 +9,21 @@ import "react-phone-number-input/style.css";
 // Buyer types that require a company name
 const COMPANY_BUYER_TYPES = ["Dealer", "Company", "Broker", "Fleet Buyer"];
 
+const colourOptionsByVariant: Record<string, string[]> = {
+  "Hilux 4x4 BEV": ["White Pearl", "Silver Metallic", "Phantom Matte Black", "Any Colour / No Preference"],
+  "2.8 Conquest 4x4 A/T": ["White Pearl", "Silver Metallic", "Dark Gray Metallic", "Phantom Matte Black", "Any Colour / No Preference"],
+  "2.8 V 4x4 M/T": ["White Pearl", "Silver Metallic", "Dark Gray Metallic", "Red Mica", "Any Colour / No Preference"],
+  "2.8 Conquest 4x2 A/T": ["White Pearl", "Silver Metallic", "Phantom Matte Black", "Blue / Nebula Blue", "Any Colour / No Preference"],
+  "2.8 G 4x2 A/T": ["White Pearl", "Silver Metallic", "Dark Gray Metallic", "Bronze / Savanna Brown", "Any Colour / No Preference"],
+  "2.8 G 4x2 M/T": ["White Pearl", "Silver Metallic", "Dark Gray Metallic", "Crimson Spark Red", "Any Colour / No Preference"],
+  "2.8 E 4x4 M/T": ["White Pearl", "Silver Metallic", "Phantom Matte Black", "Dark Gray Metallic", "Any Colour / No Preference"],
+  "2.8 E 4x2 A/T": ["White Pearl", "Silver Metallic", "Blue / Nebula Blue", "Bronze / Savanna Brown", "Any Colour / No Preference"],
+};
+
 export default function QuotePage() {
   const [buyerType, setBuyerType] = useState<string>("");
   const [hiluxVariant, setHiluxVariant] = useState<string>("");
+  const [preferredColour, setPreferredColour] = useState<string>("");
   const [otherMake, setOtherMake] = useState<string>("");
   const [otherModel, setOtherModel] = useState<string>("");
   const [shippingMethod, setShippingMethod] = useState<string>("");
@@ -24,6 +36,19 @@ export default function QuotePage() {
   const [submitError, setSubmitError] = useState("");
 
   const requiresCompany = COMPANY_BUYER_TYPES.includes(buyerType);
+  const activeColourOptions = hiluxVariant && colourOptionsByVariant[hiluxVariant]
+    ? colourOptionsByVariant[hiluxVariant]
+    : [
+        "White Pearl",
+        "Phantom Matte Black",
+        "Silver Metallic",
+        "Dark Gray Metallic",
+        "Red Mica",
+        "Crimson Spark Red",
+        "Bronze / Savanna Brown",
+        "Blue / Nebula Blue",
+        "Any Colour / No Preference",
+      ];
 
   async function validateAndSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -65,8 +90,7 @@ export default function QuotePage() {
         whatsapp 
       };
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-      const res = await fetch(`${apiUrl}/api/v1/leads/quote`, {
+      const res = await fetch("/api/v1/leads/quote", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -261,8 +285,13 @@ export default function QuotePage() {
                     name="hiluxVariant"
                     value={hiluxVariant}
                     onChange={(e) => {
-                      setHiluxVariant(e.target.value);
+                      const nextVariant = e.target.value;
+                      setHiluxVariant(nextVariant);
                       setVehicleError("");
+                      setPreferredColour((current) => {
+                        const nextOptions = colourOptionsByVariant[nextVariant] || [];
+                        return nextOptions.length > 0 && current && nextOptions.includes(current) ? current : "";
+                      });
                     }}
                   >
                     <option value="">— Select a variant —</option>
@@ -284,17 +313,15 @@ export default function QuotePage() {
                 <span className="field-label">Preferred Colour</span>
                 <span className="field-input-row">
                   <span className="field-icon">🎨</span>
-                  <select name="preferredColour">
+                  <select
+                    name="preferredColour"
+                    value={preferredColour}
+                    onChange={(e) => setPreferredColour(e.target.value)}
+                  >
                     <option value="">— Select a colour —</option>
-                    <option value="White Pearl">White Pearl</option>
-                    <option value="Phantom Matte Black">Phantom Matte Black</option>
-                    <option value="Silver Metallic">Silver Metallic</option>
-                    <option value="Dark Gray Metallic">Dark Gray Metallic</option>
-                    <option value="Red Mica">Red Mica</option>
-                    <option value="Crimson Spark Red">Crimson Spark Red</option>
-                    <option value="Bronze / Savanna Brown">Bronze / Savanna Brown</option>
-                    <option value="Blue / Nebula Blue">Blue / Nebula Blue</option>
-                    <option value="Any Colour / No Preference">Any Colour / No Preference</option>
+                    {activeColourOptions.map((option) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
                   </select>
                 </span>
               </label>

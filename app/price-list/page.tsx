@@ -217,15 +217,33 @@ export default function PriceListPage() {
               </div>
             </div>
 
-            <div className="journey-callout-box" style={{ marginTop: 32 }}>
-              <strong style={{ display: "block", marginBottom: 6 }}>Confirm before placing the order:</strong>
+            <div
+              className="journey-callout-box"
+              style={{
+                marginTop: 32,
+                background: "#f8f1dd",
+                border: "1px solid rgba(117, 88, 34, 0.18)",
+                color: "#1e2b3d",
+                boxShadow: "0 10px 24px rgba(16, 28, 41, 0.07)",
+              }}
+            >
+              <strong style={{ display: "block", marginBottom: 6, color: "#1d2a3a" }}>
+                Confirm before placing the order:
+              </strong>
               Confirm the original manufacturer version, selected specification, colour, stock/order status, lead time,
               destination eligibility and warranty. Confirm any compulsory insurance and distributor-supplied
               accessories and itemise the applicable charges in the proforma invoice.
-              <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid rgba(215,164,74,0.25)" }}>
-                <strong>Container arrangement standard:</strong> Standard Hilux container arrangement: 2 vehicles in a
-                40FT / 40HC container. A 3-vehicle arrangement is a special request and requires an approved loading
-                plan. Other vehicles and routes are assessed individually.
+              <div
+                style={{
+                  marginTop: 12,
+                  paddingTop: 12,
+                  borderTop: "1px solid rgba(117, 88, 34, 0.2)",
+                  color: "#1d2a3a",
+                }}
+              >
+                <strong style={{ color: "#1d2a3a" }}>Container arrangement standard:</strong> Standard Hilux container
+                arrangement: 2 vehicles in a 40FT / 40HC container. A 3-vehicle arrangement is a special request and
+                requires an approved loading plan. Other vehicles and routes are assessed individually.
               </div>
             </div>
           </section>

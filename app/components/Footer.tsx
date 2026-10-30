@@ -73,9 +73,9 @@ export default function Footer() {
               <span className="footer-contact-icon">🇵🇭</span>
               <div>
                 <strong style={{ color: "#c2d5e8", fontSize: 12, fontWeight: 800, display: "block", marginBottom: 3 }}>Philippines Operations</strong>
-                Unit 01-02, No. 167 Dela Fuente St., Barrio Magsaysay,
-                Brgy. 122, Zone 09, Tondo I/II NCR,
-                City of Manila, First District, Philippines 1012
+                No. 0728-B, Laot Street, Barangay Buenavista,
+                Municipality of Santa Maria, Province of Bulacan,
+                Region III (Central Luzon), Philippines, ZIP Code 3022.
               </div>
             </div>
           </div>

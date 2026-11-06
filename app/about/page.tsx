@@ -16,7 +16,7 @@ export default function AboutPage() {
           <span className="variant-note-pill">About Us</span>
           <h1 style={{ marginTop: 12 }}>About Jasmine Global HI-Lux Export</h1>
           <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
-            Jasmine Global HI-Lux Export is the dedicated vehicle export division of Jasmine Global Process Solutions. We specialise in sourcing, verifying, preparing and exporting Philippines-spec Toyota Hilux vehicles to approved international markets.
+            Jasmine Global HI-Lux Export is the dedicated vehicle export division and a subsidiary of Jasmine Global Process Solutions (Philippines). We specialise in sourcing, verifying, preparing and exporting Philippines-spec Toyota Hilux vehicles to approved international markets.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function AboutPage() {
             <div className="kicker" style={{ marginBottom: 12 }}>Brand &amp; Legal Entity</div>
             <h2 style={{ margin: "0 0 16px", fontSize: "clamp(20px,3vw,28px)" }}>HI-Lux Export is our trading brand</h2>
             <p style={{ fontSize: 15, color: "var(--ink)", lineHeight: 1.7, marginBottom: 16 }}>
-              <strong>Jasmine Global HI-Lux Export</strong> is the trading and export brand operated under <strong>Jasmine Global Process Solutions OPC</strong>. All invoices, agreements and official communications are issued under the correct registered legal entity. Buyers should verify legal entity details on any invoice before payment.
+              <strong>Jasmine Global HI-Lux Export</strong> is a subsidiary of <strong>Jasmine Global Process Solutions OPC</strong> (Philippines) and operates as its trading and vehicle export brand. All invoices, agreements and official communications are issued under the correct registered legal entity. Buyers should verify legal entity details on any invoice before payment.
             </p>
             <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.6, margin: 0 }}>
               This website and the Jasmine Global HI-Lux Export brand are not affiliated with, authorised by or endorsed by Toyota Motor Corporation or any Toyota subsidiary. Toyota and Hilux are registered trademarks of Toyota Motor Corporation.

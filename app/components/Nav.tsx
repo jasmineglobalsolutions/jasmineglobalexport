@@ -19,17 +19,25 @@ export default function Nav() {
     <header>
       <div className="wrap nav">
         <Link href="/" className="brand" aria-label="Jasmine Global HI-Lux Export Home">
-          <Image
-            src="/images/logo.png"
-            alt="Jasmine Global logo"
-            width={120}
-            height={44}
-            className="logo"
-            priority
-            style={{ objectFit: "contain", maxHeight: 48 }}
-          />
-          <div style={{ marginLeft: "6px" }}>
-            <h2 style={{ fontSize: "14px", whiteSpace: "nowrap", margin: 0, fontWeight: 900 }}>HI-LUX EXPORT</h2>
+          <div className="brand-inner">
+            <div className="brand-top-row">
+              <Image
+                src="/images/logo.png"
+                alt="Jasmine Global logo"
+                width={120}
+                height={44}
+                className="logo"
+                priority
+                style={{ objectFit: "contain", maxHeight: 48 }}
+              />
+              <div className="brand-title-wrap">
+                <h2 className="brand-subname">HI-LUX EXPORT</h2>
+              </div>
+            </div>
+            <div className="brand-subline">
+              <span className="brand-subline-kicker">A SUBSIDIARY OF</span>
+              <span className="brand-subline-entity">JASMINE GLOBAL PROCESS SOLUTIONS • PHILIPPINES</span>
+            </div>
           </div>
         </Link>
 

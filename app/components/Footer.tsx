@@ -20,8 +20,16 @@ export default function Footer() {
               height={56}
               style={{ objectFit: "contain", maxHeight: 56 }}
             />
-            <p style={{ marginTop: 14 }}>
-              Your trusted partner for Toyota Hilux export sourcing and shipment coordination from the Philippines. We arrange export supply and shipment coordination to the agreed destination port only. Destination customs clearance, taxes, registration and local compliance are handled by the buyer.
+            <div className="footer-subsidiary-lockup" style={{ marginTop: 8, marginBottom: 12 }}>
+              <span style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: "0.22em", color: "var(--accent-gold, #c5a059)", textTransform: "uppercase", display: "block" }}>
+                A SUBSIDIARY OF
+              </span>
+              <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.12em", color: "#e2ecf7", textTransform: "uppercase", display: "block", marginTop: 2 }}>
+                JASMINE GLOBAL PROCESS SOLUTIONS • PHILIPPINES
+              </span>
+            </div>
+            <p style={{ marginTop: 10 }}>
+              Jasmine Global HI-Lux Export is a subsidiary of Jasmine Global Process Solutions. Your trusted partner for Toyota Hilux export sourcing and shipment coordination from the Philippines. We arrange export supply and shipment coordination to the agreed destination port only. Destination customs clearance, taxes, registration and local compliance are handled by the buyer.
             </p>
             <div className="footer-brand-badges">
               <span className="footer-badge">🇵🇭 Export Procedure</span>
@@ -130,7 +138,7 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Jasmine Global Process Solutions OPC. All rights reserved. Jasmine Global HI-Lux Export is a trading/export brand.</p>
+          <p>© {new Date().getFullYear()} Jasmine Global — Subsidiary of Jasmine Global Process Solutions. All rights reserved. Jasmine Global HI-Lux Export is a trading/export brand.</p>
           <div className="footer-bottom-links">
             <Link href="/terms">Terms &amp; Conditions</Link>
             <Link href="/privacy">Privacy Policy</Link>

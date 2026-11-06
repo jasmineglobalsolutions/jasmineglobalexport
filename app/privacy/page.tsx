@@ -12,7 +12,7 @@ const sections = [
   {
     title: "1. Who We Are",
     content:
-      "This website is operated by Jasmine Global Process Solutions OPC, trading as Jasmine Global HI-Lux Export. Our coordination is based in Singapore. For privacy enquiries, contact us at admin@jasmineglobalexport.com.",
+      "This website is operated by Jasmine Global — Subsidiary of Jasmine Global Process Solutions OPC (Philippines), trading as Jasmine Global HI-Lux Export. For privacy enquiries, contact us at admin@jasmineglobalexport.com.",
   },
   {
     title: "2. What Data We Collect",

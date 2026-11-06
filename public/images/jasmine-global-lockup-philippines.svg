@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 280" width="1024" height="280">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d7a44a" />
+      <stop offset="50%" stop-color="#f3d18c" />
+      <stop offset="100%" stop-color="#c5a059" />
+    </linearGradient>
+    <linearGradient id="goldVGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d7a44a" />
+      <stop offset="50%" stop-color="#f3d18c" />
+      <stop offset="100%" stop-color="#b08a3d" />
+    </linearGradient>
+  </defs>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1024" height="42" fill="#000000" />
+  <!-- Top Gold Line -->
+  <rect x="0" y="42" width="1024" height="4" fill="url(#goldGrad)" />
+
+  <!-- Main Background -->
+  <rect x="0" y="46" width="1024" height="230" fill="#ffffff" />
+
+  <!-- Bottom Gold Line -->
+  <rect x="0" y="276" width="1024" height="4" fill="url(#goldGrad)" />
+
+  <!-- Main Brand Row -->
+  <g transform="translate(185, 68)">
+    <!-- JG Monogram / Icon -->
+    <g transform="translate(0, 8)">
+      <!-- J in Gold -->
+      <path d="M 38 10 C 38 4 39 0 45 0 L 62 0 L 62 70 C 62 95 48 108 24 108 C 8 108 -1 98 0 85 C 1 74 10 70 17 70 C 25 70 31 75 32 83 C 33 89 38 94 45 94 C 53 94 57 88 57 74 L 57 26 C 52 26 44 26 38 27 Z" fill="#c5a059" />
+      <!-- G in Dark Navy -->
+      <path d="M 68 8 C 86 3 105 10 114 24 C 122 36 125 54 125 72 C 125 96 117 114 96 122 C 78 128 58 126 44 116 C 54 112 61 104 65 92 C 75 97 88 98 97 94 C 109 88 113 74 113 58 C 113 42 108 28 96 22 C 86 17 73 18 64 24 L 64 8 Z" fill="#0b1b30" />
+      <path d="M 82 54 L 122 54 L 122 66 L 96 66 L 96 82 L 82 82 Z" fill="#0b1b30" />
+    </g>
+
+    <!-- First Vertical Gold Divider -->
+    <rect x="150" y="16" width="2" height="96" rx="1" fill="url(#goldVGrad)" />
+
+    <!-- JASMINE GLOBAL -->
+    <g transform="translate(172, 16)">
+      <text x="0" y="52" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="52" font-weight="800" fill="#0b1b30" letter-spacing="4">JASMINE</text>
+      <text x="2" y="92" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="34" font-weight="700" fill="#c5a059" letter-spacing="14">GLOBAL</text>
+    </g>
+
+    <!-- Second Vertical Gold Divider -->
+    <rect x="460" y="16" width="2" height="96" rx="1" fill="url(#goldVGrad)" />
+
+    <!-- HI-LUX EXPORT -->
+    <g transform="translate(484, 16)">
+      <text x="0" y="70" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="38" font-weight="900" fill="#0b1b30" letter-spacing="3">HI-LUX EXPORT</text>
+    </g>
+  </g>
+
+  <!-- Subsidiary Subtitle Centered Below -->
+  <g transform="translate(512, 222)">
+    <!-- A SUBSIDIARY OF -->
+    <text x="0" y="0" text-anchor="middle" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#c5a059" letter-spacing="6">A SUBSIDIARY OF</text>
+    <!-- JASMINE GLOBAL PROCESS SOLUTIONS • PHILIPPINES -->
+    <text x="0" y="24" text-anchor="middle" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="800" fill="#0b1b30" letter-spacing="3.5">JASMINE GLOBAL PROCESS SOLUTIONS • PHILIPPINES</text>
+  </g>
+</svg>
